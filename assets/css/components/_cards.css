@@ -1,0 +1,203 @@
+/* ========================================
+   Quick Access Cards
+   ======================================== */
+.quick-access {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.quick-access .section-header {
+  margin-bottom: 40px;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.quick-card:hover {
+  border-color: var(--blue-400);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.quick-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.quick-card-icon i {
+  font-size: 1.1rem;
+  color: var(--blue-600);
+}
+
+.quick-card:hover .quick-card-icon {
+  background: var(--blue-600);
+}
+
+.quick-card:hover .quick-card-icon i {
+  color: var(--white);
+}
+
+.quick-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.quick-card p {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+
+.quick-card--highlight {
+  background: var(--blue-600);
+  border-color: var(--blue-600);
+}
+
+.quick-card--highlight .quick-card-icon {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.quick-card--highlight .quick-card-icon i {
+  color: var(--white);
+}
+
+.quick-card--highlight h3 {
+  color: var(--white);
+}
+
+.quick-card--highlight p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.quick-card--highlight:hover {
+  border-color: var(--blue-800);
+  background: var(--blue-700);
+}
+
+.quick-card--highlight:hover .quick-card-icon {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ========================================
+   Curso Cards (Detail pages)
+   ======================================== */
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.curso-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.curso-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--blue-400);
+}
+
+.curso-card__header {
+  padding: 14px 20px 0;
+}
+
+.curso-card__mes {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--blue-600);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.curso-card__body {
+  padding: 16px 20px;
+  flex: 1;
+}
+
+.curso-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.curso-card__icon i {
+  font-size: 1rem;
+  color: var(--blue-600);
+}
+
+.curso-card__body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.curso-card__body p {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.curso-card__footer {
+  padding: 14px 20px;
+  border-top: 1px solid var(--gray-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.curso-card__footer span {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.curso-card__footer i {
+  font-size: 0.7rem;
+  color: var(--blue-600);
+}

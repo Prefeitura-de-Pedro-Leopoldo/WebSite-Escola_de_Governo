@@ -1,0 +1,86 @@
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+  background: var(--blue-900);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 56px 0 0;
+  border-top: 3px solid var(--green-500);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-logo strong {
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.footer-logo span {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+.footer-info p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: var(--white);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.footer-links a {
+  display: block;
+  font-size: 0.875rem;
+  padding: 4px 0;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.footer-links a:hover {
+  color: var(--white);
+  padding-left: 4px;
+}
+
+.footer-contact p {
+  font-size: 0.875rem;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-contact i {
+  color: var(--gray-500);
+  width: 16px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.footer-bottom p + p {
+  margin-top: 4px;
+  opacity: 0.6;
+}

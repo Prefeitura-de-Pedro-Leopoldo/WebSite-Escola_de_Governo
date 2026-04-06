@@ -1,0 +1,56 @@
+/* ========================================
+   Design Tokens (Variables)
+   ======================================== */
+:root {
+  /* Colors - Blue */
+  --blue-900: #162d4a;
+  --blue-800: #1e3a5c;
+  --blue-700: #24547a;
+  --blue-600: #2b6cb0;
+  --blue-500: #3182ce;
+  --blue-400: #63b3ed;
+  --blue-100: #ebf5fb;
+  --blue-50: #f4f9fd;
+
+  /* Colors - Green */
+  --green-700: #558b2f;
+  --green-600: #689f38;
+  --green-500: #7cb342;
+  --green-400: #8bc34a;
+  --green-100: #f1f8e9;
+
+  /* Colors - Accent */
+  --purple: #7d3c98;
+  --red: #c0392b;
+  --amber: #f39c12;
+
+  /* Colors - Neutral */
+  --white: #ffffff;
+  --gray-25: #fcfcfd;
+  --gray-50: #f8f9fa;
+  --gray-100: #f1f3f5;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #6c757d;
+  --gray-600: #495057;
+  --gray-700: #3d4852;
+  --gray-800: #2d3748;
+  --gray-900: #1a202c;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Transitions */
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

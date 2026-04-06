@@ -1,0 +1,627 @@
+/* ========================================
+   Eixos Summary
+   ======================================== */
+.eixos-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 8px 0;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+.summary-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.summary-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--gray-300);
+}
+
+/* ========================================
+   Eixos Cards (V1)
+   ======================================== */
+.eixos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.eixo-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  transition: var(--transition);
+}
+
+.eixo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gray-300);
+}
+
+.eixo-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.eixo-header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.eixo-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.eixo-icon i {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.eixo-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.eixo-card > p {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.eixo-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.eixo-count i {
+  font-size: 0.7rem;
+}
+
+.eixo-cursos-list {
+  border-top: 1px solid var(--gray-100);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+
+.eixo-cursos-list ul {
+  list-style: none;
+}
+
+.eixo-cursos-list li {
+  padding: 10px 0;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.eixo-cursos-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.eixo-cursos-list li i {
+  color: var(--green-500);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.eixo-cursos-list li div {
+  flex: 1;
+  min-width: 0;
+}
+
+.eixo-cursos-list li strong {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--gray-900);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.eixo-cursos-list li small {
+  font-size: 0.78rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+
+.mes-tag {
+  margin-left: auto;
+  padding: 3px 10px;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 50px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.eixo-card--ativo {
+  border: 1px solid var(--blue-600);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.eixo-card--ativo:hover {
+  border-color: var(--blue-700);
+}
+
+.eixo-status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--green-500);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
+.eixo-count--futuro {
+  background: var(--gray-100) !important;
+  color: var(--gray-500) !important;
+}
+
+.eixo-responsaveis {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--gray-100);
+}
+
+.eixo-responsaveis span {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.eixo-responsaveis i {
+  color: var(--blue-600);
+  font-size: 0.85rem;
+}
+
+/* ========================================
+   Eixos V2 - Cards minimalistas
+   ======================================== */
+.eixos-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.eixo-card-v2 {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.eixo-card-v2:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gray-300);
+}
+
+.eixo-card-v2--ativo {
+  border-color: var(--blue-600);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.eixo-card-v2--ativo:hover {
+  border-color: var(--blue-700);
+  box-shadow: var(--shadow-xl);
+}
+
+.eixo-card-v2__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.eixo-card-v2__icon i {
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.eixo-card-v2__body {
+  flex: 1;
+}
+
+.eixo-card-v2__body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.eixo-card-v2__badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--green-500);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.eixo-card-v2__body p {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.eixo-card-v2__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-100);
+}
+
+.eixo-card-v2__count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background: var(--blue-100);
+  color: var(--blue-700);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.eixo-card-v2__count i {
+  font-size: 0.7rem;
+}
+
+.eixo-card-v2__count--futuro {
+  background: var(--gray-100);
+  color: var(--gray-500);
+}
+
+.eixo-card-v2__arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--blue-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.eixo-card-v2__arrow i {
+  font-size: 0.75rem;
+  color: var(--blue-600);
+  transition: var(--transition);
+}
+
+.eixo-card-v2--ativo:hover .eixo-card-v2__arrow {
+  background: var(--blue-600);
+}
+
+.eixo-card-v2--ativo:hover .eixo-card-v2__arrow i {
+  color: var(--white);
+  transform: translateX(2px);
+}
+
+/* ========================================
+   Aula Magna Highlight
+   ======================================== */
+.aula-magna-highlight {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 60%, var(--blue-600) 100%);
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--green-500);
+}
+
+.aula-magna-highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(124, 179, 66, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.aula-magna-left {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.badge-special {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.badge-special i {
+  color: var(--green-400);
+}
+
+.aula-magna-highlight h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+}
+
+.aula-magna-highlight p {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.aula-magna-meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.aula-magna-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.aula-magna-meta i {
+  color: var(--green-400);
+}
+
+.aula-magna-right {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.speaker-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.speaker-avatar {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.speaker-avatar i {
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.speaker-card strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.speaker-card span {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+/* ========================================
+   Cronograma
+   ======================================== */
+.cronograma-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.crono-month {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.crono-month:hover {
+  border-color: var(--blue-400);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.crono-month-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blue-700);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--blue-100);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.crono-month-label::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--blue-600);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.crono-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.crono-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  transition: var(--transition);
+}
+
+.crono-item:hover {
+  background: var(--blue-50);
+}
+
+.crono-item--destaque {
+  background: var(--blue-50);
+  border-left: 3px solid var(--green-500);
+}
+
+.crono-item .crono-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.crono-dot.governanca { background: var(--blue-600); }
+.crono-dot.licitacoes { background: var(--purple); }
+.crono-dot.atendimento { background: var(--red); }
+.crono-dot.aula-magna { background: var(--green-500); }
+
+.crono-dot-inline {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.crono-dot-inline.governanca { background: var(--blue-600); }
+.crono-dot-inline.licitacoes { background: var(--purple); }
+.crono-dot-inline.atendimento { background: var(--red); }
+.crono-dot-inline.aula-magna { background: var(--green-500); }
+
+.crono-item strong {
+  color: var(--gray-800);
+  font-weight: 600;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.crono-item .crono-resp {
+  margin-left: auto;
+  font-size: 0.72rem;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+.crono-legenda {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 16px 20px;
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.crono-legenda > span {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}

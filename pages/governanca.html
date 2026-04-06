@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Licitacoes e Contratos - Escola de Governo Pedro Leopoldo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Governanca e Gestao Publica - Escola de Governo Pedro Leopoldo</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -14,15 +14,11 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon"><span class="logo-eg">EG</span></div>
-                <div class="logo-text">
-                    <span class="logo-title">Escola de Governo</span>
-                    <span class="logo-subtitle">Pedro Leopoldo</span>
-                </div>
+            <a href="../index.html" class="logo">
+                <img src="../assets/img/logo.svg" alt="EGOV-PL" class="logo-header">
             </a>
             <nav class="nav" id="nav">
-                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="../index.html" class="nav-link">Inicio</a>
                 <a href="eixos.html" class="nav-link active">Eixos e Cursos</a>
                 <a href="noticias.html" class="nav-link">Noticias</a>
                 <a href="sobre.html" class="nav-link">Sobre</a>
@@ -35,26 +31,28 @@
     </header>
 
     <!-- Banner -->
-    <section class="page-banner page-banner--eixo" style="background: linear-gradient(135deg, #162d4a 0%, #24547a 50%, #7d3c98 100%);">
+    <section class="page-banner page-banner--eixo">
+        <div class="page-banner__bg page-banner__bg--governanca"></div>
         <div class="container">
             <nav class="breadcrumb">
-                <a href="index.html">Inicio</a>
+                <a href="../index.html">Inicio</a>
                 <i class="fas fa-chevron-right"></i>
                 <a href="eixos.html">Eixos e Cursos</a>
                 <i class="fas fa-chevron-right"></i>
-                <span>Licitacoes e Contratos</span>
+                <span>Governanca e Gestao Publica</span>
             </nav>
             <div class="page-banner__eixo-header">
                 <div class="page-banner__icon">
-                    <i class="fas fa-file-contract"></i>
+                    <i class="fas fa-landmark"></i>
                 </div>
                 <div>
-                    <h1>Licitacoes e Contratos Administrativos</h1>
-                    <p>Planejamento estrategico de contratacoes, padronizacao de procedimentos e gestao contratual sob a Lei 14.133/21.</p>
+                    <h1>Governanca e Gestao Publica</h1>
+                    <p>Fundamentos, etica, inovacao, avaliacao de desempenho e gestao para resultados na administracao publica.</p>
                 </div>
             </div>
             <div class="page-banner__meta">
-                <span><i class="fas fa-book-open"></i> 3 cursos programados</span>
+                <span><i class="fas fa-book-open"></i> 6 cursos programados</span>
+                <span><i class="fas fa-user-circle"></i> Sec. Celio, SATD, DIRGEP</span>
             </div>
         </div>
     </section>
@@ -71,14 +69,48 @@
 
                 <div class="curso-card">
                     <div class="curso-card__header">
-                        <span class="curso-card__mes">Agosto</span>
+                        <span class="curso-card__mes">Abril</span>
                     </div>
                     <div class="curso-card__body">
                         <div class="curso-card__icon">
-                            <i class="fas fa-tasks"></i>
+                            <i class="fas fa-users-cog"></i>
                         </div>
-                        <h3>Padronizacao dos Procedimentos de Contratacao</h3>
-                        <p>Organizacao e uniformizacao de fluxos e procedimentos para garantir eficiencia e conformidade.</p>
+                        <h3>Formacao para Membros da Comissao Recursal de Avaliacao de Desempenho</h3>
+                        <p>Aspectos legais e procedimentais para atuacao em comissoes recursais, com foco em analise tecnica e tomada de decisao.</p>
+                    </div>
+                    <div class="curso-card__footer">
+                        <span><i class="fas fa-user-circle"></i> DIRGEP</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Presencial</span>
+                    </div>
+                </div>
+
+                <div class="curso-card">
+                    <div class="curso-card__header">
+                        <span class="curso-card__mes">Maio</span>
+                    </div>
+                    <div class="curso-card__body">
+                        <div class="curso-card__icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Gestao Publica para Resultados</h3>
+                        <p>Conceitos e ferramentas para gestao para resultados com foco em planejamento, indicadores, monitoramento e avaliacao.</p>
+                    </div>
+                    <div class="curso-card__footer">
+                        <span><i class="fas fa-user-circle"></i> SATD</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Presencial</span>
+                    </div>
+                </div>
+
+                <div class="curso-card">
+                    <div class="curso-card__header">
+                        <span class="curso-card__mes">Maio</span>
+                    </div>
+                    <div class="curso-card__body">
+                        <div class="curso-card__icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Fundamentos da Etica no Setor Publico</h3>
+                        <p>Principios eticos, integridade, conduta profissional e prevencao de conflitos de interesse.</p>
                     </div>
                     <div class="curso-card__footer">
                         <span><i class="fas fa-user-circle"></i> -</span>
@@ -88,34 +120,51 @@
 
                 <div class="curso-card">
                     <div class="curso-card__header">
-                        <span class="curso-card__mes">Setembro</span>
+                        <span class="curso-card__mes">Junho</span>
                     </div>
                     <div class="curso-card__body">
                         <div class="curso-card__icon">
-                            <i class="fas fa-project-diagram"></i>
+                            <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3>Planejamento Estrategico das Contratacoes Publicas</h3>
-                        <p>Planejamento das contratacoes alinhado as necessidades institucionais, com base na legislacao vigente.</p>
+                        <h3>Gestao da Inovacao no Setor Publico</h3>
+                        <p>Conceitos e praticas de inovacao aplicadas ao setor publico, com foco na transformacao digital e cultura inovadora.</p>
                     </div>
                     <div class="curso-card__footer">
-                        <span><i class="fas fa-user-circle"></i> -</span>
+                        <span><i class="fas fa-user-circle"></i> SATD</span>
                         <span><i class="fas fa-map-marker-alt"></i> Presencial</span>
                     </div>
                 </div>
 
                 <div class="curso-card">
                     <div class="curso-card__header">
-                        <span class="curso-card__mes">Outubro</span>
+                        <span class="curso-card__mes">Junho</span>
                     </div>
                     <div class="curso-card__body">
                         <div class="curso-card__icon">
-                            <i class="fas fa-search"></i>
+                            <i class="fas fa-clipboard-check"></i>
                         </div>
-                        <h3>Gestao e Fiscalizacao de Contratos (Lei 14.133/21)</h3>
-                        <p>Praticas de acompanhamento, execucao e fiscalizacao contratual, com foco na conformidade legal e resultados.</p>
+                        <h3>Avaliacao de Desempenho</h3>
+                        <p>Instrumentos, metodos e ferramentas para avaliacao de desempenho individual de servidores municipais.</p>
                     </div>
                     <div class="curso-card__footer">
-                        <span><i class="fas fa-user-circle"></i> -</span>
+                        <span><i class="fas fa-user-circle"></i> DIRGEP</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Presencial</span>
+                    </div>
+                </div>
+
+                <div class="curso-card">
+                    <div class="curso-card__header">
+                        <span class="curso-card__mes">Julho</span>
+                    </div>
+                    <div class="curso-card__body">
+                        <div class="curso-card__icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <h3>Fundamentos da Gestao Publica</h3>
+                        <p>Introducao aos principios, estruturas e funcionamento da administracao publica, com foco em legalidade, eficiencia, transparencia e interesse publico.</p>
+                    </div>
+                    <div class="curso-card__footer">
+                        <span><i class="fas fa-user-circle"></i> Sec. Celio</span>
                         <span><i class="fas fa-map-marker-alt"></i> Presencial</span>
                     </div>
                 </div>
@@ -134,17 +183,13 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <div class="footer-logo">
-                        <div class="logo-icon logo-icon-sm"><span class="logo-eg">EG</span></div>
-                        <div>
-                            <strong>Escola de Governo</strong><br>
-                            <span>Pedro Leopoldo</span>
-                        </div>
+                        <img src="../assets/img/logo.svg" alt="EGOV-PL" class="logo-footer">
                     </div>
                     <p>Capacitacao e desenvolvimento dos servidores publicos municipais para uma administracao moderna e eficiente.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navegacao</h4>
-                    <a href="index.html">Inicio</a>
+                    <a href="../index.html">Inicio</a>
                     <a href="eixos.html">Eixos e Cursos</a>
                     <a href="noticias.html">Noticias</a>
                     <a href="sobre.html">Sobre</a>
@@ -169,6 +214,6 @@
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
-    <script src="js/main.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
 </body>
 </html>

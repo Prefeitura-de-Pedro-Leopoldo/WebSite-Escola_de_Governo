@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte - Escola de Governo Pedro Leopoldo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -14,15 +14,11 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon"><span class="logo-eg">EG</span></div>
-                <div class="logo-text">
-                    <span class="logo-title">Escola de Governo</span>
-                    <span class="logo-subtitle">Pedro Leopoldo</span>
-                </div>
+            <a href="../index.html" class="logo">
+                <img src="../assets/img/logo.svg" alt="EGOV-PL" class="logo-header">
             </a>
             <nav class="nav" id="nav">
-                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="../index.html" class="nav-link">Inicio</a>
                 <a href="eixos.html" class="nav-link">Eixos e Cursos</a>
                 <a href="noticias.html" class="nav-link">Noticias</a>
                 <a href="sobre.html" class="nav-link">Sobre</a>
@@ -36,9 +32,10 @@
 
     <!-- Banner -->
     <section class="page-banner">
+        <div class="page-banner__bg page-banner__bg--suporte"></div>
         <div class="container">
             <nav class="breadcrumb">
-                <a href="index.html">Inicio</a>
+                <a href="../index.html">Inicio</a>
                 <i class="fas fa-chevron-right"></i>
                 <span>Suporte</span>
             </nav>
@@ -75,7 +72,7 @@
             </div>
 
             <div class="back-link">
-                <a href="index.html"><i class="fas fa-arrow-left"></i> Voltar para a Pagina Inicial</a>
+                <a href="../index.html"><i class="fas fa-arrow-left"></i> Voltar para a Pagina Inicial</a>
             </div>
         </div>
     </section>
@@ -86,17 +83,13 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <div class="footer-logo">
-                        <div class="logo-icon logo-icon-sm"><span class="logo-eg">EG</span></div>
-                        <div>
-                            <strong>Escola de Governo</strong><br>
-                            <span>Pedro Leopoldo</span>
-                        </div>
+                        <img src="../assets/img/logo.svg" alt="EGOV-PL" class="logo-footer">
                     </div>
                     <p>Capacitacao e desenvolvimento dos servidores publicos municipais para uma administracao moderna e eficiente.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navegacao</h4>
-                    <a href="index.html">Inicio</a>
+                    <a href="../index.html">Inicio</a>
                     <a href="eixos.html">Eixos e Cursos</a>
                     <a href="noticias.html">Noticias</a>
                     <a href="sobre.html">Sobre</a>
@@ -121,6 +114,6 @@
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
-    <script src="js/main.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
 </body>
 </html>

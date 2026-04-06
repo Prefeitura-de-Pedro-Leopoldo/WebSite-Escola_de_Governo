@@ -1,0 +1,59 @@
+/* ========================================
+   Back to Top Button
+   ======================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  background: var(--blue-900);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  z-index: 999;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--blue-700);
+  transform: translateY(-2px);
+}
+
+/* --- Back Link --- */
+.back-link {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-200);
+  text-align: center;
+}
+
+.back-link a {
+  color: var(--blue-600);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+}
+
+.back-link a:hover {
+  color: var(--blue-800);
+  background: var(--blue-100);
+  gap: 12px;
+}

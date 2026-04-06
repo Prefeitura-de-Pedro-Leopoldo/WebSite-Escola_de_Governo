@@ -1,0 +1,160 @@
+/* ========================================
+   Sobre
+   ======================================== */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.sobre-content p {
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.principios {
+  margin-top: 32px;
+}
+
+.principios h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 20px;
+}
+
+.principios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.principio {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px;
+  background: var(--gray-50);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.principio i {
+  font-size: 1.1rem;
+  color: var(--blue-600);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.principio strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gray-900);
+  margin-bottom: 2px;
+}
+
+.principio p {
+  font-size: 0.82rem !important;
+  color: var(--gray-500) !important;
+  margin-bottom: 0 !important;
+}
+
+.sobre-visual {
+  position: sticky;
+  top: 100px;
+}
+
+.sobre-card-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sobre-stat-card {
+  padding: 24px;
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.sobre-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.sobre-stat-card i {
+  font-size: 1.5rem;
+  color: var(--blue-600);
+  margin-bottom: 8px;
+}
+
+.stat-big {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.sobre-stat-card span {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+.card-green {
+  background: var(--green-100);
+  border-color: transparent;
+}
+
+.card-green i {
+  color: var(--green-600);
+}
+
+.card-green .stat-big {
+  color: var(--green-700);
+}
+
+.card-dark {
+  background: var(--blue-900);
+  border-color: transparent;
+  color: var(--white);
+}
+
+.card-dark i {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.card-dark .stat-big {
+  color: var(--white);
+}
+
+.card-dark span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sobre-extra {
+  margin-top: 32px;
+  padding: 24px;
+  background: var(--blue-50);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--blue-600);
+}
+
+.sobre-extra h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.sobre-extra p {
+  font-size: 0.9rem !important;
+  color: var(--gray-600) !important;
+  margin-bottom: 0 !important;
+}

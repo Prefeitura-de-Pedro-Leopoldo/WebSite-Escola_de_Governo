@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola de Governo - Pedro Leopoldo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,20 +15,14 @@
     <header class="header" id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <span class="logo-eg">EG</span>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-title">Escola de Governo</span>
-                    <span class="logo-subtitle">Pedro Leopoldo</span>
-                </div>
+                <img src="assets/img/logo.svg" alt="EGOV-PL" class="logo-header">
             </a>
             <nav class="nav" id="nav">
                 <a href="index.html" class="nav-link active">Inicio</a>
-                <a href="eixos.html" class="nav-link">Eixos e Cursos</a>
-                <a href="noticias.html" class="nav-link">Noticias</a>
-                <a href="sobre.html" class="nav-link">Sobre</a>
-                <a href="suporte.html" class="nav-link">Suporte</a>
+                <a href="pages/eixos.html" class="nav-link">Eixos e Cursos</a>
+                <a href="pages/noticias.html" class="nav-link">Noticias</a>
+                <a href="pages/sobre.html" class="nav-link">Sobre</a>
+                <a href="pages/suporte.html" class="nav-link">Suporte</a>
             </nav>
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                 <i class="fas fa-bars"></i>
@@ -41,15 +35,10 @@
         <div class="hero-bg-image"></div>
         <div class="hero-bg-pattern"></div>
         <div class="container hero-content">
-            <span class="hero-badge"><i class="fas fa-university"></i> Prefeitura de Pedro Leopoldo</span>
-            <h1>Escola de Governo</h1>
-            <p class="hero-description">
-                Capacitacao, desenvolvimento e valorizacao dos servidores publicos municipais.
-                Formando profissionais para uma administracao publica moderna, eficiente e transparente.
-            </p>
+            <img src="assets/img/logo.svg" alt="Escola de Governo - Pedro Leopoldo" class="hero-logo">
             <div class="hero-actions">
-                <a href="eixos.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Ver Eixos e Cursos</a>
-                <a href="sobre.html" class="btn btn-outline"><i class="fas fa-info-circle"></i> Conheca o Projeto</a>
+                <a href="pages/eixos.html" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Ver Eixos e Cursos</a>
+                <a href="pages/sobre.html" class="btn btn-outline"><i class="fas fa-info-circle"></i> Conheca o Projeto</a>
             </div>
             <div class="hero-stats">
                 <div class="stat">
@@ -80,7 +69,7 @@
                 <p class="section-subtitle">Encontre rapidamente o que voce precisa.</p>
             </div>
             <div class="quick-grid">
-                <a href="eixos.html" class="quick-card quick-card--highlight">
+                <a href="pages/eixos.html" class="quick-card quick-card--highlight">
                     <div class="quick-card-icon"><i class="fas fa-graduation-cap"></i></div>
                     <h3>Eixos e Cursos</h3>
                     <p>Confira os eixos tematicos e cursos disponiveis para 2026.</p>
@@ -100,7 +89,7 @@
                     <h3>Videos e Tutoriais</h3>
                     <p>Assista a guias rapidos e conteudos de apoio.</p>
                 </a>
-                <a href="noticias.html" class="quick-card">
+                <a href="pages/noticias.html" class="quick-card">
                     <div class="quick-card-icon"><i class="fas fa-newspaper"></i></div>
                     <h3>Noticias</h3>
                     <p>Acompanhe as novidades e eventos da Escola de Governo.</p>
@@ -120,23 +109,17 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <div class="footer-logo">
-                        <div class="logo-icon logo-icon-sm">
-                            <span class="logo-eg">EG</span>
-                        </div>
-                        <div>
-                            <strong>Escola de Governo</strong><br>
-                            <span>Pedro Leopoldo</span>
-                        </div>
+                        <img src="assets/img/logo.svg" alt="EGOV-PL" class="logo-footer">
                     </div>
                     <p>Capacitacao e desenvolvimento dos servidores publicos municipais para uma administracao moderna e eficiente.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Navegacao</h4>
                     <a href="index.html">Inicio</a>
-                    <a href="eixos.html">Eixos e Cursos</a>
-                    <a href="noticias.html">Noticias</a>
-                    <a href="sobre.html">Sobre</a>
-                    <a href="suporte.html">Suporte</a>
+                    <a href="pages/eixos.html">Eixos e Cursos</a>
+                    <a href="pages/noticias.html">Noticias</a>
+                    <a href="pages/sobre.html">Sobre</a>
+                    <a href="pages/suporte.html">Suporte</a>
                 </div>
                 <div class="footer-links">
                     <h4>Recursos</h4>
@@ -161,6 +144,6 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <script src="js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

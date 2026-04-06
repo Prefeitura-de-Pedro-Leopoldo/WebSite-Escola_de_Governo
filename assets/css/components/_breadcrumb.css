@@ -1,0 +1,28 @@
+/* ========================================
+   Breadcrumb
+   ======================================== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+  color: var(--white);
+}
+
+.breadcrumb i {
+  font-size: 0.6rem;
+}
+
+.breadcrumb span {
+  color: var(--white);
+}

@@ -1,0 +1,202 @@
+/* ========================================
+   Responsive - Tablet (1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .sobre-card-stack {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .suporte-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .aula-magna-highlight {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .eixos-summary {
+    gap: 32px;
+  }
+  .eixos-grid-v2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cursos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .page-banner__eixo-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile (768px)
+   ======================================== */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 12px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eixos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .noticias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .noticia-destaque {
+    grid-row: auto;
+  }
+
+  .principios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .suporte-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .page-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-banner {
+    padding: 100px 0 40px;
+  }
+
+  .sobre-card-stack {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .eixos-summary {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .summary-divider {
+    display: none;
+  }
+
+  .cronograma-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .crono-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .crono-item .crono-resp {
+    margin-left: 0;
+  }
+
+  .crono-legenda {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .eixos-grid-v2 {
+    grid-template-columns: 1fr;
+  }
+
+  .cursos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-banner--eixo {
+    padding: 100px 0 36px;
+  }
+
+  .page-banner__meta {
+    gap: 12px;
+  }
+}
+
+/* ========================================
+   Responsive - Small Mobile (480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .hero {
+    min-height: auto;
+    padding: 100px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .sobre-card-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .cursos-grid {
+    grid-template-columns: 1fr;
+  }
+}

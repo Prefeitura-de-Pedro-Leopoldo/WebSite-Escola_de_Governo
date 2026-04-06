@@ -1,0 +1,123 @@
+/* ========================================
+   Header
+   ======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 3px solid var(--blue-600);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: var(--transition);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--blue-900);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon-sm {
+  width: 34px;
+  height: 34px;
+}
+
+.logo-eg {
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.logo-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--gray-900);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.logo-subtitle {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--gray-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-link {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  letter-spacing: -0.01em;
+}
+
+.nav-link:hover {
+  color: var(--blue-600);
+  background: var(--blue-50);
+}
+
+.nav-link.active {
+  color: var(--blue-700);
+  background: var(--blue-100);
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--gray-700);
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* --- Logo Sizes --- */
+.logo-header {
+  height: 38px;
+  width: auto;
+}
+
+.logo-footer {
+  height: 32px;
+  width: auto;
+}
