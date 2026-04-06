@@ -19,7 +19,7 @@ export function initCounter() {
                 if (progress < 1) {
                     requestAnimationFrame(update);
                 } else {
-                    counter.textContent = target > 1 ? target + '+' : target;
+                    counter.textContent = target;
                 }
             }
             requestAnimationFrame(update);
