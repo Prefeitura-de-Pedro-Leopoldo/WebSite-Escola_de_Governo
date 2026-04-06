@@ -96,6 +96,18 @@
     grid-template-columns: 1fr;
   }
 
+  .metodologia-content {
+    flex-direction: column;
+  }
+
+  .metodologia-visual {
+    width: 140px;
+  }
+
+  .metodologia-modalidades {
+    flex-wrap: wrap;
+  }
+
   .suporte-grid {
     grid-template-columns: 1fr;
   }

@@ -158,3 +158,74 @@
   color: var(--gray-600) !important;
   margin-bottom: 0 !important;
 }
+
+/* Metodologia */
+.metodologia-content {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.metodologia-visual {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.metodologia-img {
+  width: 100%;
+  height: auto;
+}
+
+.metodologia-texto h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.metodologia-texto p {
+  font-size: 0.88rem !important;
+  line-height: 1.7;
+}
+
+.metodologia-lista {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metodologia-lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--gray-700);
+}
+
+.metodologia-lista li i {
+  color: var(--blue-600);
+  font-size: 0.85rem;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.metodologia-modalidades {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.modalidade-tag {
+  padding: 8px 20px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  background: var(--white);
+}
