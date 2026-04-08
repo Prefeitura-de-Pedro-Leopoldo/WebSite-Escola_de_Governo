@@ -99,10 +99,12 @@
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   padding-top: 40px;
   border-top: 1px solid rgba(22, 45, 74, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .stat {
@@ -110,12 +112,19 @@
 }
 
 .stat-number {
-  display: block;
+  display: inline;
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--blue-900);
   line-height: 1;
   letter-spacing: -0.03em;
+}
+
+.stat-plus {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  line-height: 1;
 }
 
 .stat-label {

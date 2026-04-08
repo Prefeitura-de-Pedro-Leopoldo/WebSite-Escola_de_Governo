@@ -138,6 +138,27 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+.card-legislation {
+  text-decoration: none;
+  color: inherit;
+  background: var(--blue-50);
+  border-color: var(--blue-200);
+  cursor: pointer;
+}
+
+.card-legislation i {
+  color: var(--blue-700);
+}
+
+.card-legislation .stat-big {
+  font-size: 1.15rem;
+  color: var(--blue-800);
+}
+
+.card-legislation span {
+  color: var(--blue-600);
+}
+
 .sobre-extra {
   margin-top: 32px;
   padding: 24px;
