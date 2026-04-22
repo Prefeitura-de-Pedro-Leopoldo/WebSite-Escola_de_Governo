@@ -1,18 +1,24 @@
-/* ========================================
+/* ================================================================
    Breadcrumb
-   ======================================== */
+   ================================================================ */
 .breadcrumb {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  margin-bottom: 20px;
-  opacity: 0.7;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-6);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(8px);
 }
 
 .breadcrumb a {
-  color: rgba(255, 255, 255, 0.8);
-  transition: var(--transition);
+  color: rgba(255, 255, 255, 0.70);
+  transition: color var(--duration-fast) var(--ease-in-out);
 }
 
 .breadcrumb a:hover {
@@ -20,9 +26,11 @@
 }
 
 .breadcrumb i {
-  font-size: 0.6rem;
+  font-size: 0.55em;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .breadcrumb span {
   color: var(--white);
+  font-weight: var(--fw-semibold);
 }
