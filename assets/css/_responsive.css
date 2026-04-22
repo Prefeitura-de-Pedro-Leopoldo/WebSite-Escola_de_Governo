@@ -1,58 +1,48 @@
-/* ========================================
-   Responsive - Tablet (1024px)
-   ======================================== */
+/* ================================================================
+   Responsive — ajustes cross-components
+   (regras específicas de hero, footer, sobre, etc. vivem nos próprios arquivos)
+   ================================================================ */
+
+/* ---------------- Tablet (1024px) ---------------- */
 @media (max-width: 1024px) {
-  .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+  :root {
+    --section-py: 72px;
+    --container-px: 20px;
   }
-  .sobre-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .sobre-card-stack {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-  .suporte-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .aula-magna-highlight {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .eixos-summary {
-    gap: 32px;
-  }
+
   .eixos-grid-v2 {
     grid-template-columns: repeat(2, 1fr);
   }
   .cursos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .page-banner__eixo-header {
-    flex-direction: column;
-    gap: 12px;
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* ========================================
-   Responsive - Mobile (768px)
-   ======================================== */
+/* ---------------- Mobile Large (768px) ---------------- */
 @media (max-width: 768px) {
+  :root {
+    --header-h: 72px;
+    --section-py: 56px;
+  }
+
+  .logo-header {
+    height: 56px;
+  }
+
   .nav {
     display: none;
     position: absolute;
-    top: 68px;
+    top: var(--header-h);
     left: 0;
     right: 0;
-    background: var(--white);
+    background: var(--surface-card);
     flex-direction: column;
-    padding: 12px;
-    border-bottom: 1px solid var(--gray-200);
+    padding: var(--space-3);
+    gap: 0;
+    border-bottom: 1px solid var(--border-subtle);
     box-shadow: var(--shadow-lg);
   }
 
@@ -60,27 +50,26 @@
     display: flex;
   }
 
+  .nav-link {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
   .menu-toggle {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-  }
-
-  .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
+  .section-title {
+    font-size: var(--fs-2xl);
   }
 
   .quick-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .eixos-grid {
     grid-template-columns: 1fr;
   }
 
@@ -88,57 +77,8 @@
     grid-template-columns: 1fr;
   }
 
-  .noticia-destaque {
-    grid-row: auto;
-  }
-
-  .principios-grid {
+  .cursos-grid {
     grid-template-columns: 1fr;
-  }
-
-  .metodologia-content {
-    flex-direction: column;
-  }
-
-  .metodologia-visual {
-    width: 140px;
-  }
-
-  .metodologia-modalidades {
-    flex-wrap: wrap;
-  }
-
-  .suporte-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .page-banner h1 {
-    font-size: 1.8rem;
-  }
-
-  .page-banner {
-    padding: 100px 0 40px;
-  }
-
-  .sobre-card-stack {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .eixos-summary {
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  .summary-divider {
-    display: none;
   }
 
   .cronograma-timeline {
@@ -146,69 +86,26 @@
   }
 
   .crono-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .crono-item .crono-resp {
-    margin-left: 0;
+    flex-wrap: wrap;
   }
 
   .crono-legenda {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .eixos-grid-v2 {
-    grid-template-columns: 1fr;
-  }
-
-  .cursos-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .page-banner--eixo {
-    padding: 100px 0 36px;
+    gap: var(--space-3);
   }
 
   .page-banner__meta {
-    gap: 12px;
+    gap: var(--space-2);
   }
 }
 
-/* ========================================
-   Responsive - Small Mobile (480px)
-   ======================================== */
+/* ---------------- Mobile (480px) ---------------- */
 @media (max-width: 480px) {
-  .hero {
-    min-height: auto;
-    padding: 100px 0 60px;
+  :root {
+    --container-px: 16px;
+    --section-py: 48px;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-  }
-
-  .sobre-card-stack {
-    grid-template-columns: 1fr;
-  }
-
-  .cursos-grid {
-    grid-template-columns: 1fr;
+  .hero-badge {
+    font-size: var(--fs-2xs);
   }
 }
