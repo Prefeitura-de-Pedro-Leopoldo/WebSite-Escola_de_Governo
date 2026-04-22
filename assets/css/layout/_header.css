@@ -166,11 +166,12 @@
     var(--shadow-ring);
 }
 
-/* Thumb deslizante */
+/* Thumb deslizante — centralizado verticalmente via translateY(-50%)
+   para eliminar qualquer desalinhamento por padding/border inconsistente. */
 .theme-toggle::before {
   content: "";
   position: absolute;
-  top: var(--t-pad);
+  top: 50%;
   left: var(--t-pad);
   width: var(--t-thumb);
   height: var(--t-thumb);
@@ -180,6 +181,7 @@
     0 2px 4px rgba(22, 31, 54, 0.18),
     0 1px 2px rgba(22, 31, 54, 0.10),
     inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transform: translateY(-50%) translateX(0);
   transition:
     transform var(--duration-slow) var(--ease-spring),
     background-color var(--duration-base) var(--ease-in-out),
@@ -189,7 +191,7 @@
 }
 
 [data-theme="dark"] .theme-toggle::before {
-  transform: translateX(var(--t-travel));
+  transform: translateY(-50%) translateX(var(--t-travel));
   background: var(--brand-accent);
   box-shadow:
     0 2px 8px rgba(77, 173, 51, 0.35),
@@ -216,48 +218,69 @@
 }
 
 [data-theme="dark"] .theme-toggle:active::before {
-  transform: translateX(calc(var(--t-travel) - 6px));
+  transform: translateY(-50%) translateX(calc(var(--t-travel) - 6px));
 }
 
+/* Ícones posicionados absolutamente para centralização perfeita
+   — elimina qualquer interferência de baseline/line-height do FontAwesome
+   ou do flexbox do container. */
 .theme-toggle i {
-  position: relative;
+  position: absolute;
+  top: 50%;
   z-index: 1;
   width: var(--t-thumb);
-  display: inline-flex;
+  height: var(--t-thumb);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  line-height: 1;
+  font-size: 0.72rem;
   transition:
     color var(--duration-base) var(--ease-in-out),
     opacity var(--duration-base) var(--ease-in-out),
     transform var(--duration-slow) var(--ease-spring);
   pointer-events: none;
+  --t-icon-rot: 0deg;
+  --t-icon-scale: 1;
+  transform: translateY(-50%) rotate(var(--t-icon-rot)) scale(var(--t-icon-scale));
+}
+
+.theme-toggle .icon-sun  { left: var(--t-pad); }
+.theme-toggle .icon-moon { right: var(--t-pad); }
+
+.theme-toggle i::before {
+  display: block;
+  line-height: 1;
 }
 
 /* Light: sol ativo dentro do thumb (branco) · lua esmaecida */
 .theme-toggle .icon-sun {
   color: var(--white);
   opacity: 1;
-  transform: rotate(0deg) scale(1);
+  --t-icon-rot: 0deg;
+  --t-icon-scale: 1;
 }
 
 .theme-toggle .icon-moon {
   color: var(--text-faint);
   opacity: 0.6;
-  transform: rotate(-25deg) scale(0.9);
+  --t-icon-rot: -25deg;
+  --t-icon-scale: 0.9;
 }
 
 /* Dark: lua ativa dentro do thumb (branca) · sol esmaecido */
 [data-theme="dark"] .theme-toggle .icon-sun {
   color: var(--text-faint);
   opacity: 0.5;
-  transform: rotate(25deg) scale(0.9);
+  --t-icon-rot: 25deg;
+  --t-icon-scale: 0.9;
 }
 
 [data-theme="dark"] .theme-toggle .icon-moon {
   color: var(--white);
   opacity: 1;
-  transform: rotate(0deg) scale(1);
+  --t-icon-rot: 0deg;
+  --t-icon-scale: 1;
 }
 
 /* ---------------- Menu toggle (mobile) ---------------- */

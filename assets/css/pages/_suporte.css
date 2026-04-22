@@ -230,33 +230,51 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* <summary> é apenas um trigger (sem flex interno).
+   O layout real é construído pelo .faq-item__summary-inner. */
 .faq-item__summary {
+  display: block;
+  padding: 0;
+  cursor: pointer;
+  list-style: none;
+  list-style-type: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.faq-item__summary::-webkit-details-marker,
+.faq-item__summary::marker {
+  display: none;
+  content: "";
+}
+
+/* Wrapper flex — garante alinhamento independente do summary */
+.faq-item__summary-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
   padding: var(--space-5) var(--space-6);
+  transition: color var(--duration-fast) var(--ease-in-out);
+}
+
+.faq-item__question {
+  flex: 1;
+  min-width: 0;
   font-family: var(--font-display);
   font-size: var(--fs-md);
   font-weight: var(--fw-semibold);
   color: var(--text-primary);
   letter-spacing: var(--tracking-tight);
   line-height: var(--lh-snug);
-  cursor: pointer;
-  list-style: none;
-  -webkit-user-select: none;
-  user-select: none;
   transition: color var(--duration-fast) var(--ease-in-out);
 }
 
-.faq-item__summary::-webkit-details-marker { display: none; }
-.faq-item__summary::marker { content: ""; }
-
-.faq-item__summary:hover {
+.faq-item__summary:hover .faq-item__question {
   color: var(--brand-primary);
 }
 
-.faq-item[open] .faq-item__summary {
+.faq-item[open] .faq-item__question {
   color: var(--brand-primary);
 }
 
@@ -269,11 +287,16 @@
   border-radius: 50%;
   background: var(--brand-soft-bg);
   color: var(--brand-primary);
-  font-size: 0.75rem;
   flex-shrink: 0;
   transition:
     transform var(--duration-base) var(--ease-out),
-    background-color var(--duration-fast) var(--ease-in-out);
+    background-color var(--duration-fast) var(--ease-in-out),
+    color var(--duration-fast) var(--ease-in-out);
+}
+
+.faq-item__chevron i {
+  font-size: 0.75rem;
+  line-height: 1;
 }
 
 .faq-item[open] .faq-item__chevron {
@@ -335,8 +358,10 @@
     width: 100%;
     justify-content: center;
   }
-  .faq-item__summary {
+  .faq-item__summary-inner {
     padding: var(--space-4) var(--space-5);
+  }
+  .faq-item__question {
     font-size: var(--fs-sm);
   }
   .faq-item__content {
