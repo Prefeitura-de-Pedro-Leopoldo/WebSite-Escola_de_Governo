@@ -6,15 +6,29 @@
     <title>Sobre - Escola de Governo Pedro Leopoldo</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+      ;(function () {
+        try {
+          var stored = localStorage.getItem("egovpl-theme")
+          var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+          document.documentElement.setAttribute("data-theme", theme)
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <!-- Header -->
     <header class="header" id="header">
       <div class="container header-container">
         <a href="../index.html" class="logo">
-          <img src="../assets/img/logo.svg" alt="EGOV-PL" class="logo-header" />
+          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
+          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
         </a>
         <nav class="nav" id="nav">
           <a href="../index.html" class="nav-link">Início</a>
@@ -23,9 +37,15 @@
           <a href="sobre.html" class="nav-link active">Sobre</a>
           <a href="suporte.html" class="nav-link">Suporte</a>
         </nav>
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div class="header-actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro">
+            <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -50,8 +70,8 @@
           <div class="sobre-content">
             <h2 class="section-title text-left">Sobre o Projeto</h2>
             <p>
-              A Escola de Governo de Pedro Leopoldo (EGov-PL) foi criada por meio do Decreto nº 2.552, de 5 de março de 2026, com o objetivo de promover a capacitação contínua dos servidores públicos municipais,
-              alinhada às diretrizes de modernização, desburocratização e eficiência administrativa.
+              A Escola de Governo de Pedro Leopoldo (EGov-PL) foi criada por meio do Decreto nº 2.552, de 5 de março de 2026, com o objetivo de promover a
+              capacitação contínua dos servidores públicos municipais, alinhada às diretrizes de modernização, desburocratização e eficiência administrativa.
             </p>
             <p>
               A Escola de Governo representa o compromisso da Prefeitura com a valorização do servidor e a qualidade dos serviços prestados à população. Sua
@@ -104,9 +124,7 @@
                 </div>
                 <div class="metodologia-texto">
                   <h4>Formação em Trilhas</h4>
-                  <p>
-                    A aprendizagem é organizada em trilhas temáticas, de forma sistêmica, progressiva e orientada a competências.
-                  </p>
+                  <p>A aprendizagem é organizada em trilhas temáticas, de forma sistêmica, progressiva e orientada a competências.</p>
                   <ul class="metodologia-lista">
                     <li><i class="fas fa-chalkboard-teacher"></i> Instrutores selecionados</li>
                     <li><i class="fas fa-users"></i> Comunidades de aprendizagem</li>
@@ -159,9 +177,9 @@
         <div class="footer-grid">
           <div class="footer-info">
             <div class="footer-logo">
-              <img src="../assets/img/logo.svg" alt="EGOV-PL" class="logo-footer" />
+              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" />
             </div>
-            <p>Capacitação e desenvolvimento dos servidores públicos municipais para uma administração moderna e eficiente.</p>
+            <p></p>
           </div>
           <div class="footer-links">
             <h4>Navegação</h4>
@@ -178,8 +196,8 @@
           </div>
           <div class="footer-contact">
             <h4>Contato e Suporte</h4>
-            <p><i class="fas fa-phone-alt"></i> (31) 3660-5122</p>
-            <p><i class="fas fa-envelope"></i> escoladegoverno@pedroleopoldo.mg.gov.br</p>
+            <p><i class="fas fa-phone-alt"></i> (31) 8814-3491</p>
+            <p><i class="fas fa-envelope"></i> egov@pedroleopoldo.mg.gov.br</p>
           </div>
         </div>
         <div class="footer-bottom">
