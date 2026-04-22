@@ -1,44 +1,81 @@
-/* ========================================
-   Suporte
-   ======================================== */
+/* ================================================================
+   Suporte · cartões de contato institucional
+   ================================================================ */
 .suporte-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 900px;
+  gap: var(--space-5);
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .suporte-card {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-md);
-  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) var(--space-6);
   text-align: center;
-  transition: var(--transition);
+  transition:
+    border-color var(--duration-fast) var(--ease-in-out),
+    box-shadow var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-fast) var(--ease-in-out);
 }
 
 .suporte-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--blue-400);
+  transform: translateY(-4px);
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-lg);
 }
 
-.suporte-card i {
-  font-size: 1.8rem;
-  color: var(--blue-600);
-  margin-bottom: 16px;
+.suporte-card > i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--brand-soft-bg);
+  color: var(--brand-primary);
+  border-radius: var(--radius-md);
+  font-size: 1.4rem;
+  transition:
+    background-color var(--duration-fast) var(--ease-in-out),
+    color var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-base) var(--ease-spring);
+}
+
+.suporte-card:hover > i {
+  background: var(--brand-primary);
+  color: var(--text-on-brand);
+  transform: scale(1.05);
 }
 
 .suporte-card h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--gray-900);
-  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-tighter);
+  margin: 0;
 }
 
 .suporte-card p {
-  font-size: 0.85rem;
-  color: var(--gray-500);
-  line-height: 1.5;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: var(--lh-relaxed);
+  margin: 0;
+  word-break: break-word;
+}
+
+/* ================================================================
+   Responsivo
+   ================================================================ */
+@media (max-width: 768px) {
+  .suporte-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
 }
