@@ -1,138 +1,239 @@
-/* ========================================
-   Hero Section
-   ======================================== */
+/* ================================================================
+   Hero — composição institucional imersiva
+   Background: hero-white.png (light) / hero-dark.png (dark)
+   ================================================================ */
 .hero {
   position: relative;
-  min-height: 620px;
+  min-height: clamp(600px, 82vh, 820px);
   display: flex;
   align-items: center;
-  background: var(--white);
-  padding: 120px 0 80px;
+  justify-content: center;
+  background: var(--surface-bg);
+  padding: calc(var(--header-h) + var(--space-12)) 0 var(--space-20);
   overflow: hidden;
+  isolation: isolate;
 }
 
+/* Camada 1 — imagem de fundo */
 .hero-bg-image {
   position: absolute;
   inset: 0;
-  background-image: url("../../img/hero-bg.jpg");
+  background-image: url("../../img/hero-white.png");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  z-index: 0;
+  z-index: -2;
+  transition: background-image var(--duration-slow) var(--ease-in-out);
+}
+
+[data-theme="dark"] .hero-bg-image {
+  background-image: url("../../img/hero-dark.png");
 }
 
 .hero-bg-image::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.70) 50%, rgba(255, 255, 255, 0.65) 100%);
+  background: var(--hero-overlay);
 }
 
+/* Camada 2 — padrão institucional sutil */
 .hero-bg-pattern {
   position: absolute;
   inset: 0;
+  z-index: -1;
   background:
-    radial-gradient(circle at 70% 30%, rgba(43, 108, 176, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(124, 179, 66, 0.05) 0%, transparent 40%);
-  z-index: 1;
+    radial-gradient(ellipse at 78% 22%, rgba(48, 99, 173, 0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 18% 82%, rgba(77, 173, 51, 0.07) 0%, transparent 42%);
 }
 
+[data-theme="dark"] .hero-bg-pattern {
+  background:
+    radial-gradient(ellipse at 78% 22%, rgba(110, 155, 214, 0.10) 0%, transparent 45%),
+    radial-gradient(ellipse at 18% 82%, rgba(107, 193, 85, 0.08) 0%, transparent 42%);
+}
+
+/* Camada 3 — conteúdo */
 .hero-content {
   position: relative;
-  z-index: 2;
-  color: var(--blue-900);
+  z-index: 1;
   text-align: center;
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* --- Logo --- */
 .hero-logo {
-  max-width: 360px;
+  width: clamp(220px, 26vw, 340px);
   height: auto;
-  margin: 0 auto 32px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  margin-bottom: var(--space-8);
+  filter: drop-shadow(0 12px 32px rgba(22, 31, 54, 0.14));
 }
 
+[data-theme="dark"] .hero-logo {
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.55));
+}
+
+.hero-logo--dark { display: none; }
+[data-theme="dark"] .hero-logo--light { display: none; }
+[data-theme="dark"] .hero-logo--dark { display: block; }
+
+/* --- Badge institucional --- */
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 20px;
-  background: rgba(22, 45, 74, 0.06);
-  border: 1px solid rgba(22, 45, 74, 0.12);
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  margin-bottom: 24px;
-  backdrop-filter: blur(8px);
-  letter-spacing: 0.02em;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--brand-primary);
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-6);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
 }
 
 .hero-badge i {
-  font-size: 0.75rem;
-  opacity: 0.8;
+  color: var(--brand-accent);
+  font-size: 0.7em;
 }
 
+/* --- Title --- */
 .hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 20px;
-  letter-spacing: -0.04em;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.8vw, 3.25rem);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tightest);
+  color: var(--text-primary);
+  margin-bottom: var(--space-5);
+  max-width: 18ch;
 }
 
+/* --- Descrição --- */
 .hero-description {
-  font-size: 1.1rem;
-  opacity: 0.7;
-  max-width: 540px;
-  margin: 0 auto 36px;
-  line-height: 1.8;
-  font-weight: 400;
+  font-size: clamp(0.975rem, 1.3vw, 1.125rem);
+  color: var(--text-secondary);
+  max-width: 56ch;
+  margin: 0 auto var(--space-10);
+  line-height: var(--lh-relaxed);
 }
 
+/* --- CTAs --- */
 .hero-actions {
   display: flex;
-  gap: 14px;
+  gap: var(--space-3);
   justify-content: center;
-  margin-bottom: 64px;
   flex-wrap: wrap;
+  margin-bottom: var(--space-16);
 }
 
+/* --- Stats --- */
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  padding-top: 40px;
-  border-top: 1px solid rgba(22, 45, 74, 0.1);
-  max-width: 700px;
-  margin: 0 auto;
+  gap: clamp(var(--space-4), 3vw, var(--space-10));
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+  max-width: 640px;
 }
 
 .stat {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.stat-value {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
 }
 
 .stat-number {
-  display: inline;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--blue-900);
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3.4vw, 2.625rem);
+  font-weight: var(--fw-bold);
+  color: var(--brand-primary);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: var(--tracking-tighter);
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-plus {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--blue-900);
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 3vw, 2.25rem);
+  font-weight: var(--fw-bold);
+  color: var(--brand-accent);
   line-height: 1;
+  margin-left: 2px;
 }
 
 .stat-label {
-  font-size: 0.8rem;
-  opacity: 0.5;
-  margin-top: 8px;
-  display: block;
-  font-weight: 500;
+  font-size: var(--fs-2xs);
+  color: var(--text-muted);
+  font-weight: var(--fw-semibold);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--tracking-widest);
+  margin-top: var(--space-1);
+}
+
+/* ================================================================
+   RESPONSIVO
+   ================================================================ */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: calc(var(--header-h) + var(--space-10)) 0 var(--space-16);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-12);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    width: 180px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    gap: 0;
+  }
+
+  .stat {
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .stat:last-child {
+    border-bottom: none;
+  }
 }

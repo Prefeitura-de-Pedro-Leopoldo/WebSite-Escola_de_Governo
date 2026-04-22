@@ -6,15 +6,29 @@
     <title>Eixos e Cursos - Escola de Governo Pedro Leopoldo</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+      ;(function () {
+        try {
+          var stored = localStorage.getItem("egovpl-theme")
+          var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+          document.documentElement.setAttribute("data-theme", theme)
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <!-- Header -->
     <header class="header" id="header">
       <div class="container header-container">
         <a href="../index.html" class="logo">
-          <img src="../assets/img/logo.svg" alt="EGOV-PL" class="logo-header" />
+          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
+          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
         </a>
         <nav class="nav" id="nav">
           <a href="../index.html" class="nav-link">Início</a>
@@ -23,9 +37,15 @@
           <a href="sobre.html" class="nav-link">Sobre</a>
           <a href="suporte.html" class="nav-link">Suporte</a>
         </nav>
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div class="header-actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro">
+            <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -75,12 +95,10 @@
       <div class="container">
         <div class="aula-magna-highlight">
           <div class="aula-magna-left">
-            <span class="badge-special"><i class="fas fa-star"></i> Evento de Abertura</span>
             <h2>Aula Magna: Liderança Pública Estratégica</h2>
             <p>Evento inaugural da Escola de Governo de Pedro Leopoldo (EGov-PL), conduzido pela palestrante <strong>A definir</strong>.</p>
             <div class="aula-magna-meta">
-              <span><i class="fas fa-calendar-alt"></i> 17 de abril de 2026</span>
-              <span><i class="fas fa-map-marker-alt"></i> Centro de Artes e Esportes Unificados (CEU)</span>
+              <span><i class="fas fa-calendar-alt"></i> 23 de abril de 2026</span>
             </div>
           </div>
           <div class="aula-magna-right">
@@ -107,8 +125,8 @@
         <div class="eixos-grid-v2">
           <!-- EIXO 1: Governança (ATIVO) -->
           <a href="governanca.html" class="eixo-card-v2 eixo-card-v2--ativo">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #1e3a5c, #2b6cb0)">
-              <i class="fas fa-landmark"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/governanca-e-gestao-publica.png" alt="Governança e Gestão Pública" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Governança e Gestão Pública</h3>
@@ -123,8 +141,8 @@
 
           <!-- EIXO 2: Planejamento -->
           <div class="eixo-card-v2">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #117a65, #1abc9c)">
-              <i class="fas fa-chart-line"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/planejamento-orcamento-responsabilidade-fiscal.png" alt="Planejamento, Orçamento e Responsabilidade Fiscal" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Planejamento, Orçamento e Responsabilidade Fiscal</h3>
@@ -137,8 +155,8 @@
 
           <!-- EIXO 3: Licitações (ATIVO) -->
           <a href="licitacoes.html" class="eixo-card-v2 eixo-card-v2--ativo">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #7d3c98, #a569bd)">
-              <i class="fas fa-file-contract"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/licitacoes-e-contratos-administrativos.png" alt="Licitações e Contratos Administrativos" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Licitações e Contratos Administrativos</h3>
@@ -153,8 +171,8 @@
 
           <!-- EIXO 4: Controle Interno -->
           <div class="eixo-card-v2">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #b9770e, #f39c12)">
-              <i class="fas fa-shield-alt"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/controle-interno-integridade-compliance.png" alt="Controle Interno, Integridade e Compliance" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Controle Interno, Integridade e Compliance</h3>
@@ -167,8 +185,8 @@
 
           <!-- EIXO 5: Governo Digital e Inovação -->
           <div class="eixo-card-v2">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #0e6655, #1abc9c)">
-              <i class="fas fa-laptop-code"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/governo-digital-e-inovacao.png" alt="Governo Digital e Inovação" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Governo Digital e Inovação</h3>
@@ -181,8 +199,8 @@
 
           <!-- EIXO 6: Proteção de Dados e Segurança da Informação -->
           <div class="eixo-card-v2">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #2c3e50, #4a6fa5)">
-              <i class="fas fa-lock"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/protecao-de-dados-e-seguranca-da-informacao.png" alt="Proteção de Dados e Segurança da Informação" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Proteção de Dados e Segurança da Informação</h3>
@@ -195,8 +213,8 @@
 
           <!-- EIXO 7: Liderança -->
           <div class="eixo-card-v2">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #1e3a5c, #3182ce)">
-              <i class="fas fa-users-cog"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/lideranca-publica-e-gestao-de-pessoas.png" alt="Liderança Pública e Gestão de Pessoas" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Liderança Pública e Gestão de Pessoas</h3>
@@ -209,8 +227,8 @@
 
           <!-- EIXO 8: Atendimento (ATIVO) -->
           <a href="atendimento.html" class="eixo-card-v2 eixo-card-v2--ativo">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #c0392b, #e74c3c)">
-              <i class="fas fa-handshake"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/atendimento-ao-cidadao-e-experiencia-do-usuario.png" alt="Atendimento ao Cidadão e Experiência do Usuário" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Atendimento ao Cidadão e Experiência do Usuário</h3>
@@ -225,8 +243,8 @@
 
           <!-- EIXO 9: Sustentabilidade -->
           <div class="eixo-card-v2">
-            <div class="eixo-card-v2__icon" style="background: linear-gradient(135deg, #1e8449, #27ae60)">
-              <i class="fas fa-leaf"></i>
+            <div class="eixo-card-v2__icon">
+              <img src="../assets/img/eixos/sustentabilidade-e-desenvolvimento-territorial.png" alt="Sustentabilidade e Desenvolvimento Territorial" />
             </div>
             <div class="eixo-card-v2__body">
               <h3>Sustentabilidade e Desenvolvimento Territorial</h3>
@@ -366,9 +384,9 @@
         <div class="footer-grid">
           <div class="footer-info">
             <div class="footer-logo">
-              <img src="../assets/img/logo.svg" alt="EGOV-PL" class="logo-footer" />
+              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" />
             </div>
-            <p>Capacitação e desenvolvimento dos servidores públicos municipais para uma administração moderna e eficiente.</p>
+            <p></p>
           </div>
           <div class="footer-links">
             <h4>Navegação</h4>
@@ -385,8 +403,8 @@
           </div>
           <div class="footer-contact">
             <h4>Contato e Suporte</h4>
-            <p><i class="fas fa-phone-alt"></i> (31) 3660-5122</p>
-            <p><i class="fas fa-envelope"></i> escoladegoverno@pedroleopoldo.mg.gov.br</p>
+            <p><i class="fas fa-phone-alt"></i> (31) 8814-3491</p>
+            <p><i class="fas fa-envelope"></i> egov@pedroleopoldo.mg.gov.br</p>
           </div>
         </div>
         <div class="footer-bottom">

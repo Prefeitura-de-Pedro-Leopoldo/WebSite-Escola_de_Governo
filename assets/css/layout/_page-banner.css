@@ -1,13 +1,29 @@
-/* ========================================
-   Page Banner (Subpages)
-   ======================================== */
+/* ================================================================
+   Page Banner — cabeçalho institucional das subpáginas
+   ================================================================ */
 .page-banner {
   position: relative;
-  background: var(--blue-900);
+  background: var(--blue-950);
   color: var(--white);
-  padding: 120px 0 56px;
-  border-bottom: 4px solid var(--green-500);
+  padding: calc(var(--header-h) + var(--space-12)) 0 var(--space-12);
   overflow: hidden;
+  isolation: isolate;
+}
+
+/* Fio tricolor inferior (usa cores fixas pois banner é sempre escuro) */
+.page-banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--blue-600) 0%,
+    var(--blue-600) 50%,
+    var(--green-500) 50%,
+    var(--green-500) 100%);
+  z-index: 2;
 }
 
 .page-banner__bg {
@@ -16,100 +32,177 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 0;
+  z-index: -1;
 }
 
 .page-banner__bg::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(22, 45, 74, 0.82) 0%, rgba(30, 58, 92, 0.75) 50%, rgba(43, 108, 176, 0.70) 100%);
+  background:
+    linear-gradient(180deg,
+      rgba(11, 17, 32, 0.82) 0%,
+      rgba(11, 17, 32, 0.88) 60%,
+      rgba(11, 17, 32, 0.95) 100%),
+    radial-gradient(ellipse at top right, rgba(48, 99, 173, 0.35) 0%, transparent 50%);
 }
+
+/* Banners de eixo — overlay mais sutil preserva a arte temática */
+.page-banner--eixo .page-banner__bg::after {
+  background:
+    linear-gradient(180deg,
+      rgba(11, 17, 32, 0.55) 0%,
+      rgba(11, 17, 32, 0.70) 60%,
+      rgba(11, 17, 32, 0.85) 100%),
+    linear-gradient(90deg, rgba(11, 17, 32, 0.55) 0%, rgba(11, 17, 32, 0.2) 45%, transparent 100%);
+}
+
+/* Banners genéricos (não-eixo) usam a composição escura do hero */
+.page-banner__bg--eixos,
+.page-banner__bg--noticias,
+.page-banner__bg--sobre,
+.page-banner__bg--suporte {
+  background-image: url('../../img/hero-dark.png');
+}
+
+/* ----------------------------------------------------------------
+   Banners específicos por eixo — trocam por tema
+   Light (padrão)        → assets/img/banner-eixos/light/*
+   Dark  ([data-theme])  → assets/img/banner-eixos/dark/*
+   ---------------------------------------------------------------- */
+.page-banner__bg--governanca       { background-image: url('../../img/banner-eixos/light/governanca-e-gestao-publica.png'); }
+.page-banner__bg--licitacoes       { background-image: url('../../img/banner-eixos/light/licitacoes-e-contratos-administrativos.png'); }
+.page-banner__bg--atendimento      { background-image: url('../../img/banner-eixos/light/atendimento-ao-cidadao-e-experiencia-do-usuario.png'); }
+.page-banner__bg--planejamento     { background-image: url('../../img/banner-eixos/light/planejamento-orcamento-responsabilidade-fiscal.png'); }
+.page-banner__bg--controle-interno { background-image: url('../../img/banner-eixos/light/controle-interno-integridade-compliance.png'); }
+.page-banner__bg--governo-digital  { background-image: url('../../img/banner-eixos/light/governo-digital-e-inovacao.png'); }
+.page-banner__bg--protecao-dados   { background-image: url('../../img/banner-eixos/light/protecao-de-dados-e-seguranca-da-informacao.png'); }
+.page-banner__bg--lideranca        { background-image: url('../../img/banner-eixos/light/lideranca-publica-e-gestao-de-pessoas.png'); }
+.page-banner__bg--sustentabilidade { background-image: url('../../img/banner-eixos/light/sustentabilidade-e-desenvolvimento-territorial.png'); }
+
+[data-theme="dark"] .page-banner__bg--governanca       { background-image: url('../../img/banner-eixos/dark/governanca-e-gestao-publica.png'); }
+[data-theme="dark"] .page-banner__bg--licitacoes       { background-image: url('../../img/banner-eixos/dark/licitacoes-e-contratos-administrativos.png'); }
+[data-theme="dark"] .page-banner__bg--atendimento      { background-image: url('../../img/banner-eixos/dark/atendimento-ao-cidadao-e-experiencia-do-usuario.png'); }
+[data-theme="dark"] .page-banner__bg--planejamento     { background-image: url('../../img/banner-eixos/dark/planejamento-orcamento-responsabilidade-fiscal.png'); }
+[data-theme="dark"] .page-banner__bg--controle-interno { background-image: url('../../img/banner-eixos/dark/controle-interno-integridade-compliance.png'); }
+[data-theme="dark"] .page-banner__bg--governo-digital  { background-image: url('../../img/banner-eixos/dark/governo-digital-e-inovacao.png'); }
+[data-theme="dark"] .page-banner__bg--protecao-dados   { background-image: url('../../img/banner-eixos/dark/protecao-de-dados-e-seguranca-da-informacao.png'); }
+[data-theme="dark"] .page-banner__bg--lideranca        { background-image: url('../../img/banner-eixos/dark/lideranca-publica-e-gestao-de-pessoas.png'); }
+[data-theme="dark"] .page-banner__bg--sustentabilidade { background-image: url('../../img/banner-eixos/dark/sustentabilidade-e-desenvolvimento-territorial.png'); }
 
 .page-banner > .container {
   position: relative;
   z-index: 1;
 }
 
-/* --- Background Images --- */
-.page-banner__bg--eixos,
-.page-banner__bg--noticias,
-.page-banner__bg--sobre,
-.page-banner__bg--suporte,
-.page-banner__bg--atendimento,
-.page-banner__bg--governanca,
-.page-banner__bg--licitacoes {
-  background-image: url('../../img/hero-bg.jpg');
-}
-
 .page-banner h1 {
-  font-size: 2.25rem;
-  font-weight: 800;
-  margin-bottom: 12px;
-  letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tightest);
+  color: #ffffff;
+  margin: 0 0 var(--space-3);
+  max-width: 22ch;
 }
 
 .page-banner p {
-  font-size: 1.05rem;
-  opacity: 0.7;
-  max-width: 560px;
-  line-height: 1.7;
+  font-size: var(--fs-lg);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 62ch;
+  line-height: var(--lh-relaxed);
+  margin: 0;
 }
 
-/* --- Eixo Detail Banner --- */
+/* ================================================================
+   Eixo Detail Banner
+   ================================================================ */
 .page-banner--eixo {
-  padding: 120px 0 48px;
-  border-bottom: 4px solid var(--green-500);
+  padding-bottom: var(--space-10);
 }
 
 .page-banner__eixo-header {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-6);
 }
 
 .page-banner__icon {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-sm);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  width: 88px;
+  height: 88px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  overflow: hidden;
+  padding: var(--space-3);
+  backdrop-filter: blur(10px);
+}
+
+.page-banner__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .page-banner__icon i {
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   color: var(--white);
 }
 
+.page-banner__eixo-header > div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
 .page-banner__eixo-header h1 {
-  margin-bottom: 8px;
+  margin-bottom: var(--space-2);
 }
 
 .page-banner__meta {
   display: flex;
-  gap: 24px;
+  gap: var(--space-3);
   flex-wrap: wrap;
+  margin-top: var(--space-5);
 }
 
 .page-banner__meta span {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 50px;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(10px);
 }
 
 .page-banner__meta i {
-  font-size: 0.75rem;
-  opacity: 0.7;
+  font-size: 0.85em;
+  color: var(--brand-accent);
+}
+
+/* ================================================================
+   Responsivo
+   ================================================================ */
+@media (max-width: 768px) {
+  .page-banner {
+    padding: calc(var(--header-h) + var(--space-8)) 0 var(--space-10);
+  }
+  .page-banner__eixo-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  .page-banner__icon {
+    width: 72px;
+    height: 72px;
+  }
 }
