@@ -1,18 +1,35 @@
-/* ========================================
-   Header
-   ======================================== */
+/* ================================================================
+   Header — navegação institucional
+   ================================================================ */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 3px solid var(--blue-600);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  transition: var(--transition);
+  background: var(--header-bg);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--header-border);
+  transition:
+    background-color var(--duration-base) var(--ease-in-out),
+    border-color var(--duration-base) var(--ease-in-out),
+    box-shadow var(--duration-fast) var(--ease-in-out);
+}
+
+/* Fio institucional fino no topo (tricolor sutil) */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--brand-primary) 0%,
+    var(--brand-primary) 50%,
+    var(--brand-accent) 50%,
+    var(--brand-accent) 100%);
 }
 
 .header.scrolled {
@@ -23,101 +40,249 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: var(--header-h);
+  gap: var(--space-6);
 }
 
+/* ---------------- Logo ---------------- */
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--space-3);
   cursor: pointer;
+  text-decoration: none;
+  transition: opacity var(--duration-fast) var(--ease-in-out);
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--blue-900);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo:hover {
+  opacity: 0.85;
 }
 
-.logo-icon-sm {
-  width: 34px;
-  height: 34px;
+.logo-header {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity var(--duration-base) var(--ease-in-out);
 }
 
-.logo-eg {
-  color: var(--white);
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: -0.5px;
-}
+.logo-header--dark { display: none; }
+[data-theme="dark"] .logo-header--light { display: none; }
+[data-theme="dark"] .logo-header--dark { display: block; }
 
-.logo-title {
-  display: block;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--gray-900);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-.logo-subtitle {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--gray-500);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-}
-
+/* ---------------- Nav ---------------- */
 .nav {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: var(--space-1);
 }
 
 .nav-link {
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--gray-600);
+  position: relative;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--nav-link);
   border-radius: var(--radius-sm);
-  transition: var(--transition);
-  cursor: pointer;
-  letter-spacing: -0.01em;
+  letter-spacing: var(--tracking-tight);
+  transition:
+    color var(--duration-fast) var(--ease-in-out),
+    background-color var(--duration-fast) var(--ease-in-out);
 }
 
 .nav-link:hover {
-  color: var(--blue-600);
-  background: var(--blue-50);
+  color: var(--nav-link-hover);
+  background: var(--brand-soft-bg);
 }
 
 .nav-link.active {
-  color: var(--blue-700);
-  background: var(--blue-100);
-  font-weight: 600;
+  color: var(--brand-primary);
+  background: var(--nav-link-active-bg);
+  font-weight: var(--fw-semibold);
 }
 
+/* Indicador ativo: traço inferior sutil */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--brand-accent);
+  border-radius: var(--radius-xs);
+}
+
+/* ---------------- Actions ---------------- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ================================================================
+   THEME TOGGLE · Switch institucional premium
+   ================================================================ */
+.theme-toggle {
+  --t-w: 60px;
+  --t-h: 32px;
+  --t-pad: 3px;
+  --t-thumb: calc(var(--t-h) - var(--t-pad) * 2);
+  --t-travel: calc(var(--t-w) - var(--t-thumb) - var(--t-pad) * 2);
+
+  position: relative;
+  flex-shrink: 0;
+  width: var(--t-w);
+  height: var(--t-h);
+  padding: var(--t-pad);
+  background: var(--surface-muted);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    background-color var(--duration-base) var(--ease-in-out),
+    border-color var(--duration-fast) var(--ease-in-out),
+    box-shadow var(--duration-fast) var(--ease-in-out);
+  box-shadow: inset 0 1px 2px rgba(22, 31, 54, 0.06);
+  -webkit-tap-highlight-color: transparent;
+}
+
+[data-theme="dark"] .theme-toggle {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle:hover {
+  border-color: var(--brand-primary);
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow:
+    inset 0 1px 2px rgba(22, 31, 54, 0.06),
+    var(--shadow-ring);
+}
+
+/* Thumb deslizante */
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  top: var(--t-pad);
+  left: var(--t-pad);
+  width: var(--t-thumb);
+  height: var(--t-thumb);
+  background: var(--brand-primary);
+  border-radius: 50%;
+  box-shadow:
+    0 2px 4px rgba(22, 31, 54, 0.18),
+    0 1px 2px rgba(22, 31, 54, 0.10),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition:
+    transform var(--duration-slow) var(--ease-spring),
+    background-color var(--duration-base) var(--ease-in-out),
+    box-shadow var(--duration-fast) var(--ease-in-out),
+    width var(--duration-fast) var(--ease-in-out);
+  z-index: 0;
+}
+
+[data-theme="dark"] .theme-toggle::before {
+  transform: translateX(var(--t-travel));
+  background: var(--brand-accent);
+  box-shadow:
+    0 2px 8px rgba(77, 173, 51, 0.35),
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.theme-toggle:hover::before {
+  box-shadow:
+    0 3px 8px rgba(22, 31, 54, 0.28),
+    0 1px 2px rgba(22, 31, 54, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+[data-theme="dark"] .theme-toggle:hover::before {
+  box-shadow:
+    0 3px 12px rgba(77, 173, 51, 0.48),
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+}
+
+.theme-toggle:active::before {
+  width: calc(var(--t-thumb) + 6px);
+}
+
+[data-theme="dark"] .theme-toggle:active::before {
+  transform: translateX(calc(var(--t-travel) - 6px));
+}
+
+.theme-toggle i {
+  position: relative;
+  z-index: 1;
+  width: var(--t-thumb);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  transition:
+    color var(--duration-base) var(--ease-in-out),
+    opacity var(--duration-base) var(--ease-in-out),
+    transform var(--duration-slow) var(--ease-spring);
+  pointer-events: none;
+}
+
+/* Light: sol ativo dentro do thumb (branco) · lua esmaecida */
+.theme-toggle .icon-sun {
+  color: var(--white);
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-toggle .icon-moon {
+  color: var(--text-faint);
+  opacity: 0.6;
+  transform: rotate(-25deg) scale(0.9);
+}
+
+/* Dark: lua ativa dentro do thumb (branca) · sol esmaecido */
+[data-theme="dark"] .theme-toggle .icon-sun {
+  color: var(--text-faint);
+  opacity: 0.5;
+  transform: rotate(25deg) scale(0.9);
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+  color: var(--white);
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* ---------------- Menu toggle (mobile) ---------------- */
 .menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  color: var(--gray-700);
-  cursor: pointer;
-  padding: 8px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  transition: var(--transition-fast);
 }
 
-/* --- Logo Sizes --- */
-.logo-header {
-  height: 38px;
-  width: auto;
+.menu-toggle:hover {
+  background: var(--brand-soft-bg);
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
 }
 
+/* ---------------- Footer logo (referenciada no header.css para proximidade semântica) ---------------- */
 .logo-footer {
-  height: 32px;
+  height: 160px;
   width: auto;
+  object-fit: contain;
+  display: block;
 }
