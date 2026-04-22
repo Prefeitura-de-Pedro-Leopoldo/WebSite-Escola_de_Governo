@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notícias - Escola de Governo Pedro Leopoldo</title>
+    <title>Notícias · Escola de Governo Pedro Leopoldo</title>
+    <meta
+      name="description"
+      content="Comunicados oficiais, eventos e novidades da Escola de Governo de Pedro Leopoldo."
+    />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -26,11 +30,11 @@
     <!-- Header -->
     <header class="header" id="header">
       <div class="container header-container">
-        <a href="../index.html" class="logo">
+        <a href="../index.html" class="logo" aria-label="EGOV-PL · Início">
           <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
           <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
         </a>
-        <nav class="nav" id="nav">
+        <nav class="nav" id="nav" aria-label="Navegação principal">
           <a href="../index.html" class="nav-link">Início</a>
           <a href="eixos.html" class="nav-link">Eixos e Cursos</a>
           <a href="noticias.html" class="nav-link active">Notícias</a>
@@ -51,135 +55,126 @@
 
     <!-- Banner -->
     <section class="page-banner">
-      <div class="page-banner__bg page-banner__bg--noticias"></div>
+      <div class="page-banner__bg page-banner__bg--noticias" aria-hidden="true"></div>
       <div class="container">
-        <nav class="breadcrumb">
+        <nav class="breadcrumb" aria-label="Navegação estrutural">
           <a href="../index.html">Início</a>
-          <i class="fas fa-chevron-right"></i>
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
           <span>Notícias</span>
         </nav>
         <h1>Notícias e Atualizações</h1>
-        <p>Acompanhe as novidades, os eventos e os comunicados oficiais da EGOV-PL.</p>
+        <p>Acompanhe as novidades, eventos e comunicados oficiais da EGov-PL.</p>
       </div>
     </section>
 
-    <!-- Conteudo -->
-    <section class="section-content">
+    <!-- Destaque -->
+    <section class="section-content noticias-destaque-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Últimas Notícias</h2>
-          <p class="section-subtitle">Fique por dentro das ações, da programação e dos destaques institucionais da EGOV-PL.</p>
+        <article class="noticia-hero">
+          <div class="noticia-hero__media noticia-hero__media--institucional" aria-hidden="true">
+            <div class="noticia-hero__media-icon"><i class="fas fa-landmark"></i></div>
+            <span class="noticia-hero__tag">Destaque</span>
+          </div>
+          <div class="noticia-hero__body">
+            <div class="noticia-meta">
+              <span class="noticia-kicker noticia-kicker--primary">Institucional</span>
+              <time class="noticia-data" datetime="2026-04-06">06 de abril de 2026</time>
+              <span class="noticia-read-time"><i class="fas fa-clock" aria-hidden="true"></i> 3 min de leitura</span>
+            </div>
+            <h2 class="noticia-hero__title">EGOV-PL inicia comunicação oficial do ciclo formativo de 2026</h2>
+            <p class="noticia-hero__excerpt">
+              A Escola de Governo de Pedro Leopoldo passa a concentrar em um único portal as notícias, os eixos temáticos,
+              o cronograma anual e os canais de apoio aos servidores municipais — consolidando toda a comunicação institucional.
+            </p>
+            <a href="#" class="noticia-hero__cta">
+              Ler matéria completa
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Grid de notícias + filtros -->
+    <section class="section-content section-bg-light noticias-feed-section">
+      <div class="container">
+        <div class="noticias-feed-header">
+          <div>
+            <h2 class="section-title">Últimas publicações</h2>
+            <p class="section-subtitle">Fique por dentro das ações, da programação e dos destaques institucionais.</p>
+          </div>
+          <div class="noticias-filters" role="tablist" aria-label="Filtrar por categoria">
+            <button class="noticia-filter is-active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+            <button class="noticia-filter" data-filter="institucional" role="tab" aria-selected="false">Institucional</button>
+            <button class="noticia-filter" data-filter="portal" role="tab" aria-selected="false">Portal</button>
+            <button class="noticia-filter" data-filter="cursos" role="tab" aria-selected="false">Cursos</button>
+            <button class="noticia-filter" data-filter="evento" role="tab" aria-selected="false">Evento</button>
+          </div>
         </div>
 
         <div class="noticias-grid">
-          <article class="noticia-card noticia-destaque">
-            <div class="noticia-img noticia-img--placeholder noticia-img--lancamento">
-              <div class="noticia-img__placeholder" aria-hidden="true">
-                <div class="noticia-img__top">
-                  <span class="noticia-img__label">Imagem temporária</span>
-                  <span class="noticia-img__stamp">EGOV-PL</span>
-                </div>
-                <div class="noticia-img__content">
-                  <div class="noticia-img__icon">
-                    <i class="fas fa-landmark"></i>
-                  </div>
-                  <strong>Comunicação institucional 2026</strong>
-                  <span>Portal oficial de notícias, agenda e suporte aos servidores</span>
-                </div>
-              </div>
-              <span class="noticia-tag">Destaque</span>
+          <article class="noticia-card" data-category="portal">
+            <div class="noticia-card__media noticia-card__media--portal" aria-hidden="true">
+              <div class="noticia-card__media-icon"><i class="fas fa-desktop"></i></div>
             </div>
-            <div class="noticia-body">
-              <div class="noticia-meta">
-                <span class="noticia-kicker">Institucional</span>
-                <span class="noticia-data">06/04/2026</span>
-              </div>
-              <h3>EGOV-PL inicia comunicação oficial do ciclo formativo de 2026</h3>
-              <p>
-                A Escola de Governo de Pedro Leopoldo passa a concentrar em um único portal as notícias, os eixos temáticos, o cronograma anual e os canais de
-                apoio aos servidores municipais.
-              </p>
-            </div>
-          </article>
-          <article class="noticia-card">
-            <div class="noticia-img noticia-img--placeholder noticia-img--portal">
-              <div class="noticia-img__placeholder" aria-hidden="true">
-                <div class="noticia-img__top">
-                  <span class="noticia-img__label">Imagem temporária</span>
-                  <span class="noticia-img__stamp">Portal</span>
-                </div>
-                <div class="noticia-img__content">
-                  <div class="noticia-img__icon">
-                    <i class="fas fa-desktop"></i>
-                  </div>
-                  <strong>Informação centralizada</strong>
-                  <span>Notícias, eixos formativos e recursos de apoio</span>
-                </div>
-              </div>
-            </div>
-            <div class="noticia-body">
+            <div class="noticia-card__body">
               <div class="noticia-meta">
                 <span class="noticia-kicker">Portal</span>
-                <span class="noticia-data">04/04/2026</span>
+                <time class="noticia-data" datetime="2026-04-04">04/04/2026</time>
               </div>
-              <h3>Portal da EGOV-PL organiza notícias, cursos e informações institucionais</h3>
-              <p>A página de notícias passa a reunir comunicados oficiais da EGOV-PL, facilitando o acompanhamento das ações formativas pelos servidores.</p>
+              <h3 class="noticia-card__title">Portal da EGOV-PL organiza notícias, cursos e informações institucionais</h3>
+              <p class="noticia-card__excerpt">
+                A página de notícias passa a reunir comunicados oficiais, facilitando o acompanhamento das ações formativas.
+              </p>
+              <a href="#" class="noticia-card__cta">
+                Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
             </div>
           </article>
-          <article class="noticia-card">
-            <div class="noticia-img noticia-img--placeholder noticia-img--programacao">
-              <div class="noticia-img__placeholder" aria-hidden="true">
-                <div class="noticia-img__top">
-                  <span class="noticia-img__label">Imagem temporária</span>
-                  <span class="noticia-img__stamp">Cursos</span>
-                </div>
-                <div class="noticia-img__content">
-                  <div class="noticia-img__icon">
-                    <i class="fas fa-book-open"></i>
-                  </div>
-                  <strong>Programação 2026</strong>
-                  <span>Eixos ativos, cronograma anual e agenda de inscrições</span>
-                </div>
-              </div>
+
+          <article class="noticia-card" data-category="cursos">
+            <div class="noticia-card__media noticia-card__media--cursos" aria-hidden="true">
+              <div class="noticia-card__media-icon"><i class="fas fa-book-open"></i></div>
             </div>
-            <div class="noticia-body">
+            <div class="noticia-card__body">
               <div class="noticia-meta">
                 <span class="noticia-kicker">Cursos</span>
-                <span class="noticia-data">31/03/2026</span>
+                <time class="noticia-data" datetime="2026-03-31">31/03/2026</time>
               </div>
-              <h3>EGOV-PL divulga a programação oficial de cursos para 2026</h3>
-              <p>Dez cursos em três eixos ativos, além de uma Aula Magna de abertura, compõem a primeira agenda formativa publicada pela EGOV-PL.</p>
+              <h3 class="noticia-card__title">EGOV-PL divulga a programação oficial de cursos para 2026</h3>
+              <p class="noticia-card__excerpt">
+                Dez cursos em três eixos ativos, além de uma Aula Magna de abertura, compõem a primeira agenda formativa.
+              </p>
+              <a href="#" class="noticia-card__cta">
+                Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
             </div>
           </article>
-          <article class="noticia-card">
-            <div class="noticia-img noticia-img--placeholder noticia-img--aula-magna">
-              <div class="noticia-img__placeholder" aria-hidden="true">
-                <div class="noticia-img__top">
-                  <span class="noticia-img__label">Imagem temporária</span>
-                  <span class="noticia-img__stamp">Evento</span>
-                </div>
-                <div class="noticia-img__content">
-                  <div class="noticia-img__icon">
-                    <i class="fas fa-graduation-cap"></i>
-                  </div>
-                  <strong>Abertura oficial</strong>
-                  <span>Aula Magna de início do calendário formativo</span>
-                </div>
-              </div>
+
+          <article class="noticia-card" data-category="evento">
+            <div class="noticia-card__media noticia-card__media--evento" aria-hidden="true">
+              <div class="noticia-card__media-icon"><i class="fas fa-graduation-cap"></i></div>
             </div>
-            <div class="noticia-body">
+            <div class="noticia-card__body">
               <div class="noticia-meta">
-                <span class="noticia-kicker">Evento</span>
-                <span class="noticia-data">10/04/2026</span>
+                <span class="noticia-kicker noticia-kicker--accent">Evento</span>
+                <time class="noticia-data" datetime="2026-04-10">10/04/2026</time>
               </div>
-              <h3>Aula Magna da EGOV-PL marca a abertura oficial das atividades de 2026</h3>
-              <p>O encontro de abertura apresenta a proposta institucional da EGOV-PL e inaugura o ciclo de capacitação voltado aos servidores municipais.</p>
+              <h3 class="noticia-card__title">Aula Magna marca a abertura oficial das atividades de 2026</h3>
+              <p class="noticia-card__excerpt">
+                O encontro de abertura apresenta a proposta institucional da EGOV-PL e inaugura o ciclo de capacitação.
+              </p>
+              <a href="#" class="noticia-card__cta">
+                Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
             </div>
           </article>
         </div>
 
-        <div class="back-link">
-          <a href="../index.html"><i class="fas fa-arrow-left"></i> Voltar para a Página Inicial</a>
+        <div class="noticias-empty" hidden>
+          <div class="noticias-empty__icon"><i class="fas fa-inbox" aria-hidden="true"></i></div>
+          <h3>Nenhuma publicação nesta categoria</h3>
+          <p>Selecione outra categoria ou veja todas as publicações.</p>
         </div>
       </div>
     </section>
