@@ -65,16 +65,30 @@
   background-image: url('../../img/hero-dark.png');
 }
 
-/* Banners específicos por eixo */
-.page-banner__bg--governanca       { background-image: url('../../img/banner-eixos/governanca-e-gestao-publica.png'); }
-.page-banner__bg--licitacoes       { background-image: url('../../img/banner-eixos/licitacoes-e-contratos-administrativos.png'); }
-.page-banner__bg--atendimento      { background-image: url('../../img/banner-eixos/atendimento-ao-cidadao-e-experiencia-do-usuario.png'); }
-.page-banner__bg--planejamento     { background-image: url('../../img/banner-eixos/planejamento-orcamento-responsabilidade-fiscal.png'); }
-.page-banner__bg--controle-interno { background-image: url('../../img/banner-eixos/controle-interno-integridade-compliance.png'); }
-.page-banner__bg--governo-digital  { background-image: url('../../img/banner-eixos/governo-digital-e-inovacao.png'); }
-.page-banner__bg--protecao-dados   { background-image: url('../../img/banner-eixos/protecao-de-dados-e-seguranca-da-informacao.png'); }
-.page-banner__bg--lideranca        { background-image: url('../../img/banner-eixos/lideranca-publica-e-gestao-de-pessoas.png'); }
-.page-banner__bg--sustentabilidade { background-image: url('../../img/banner-eixos/sustentabilidade-e-desenvolvimento-territorial.png'); }
+/* ----------------------------------------------------------------
+   Banners específicos por eixo — trocam por tema
+   Light (padrão)        → assets/img/banner-eixos/light/*
+   Dark  ([data-theme])  → assets/img/banner-eixos/dark/*
+   ---------------------------------------------------------------- */
+.page-banner__bg--governanca       { background-image: url('../../img/banner-eixos/light/governanca-e-gestao-publica.png'); }
+.page-banner__bg--licitacoes       { background-image: url('../../img/banner-eixos/light/licitacoes-e-contratos-administrativos.png'); }
+.page-banner__bg--atendimento      { background-image: url('../../img/banner-eixos/light/atendimento-ao-cidadao-e-experiencia-do-usuario.png'); }
+.page-banner__bg--planejamento     { background-image: url('../../img/banner-eixos/light/planejamento-orcamento-responsabilidade-fiscal.png'); }
+.page-banner__bg--controle-interno { background-image: url('../../img/banner-eixos/light/controle-interno-integridade-compliance.png'); }
+.page-banner__bg--governo-digital  { background-image: url('../../img/banner-eixos/light/governo-digital-e-inovacao.png'); }
+.page-banner__bg--protecao-dados   { background-image: url('../../img/banner-eixos/light/protecao-de-dados-e-seguranca-da-informacao.png'); }
+.page-banner__bg--lideranca        { background-image: url('../../img/banner-eixos/light/lideranca-publica-e-gestao-de-pessoas.png'); }
+.page-banner__bg--sustentabilidade { background-image: url('../../img/banner-eixos/light/sustentabilidade-e-desenvolvimento-territorial.png'); }
+
+[data-theme="dark"] .page-banner__bg--governanca       { background-image: url('../../img/banner-eixos/dark/governanca-e-gestao-publica.png'); }
+[data-theme="dark"] .page-banner__bg--licitacoes       { background-image: url('../../img/banner-eixos/dark/licitacoes-e-contratos-administrativos.png'); }
+[data-theme="dark"] .page-banner__bg--atendimento      { background-image: url('../../img/banner-eixos/dark/atendimento-ao-cidadao-e-experiencia-do-usuario.png'); }
+[data-theme="dark"] .page-banner__bg--planejamento     { background-image: url('../../img/banner-eixos/dark/planejamento-orcamento-responsabilidade-fiscal.png'); }
+[data-theme="dark"] .page-banner__bg--controle-interno { background-image: url('../../img/banner-eixos/dark/controle-interno-integridade-compliance.png'); }
+[data-theme="dark"] .page-banner__bg--governo-digital  { background-image: url('../../img/banner-eixos/dark/governo-digital-e-inovacao.png'); }
+[data-theme="dark"] .page-banner__bg--protecao-dados   { background-image: url('../../img/banner-eixos/dark/protecao-de-dados-e-seguranca-da-informacao.png'); }
+[data-theme="dark"] .page-banner__bg--lideranca        { background-image: url('../../img/banner-eixos/dark/lideranca-publica-e-gestao-de-pessoas.png'); }
+[data-theme="dark"] .page-banner__bg--sustentabilidade { background-image: url('../../img/banner-eixos/dark/sustentabilidade-e-desenvolvimento-territorial.png'); }
 
 .page-banner > .container {
   position: relative;
