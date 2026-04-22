@@ -1,0 +1,30 @@
+<!--
+  PARTIAL: header.html
+  Uso: cabeçalho institucional padrão.
+  Em pages/*.html, trocar {BASE} por "../" (subpáginas) ou "" (index).
+  Marcar o link ativo com class="nav-link active".
+-->
+<header class="header" id="header">
+  <div class="container header-container">
+    <a href="{BASE}index.html" class="logo" aria-label="EGOV-PL · Início">
+      <img src="{BASE}assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
+      <img src="{BASE}assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
+    </a>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="{BASE}index.html" class="nav-link">Início</a>
+      <a href="{BASE}pages/eixos.html" class="nav-link">Eixos e Cursos</a>
+      <a href="{BASE}pages/noticias.html" class="nav-link">Notícias</a>
+      <a href="{BASE}pages/sobre.html" class="nav-link">Sobre</a>
+      <a href="{BASE}pages/suporte.html" class="nav-link">Suporte</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro">
+        <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
+        <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
