@@ -1,59 +1,85 @@
-/* ========================================
-   Back to Top Button
-   ======================================== */
+/* ================================================================
+   Back to Top
+   ================================================================ */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 44px;
-  height: 44px;
-  background: var(--blue-900);
-  color: var(--white);
+  bottom: var(--space-8);
+  right: var(--space-8);
+  width: 48px;
+  height: 48px;
+  background: var(--brand-primary);
+  color: var(--text-on-brand);
   border: none;
   border-radius: 50%;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   box-shadow: var(--shadow-lg);
-  transition: var(--transition);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
+  transform: translateY(12px) scale(0.92);
   z-index: 999;
+  transition:
+    opacity var(--duration-base) var(--ease-in-out),
+    visibility var(--duration-base) var(--ease-in-out),
+    transform var(--duration-base) var(--ease-spring),
+    background-color var(--duration-fast) var(--ease-in-out),
+    box-shadow var(--duration-fast) var(--ease-in-out);
 }
 
 .back-to-top.visible {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .back-to-top:hover {
-  background: var(--blue-700);
-  transform: translateY(-2px);
+  background: var(--brand-primary-hover);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: var(--shadow-brand);
 }
 
-/* --- Back Link --- */
+.back-to-top:active {
+  transform: translateY(-1px) scale(1);
+}
+
+/* ---------------- Back Link (footer de seções) ---------------- */
 .back-link {
-  margin-top: 56px;
-  padding-top: 32px;
-  border-top: 1px solid var(--gray-200);
+  margin-top: var(--space-14);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-subtle);
   text-align: center;
 }
 
 .back-link a {
-  color: var(--blue-600);
-  font-weight: 600;
-  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  transition: var(--transition);
-  padding: 10px 20px;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--brand-primary);
   border-radius: var(--radius-sm);
+  transition:
+    color var(--duration-fast) var(--ease-in-out),
+    background-color var(--duration-fast) var(--ease-in-out),
+    gap var(--duration-fast) var(--ease-in-out);
 }
 
 .back-link a:hover {
-  color: var(--blue-800);
-  background: var(--blue-100);
-  gap: 12px;
+  color: var(--brand-primary-hover);
+  background: var(--brand-soft-bg);
+  gap: var(--space-3);
+}
+
+.back-link i {
+  font-size: 0.8em;
+}
+
+@media (max-width: 640px) {
+  .back-to-top {
+    bottom: var(--space-5);
+    right: var(--space-5);
+    width: 44px;
+    height: 44px;
+  }
 }
