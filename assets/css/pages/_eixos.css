@@ -234,9 +234,6 @@
    ================================================================ */
 .aula-magna-highlight {
   position: relative;
-  display: flex;
-  gap: var(--space-10);
-  align-items: center;
   background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 55%, var(--blue-700) 100%);
   border-radius: var(--radius-xl);
   padding: var(--space-12);
@@ -272,7 +269,6 @@
 }
 
 .aula-magna-left {
-  flex: 1;
   position: relative;
   z-index: 1;
 }
@@ -342,54 +338,6 @@
   font-size: 0.9em;
 }
 
-.aula-magna-right {
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.speaker-card {
-  min-width: 240px;
-  padding: var(--space-8);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius-lg);
-  text-align: center;
-  backdrop-filter: blur(16px);
-}
-
-.speaker-avatar {
-  width: 64px;
-  height: 64px;
-  background: linear-gradient(135deg, var(--brand-primary), var(--brand-accent));
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--space-4);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-}
-
-.speaker-avatar i {
-  font-size: 1.4rem;
-  color: var(--white);
-}
-
-.speaker-card strong {
-  display: block;
-  font-size: var(--fs-md);
-  font-weight: var(--fw-bold);
-  margin-bottom: var(--space-1);
-  color: var(--white);
-}
-
-.speaker-card span {
-  font-size: var(--fs-xs);
-  color: rgba(255, 255, 255, 0.70);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
-  font-weight: var(--fw-medium);
-}
 
 /* ================================================================
    Cronograma
@@ -529,14 +477,7 @@
    ================================================================ */
 @media (max-width: 900px) {
   .aula-magna-highlight {
-    flex-direction: column;
     padding: var(--space-10) var(--space-8);
-    gap: var(--space-8);
-  }
-  .speaker-card {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
   }
 }
 

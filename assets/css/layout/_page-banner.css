@@ -47,14 +47,26 @@
     radial-gradient(ellipse at top right, rgba(48, 99, 173, 0.35) 0%, transparent 50%);
 }
 
-/* Banners de eixo — overlay mais sutil preserva a arte temática */
+/* Banners de eixo — imagem em primeiro plano.
+   Light: scrim lateral suave para o texto ter contraste sobre
+          composições claras do banner light.
+   Dark:  praticamente sem overlay, já que a imagem dark é naturalmente
+          escura e o texto branco contrasta diretamente. */
 .page-banner--eixo .page-banner__bg::after {
   background:
-    linear-gradient(180deg,
-      rgba(11, 17, 32, 0.55) 0%,
-      rgba(11, 17, 32, 0.70) 60%,
-      rgba(11, 17, 32, 0.85) 100%),
-    linear-gradient(90deg, rgba(11, 17, 32, 0.55) 0%, rgba(11, 17, 32, 0.2) 45%, transparent 100%);
+    linear-gradient(90deg,
+      rgba(11, 17, 32, 0.60) 0%,
+      rgba(11, 17, 32, 0.30) 30%,
+      rgba(11, 17, 32, 0.05) 60%,
+      transparent 80%);
+}
+
+[data-theme="dark"] .page-banner--eixo .page-banner__bg::after {
+  background:
+    linear-gradient(90deg,
+      rgba(11, 17, 32, 0.35) 0%,
+      rgba(11, 17, 32, 0.15) 30%,
+      transparent 55%);
 }
 
 /* Banners genéricos (não-eixo) usam a composição escura do hero */
@@ -119,6 +131,17 @@
    ================================================================ */
 .page-banner--eixo {
   padding-bottom: var(--space-10);
+}
+
+/* Com overlay mais leve, o texto precisa de sombra sutil para manter
+   o contraste caso a arte tenha áreas claras atrás dele. */
+.page-banner--eixo h1,
+.page-banner--eixo p {
+  text-shadow: 0 2px 8px rgba(11, 17, 32, 0.45);
+}
+
+.page-banner--eixo .breadcrumb {
+  text-shadow: 0 1px 4px rgba(11, 17, 32, 0.5);
 }
 
 .page-banner__eixo-header {
