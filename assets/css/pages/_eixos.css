@@ -500,10 +500,11 @@
   flex-shrink: 0;
 }
 
-.crono-dot.governanca  { background: var(--brand-primary); }
-.crono-dot.licitacoes  { background: var(--purple); }
-.crono-dot.atendimento { background: var(--red); }
-.crono-dot.aula-magna  { background: var(--brand-accent); }
+.crono-dot.governanca      { background: var(--brand-primary); }
+.crono-dot.governo-digital { background: var(--amber); }
+.crono-dot.licitacoes      { background: var(--purple); }
+.crono-dot.atendimento     { background: var(--red); }
+.crono-dot.aula-magna      { background: var(--brand-accent); }
 
 .crono-dot-inline {
   display: inline-block;
@@ -513,10 +514,11 @@
   margin-right: var(--space-1);
 }
 
-.crono-dot-inline.governanca  { background: var(--brand-primary); }
-.crono-dot-inline.licitacoes  { background: var(--purple); }
-.crono-dot-inline.atendimento { background: var(--red); }
-.crono-dot-inline.aula-magna  { background: var(--brand-accent); }
+.crono-dot-inline.governanca      { background: var(--brand-primary); }
+.crono-dot-inline.governo-digital { background: var(--amber); }
+.crono-dot-inline.licitacoes      { background: var(--purple); }
+.crono-dot-inline.atendimento     { background: var(--red); }
+.crono-dot-inline.aula-magna      { background: var(--brand-accent); }
 
 .crono-item strong {
   color: var(--text-primary);
