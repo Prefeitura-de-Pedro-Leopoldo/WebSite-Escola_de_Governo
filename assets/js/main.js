@@ -9,6 +9,7 @@ import { initCounter } from './modules/counter.js';
 import { initFadeIn } from './modules/fade-in.js';
 import { initThemeToggle } from './modules/theme-toggle.js';
 import { initNoticiasFilter } from './modules/noticias-filter.js';
+import { initCursoFilter } from './modules/curso-filter.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounter();
     initFadeIn();
     initNoticiasFilter();
+    initCursoFilter();
 });

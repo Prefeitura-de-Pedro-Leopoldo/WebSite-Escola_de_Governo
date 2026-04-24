@@ -72,14 +72,14 @@
             <div class="summary-label">Eixos Temáticos</div>
           </div>
           <div class="summary-divider"></div>
-          <div class="summary-item">
-            <div class="summary-number">10</div>
-            <div class="summary-label">Cursos Programados</div>
+          <div class="summary-item" data-summary="cursos-disponiveis">
+            <div class="summary-number" data-value>0</div>
+            <div class="summary-label">Cursos Disponíveis</div>
           </div>
           <div class="summary-divider"></div>
-          <div class="summary-item">
-            <div class="summary-number">3</div>
-            <div class="summary-label">Eixos Ativos</div>
+          <div class="summary-item" data-summary="eixos-ativos">
+            <div class="summary-number" data-value>0</div>
+            <div class="summary-label">Eixos com Curso Aberto</div>
           </div>
           <div class="summary-divider"></div>
           <div class="summary-item">
@@ -93,10 +93,12 @@
     <!-- Aula Magna -->
     <section class="section-content">
       <div class="container">
-        <div class="aula-magna-highlight">
+        <div class="aula-magna-highlight" data-event-date="2026-04-23">
           <div class="aula-magna-left">
+            <span class="aula-magna-status" data-event-status>Evento inaugural</span>
             <h2>Aula Magna: Liderança Pública Estratégica</h2>
-            <p>Evento inaugural da Escola de Governo de Pedro Leopoldo (EGov-PL).</p>
+            <p data-event-text-future>Evento inaugural da Escola de Governo de Pedro Leopoldo (EGov-PL).</p>
+            <p data-event-text-past hidden>Evento inaugural realizado — marcou a abertura oficial da Escola de Governo de Pedro Leopoldo (EGov-PL).</p>
             <div class="aula-magna-meta">
               <span><i class="fas fa-calendar-alt"></i> 23 de abril de 2026</span>
             </div>
@@ -117,7 +119,7 @@
 
         <div class="eixos-grid-v2">
           <!-- EIXO 1: Governança (ATIVO) -->
-          <a href="governanca.html" class="eixo-card-v2 eixo-card-v2--ativo">
+          <a href="governanca.html" class="eixo-card-v2 eixo-card-v2--ativo" data-meses="4,5,5,6,6,6,7">
             <div class="eixo-card-v2__icon">
               <img src="../assets/img/eixos/governanca-e-gestao-publica.png" alt="Governança e Gestão Pública" />
             </div>
@@ -127,7 +129,7 @@
               <p>Fundamentos, ética, inovação, avaliação de desempenho e gestão para resultados na administração pública.</p>
             </div>
             <div class="eixo-card-v2__footer">
-              <span class="eixo-card-v2__count"><i class="fas fa-book-open"></i> 6 cursos programados</span>
+              <span class="eixo-card-v2__count"><i class="fas fa-book-open"></i> 7 cursos programados</span>
               <span class="eixo-card-v2__arrow"><i class="fas fa-arrow-right"></i></span>
             </div>
           </a>
@@ -147,7 +149,7 @@
           </div>
 
           <!-- EIXO 3: Licitações (ATIVO) -->
-          <a href="licitacoes.html" class="eixo-card-v2 eixo-card-v2--ativo">
+          <a href="licitacoes.html" class="eixo-card-v2 eixo-card-v2--ativo" data-meses="8,9,10">
             <div class="eixo-card-v2__icon">
               <img src="../assets/img/eixos/licitacoes-e-contratos-administrativos.png" alt="Licitações e Contratos Administrativos" />
             </div>
@@ -219,7 +221,7 @@
           </div>
 
           <!-- EIXO 8: Atendimento (ATIVO) -->
-          <a href="atendimento.html" class="eixo-card-v2 eixo-card-v2--ativo">
+          <a href="atendimento.html" class="eixo-card-v2 eixo-card-v2--ativo" data-meses="7">
             <div class="eixo-card-v2__icon">
               <img src="../assets/img/eixos/atendimento-ao-cidadao-e-experiencia-do-usuario.png" alt="Atendimento ao Cidadão e Experiência do Usuário" />
             </div>
@@ -270,6 +272,7 @@
               <div class="crono-item">
                 <span class="crono-dot governanca"></span>
                 <strong>Formação para Membros da Comissão Recursal</strong>
+                <span class="crono-turma">1ª turma</span>
                 <span class="crono-resp">-</span>
               </div>
             </div>
@@ -280,12 +283,24 @@
             <div class="crono-items">
               <div class="crono-item">
                 <span class="crono-dot governanca"></span>
+                <strong>Formação para Membros da Comissão Recursal</strong>
+                <span class="crono-turma">2ª turma</span>
+                <span class="crono-resp">-</span>
+              </div>
+              <div class="crono-item">
+                <span class="crono-dot governanca"></span>
                 <strong>Gestão Pública para Resultados</strong>
                 <span class="crono-resp">-</span>
               </div>
               <div class="crono-item">
                 <span class="crono-dot governanca"></span>
-                <strong>Fundamentos da Ética no Setor Público</strong>
+                <strong>Ética no Setor Público</strong>
+                <span class="crono-resp">-</span>
+              </div>
+              <div class="crono-item">
+                <span class="crono-dot governanca"></span>
+                <strong>Fundamentos da Gestão Pública</strong>
+                <span class="crono-turma">1ª turma</span>
                 <span class="crono-resp">-</span>
               </div>
             </div>
@@ -313,11 +328,12 @@
               <div class="crono-item">
                 <span class="crono-dot governanca"></span>
                 <strong>Fundamentos da Gestão Pública</strong>
+                <span class="crono-turma">2ª turma</span>
                 <span class="crono-resp">-</span>
               </div>
               <div class="crono-item">
                 <span class="crono-dot atendimento"></span>
-                <strong>Fundamentos do Atendimento Público de Qualidade</strong>
+                <strong>Fundamentos do atendimento público de qualidade</strong>
                 <span class="crono-resp">-</span>
               </div>
             </div>
@@ -350,7 +366,7 @@
             <div class="crono-items">
               <div class="crono-item">
                 <span class="crono-dot licitacoes"></span>
-                <strong>Gestão e Fiscalização de Contratos (Lei 14.133/21)</strong>
+                <strong>Gestão e Fiscalização de Contratos, sob o enfoque da Lei nº 14.133/21</strong>
                 <span class="crono-resp">-</span>
               </div>
             </div>

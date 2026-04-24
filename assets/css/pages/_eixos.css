@@ -98,6 +98,27 @@
   border-color: var(--border-default);
 }
 
+/* ---------------- Card inativo (Em breve) ---------------- */
+.eixo-card-v2:not(.eixo-card-v2--ativo) {
+  opacity: 0.62;
+  cursor: default;
+  background: var(--surface-muted);
+}
+
+.eixo-card-v2:not(.eixo-card-v2--ativo):hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--border-subtle);
+}
+
+.eixo-card-v2:not(.eixo-card-v2--ativo) .eixo-card-v2__icon {
+  filter: grayscale(1);
+}
+
+.eixo-card-v2:not(.eixo-card-v2--ativo):hover .eixo-card-v2__icon {
+  transform: none;
+}
+
 .eixo-card-v2--ativo:hover::before {
   transform: scaleY(1);
 }
@@ -294,6 +315,34 @@
   font-size: 0.85em;
 }
 
+.aula-magna-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: rgba(77, 173, 51, 0.18);
+  color: var(--brand-accent);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-4);
+}
+
+.aula-magna-highlight--realizada {
+  background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-800) 100%);
+  opacity: 0.92;
+}
+
+.aula-magna-highlight--realizada .aula-magna-status {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.aula-magna-highlight--realizada::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+}
+
 .aula-magna-highlight h2 {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.5vw, 1.875rem);
@@ -363,6 +412,36 @@
   border-color: var(--border-default);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+}
+
+/* Estados temporais do cronograma */
+.crono-month--past {
+  opacity: 0.55;
+}
+
+.crono-month--past:hover {
+  opacity: 1;
+}
+
+.crono-month--current {
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 2px rgba(77, 173, 51, 0.15);
+}
+
+.crono-month--current .crono-month-label {
+  color: var(--brand-accent);
+}
+
+.crono-month--current .crono-month-label::after {
+  content: "Mês atual";
+  margin-left: auto;
+  padding: 2px 8px;
+  background: var(--brand-accent);
+  color: var(--text-on-brand);
+  font-size: 0.65rem;
+  font-weight: var(--fw-bold);
+  border-radius: var(--radius-pill);
+  letter-spacing: var(--tracking-wide);
 }
 
 .crono-month-label {
@@ -451,6 +530,23 @@
   color: var(--text-muted);
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
+  min-width: 56px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.crono-turma {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background: var(--brand-soft-bg);
+  color: var(--brand-primary);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .crono-legenda {
