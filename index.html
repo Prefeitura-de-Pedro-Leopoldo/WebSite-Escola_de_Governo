@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escola de Governo · Pedro Leopoldo</title>
     <meta name="description" content="Escola de Governo de Pedro Leopoldo · Capacitação contínua dos servidores públicos municipais em 9 eixos estratégicos." />
+    <meta name="theme-color" content="#3063ad" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="Escola de Governo · Pedro Leopoldo" />
+    <meta property="og:description" content="Capacitação contínua dos servidores públicos municipais em 9 eixos estratégicos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,12 +31,14 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
     <!-- Header -->
     <header class="header" id="header">
       <div class="container header-container">
         <a href="index.html" class="logo" aria-label="EGOV-PL · Início">
-          <img src="assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
-          <img src="assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
+          <img src="assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" decoding="async" />
+          <img src="assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" decoding="async" />
         </a>
         <nav class="nav" id="nav" aria-label="Navegação principal">
           <a href="index.html" class="nav-link active">Início</a>
@@ -51,89 +59,97 @@
       </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-bg-image" aria-hidden="true"></div>
-      <div class="hero-bg-pattern" aria-hidden="true"></div>
-      <div class="container hero-content">
-        <img src="assets/img/logo-light.png" alt="Escola de Governo · Pedro Leopoldo" class="hero-logo hero-logo--light" />
-        <img src="assets/img/logo-dark.png" alt="Escola de Governo · Pedro Leopoldo" class="hero-logo hero-logo--dark" />
-        <div class="hero-actions">
-          <a href="pages/eixos.html" class="btn btn-primary">
-            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-            Ver Eixos e Cursos
-          </a>
-          <a href="pages/sobre.html" class="btn btn-outline">
-            <i class="fas fa-info-circle" aria-hidden="true"></i>
-            Conheça o Projeto
-          </a>
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg-image" aria-hidden="true"></div>
+        <div class="hero-bg-pattern" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <img
+            src="assets/img/logo-light.png"
+            alt="Escola de Governo · Pedro Leopoldo"
+            id="hero-title"
+            class="hero-logo hero-logo--light hero-anim"
+            style="--anim-delay: 0ms"
+          />
+          <img src="assets/img/logo-dark.png" alt="Escola de Governo · Pedro Leopoldo" class="hero-logo hero-logo--dark hero-anim" style="--anim-delay: 0ms" decoding="async" />
+          <div class="hero-actions hero-anim" style="--anim-delay: 140ms">
+            <a href="pages/eixos.html" class="btn btn-primary">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              Ver Eixos e Cursos
+            </a>
+            <a href="pages/sobre.html" class="btn btn-outline">
+              <i class="fas fa-info-circle" aria-hidden="true"></i>
+              Conheça o Projeto
+            </a>
+          </div>
+          <div class="hero-stats hero-anim" style="--anim-delay: 280ms">
+            <div class="stat">
+              <span class="stat-value"> <span class="stat-number" data-target="148">0</span><span class="stat-plus">+</span> </span>
+              <span class="stat-label">Servidores Capacitados</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">
+                <span class="stat-number" data-target="9">0</span>
+              </span>
+              <span class="stat-label">Eixos Temáticos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value"> <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span> </span>
+              <span class="stat-label">Cursos em 2026</span>
+            </div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-value"> <span class="stat-number" data-target="148">0</span><span class="stat-plus">+</span> </span>
-            <span class="stat-label">Servidores Capacitados</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">
-              <span class="stat-number" data-target="9">0</span>
-            </span>
-            <span class="stat-label">Eixos Temáticos</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value"> <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span> </span>
-            <span class="stat-label">Cursos em 2026</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Acessos Rápidos -->
-    <section class="quick-access section-content">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Acessos Rápidos</h2>
-          <p class="section-subtitle">Encontre rapidamente os recursos mais utilizados pela comunidade de servidores da EGov-PL.</p>
+      <!-- Acessos Rápidos -->
+      <section class="quick-access section-content">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Acessos Rápidos</h2>
+            <p class="section-subtitle">Encontre rapidamente os recursos mais utilizados pela comunidade de servidores da EGov-PL.</p>
+          </div>
+          <div class="quick-grid">
+            <a href="pages/eixos.html" class="quick-card quick-card--highlight">
+              <div class="quick-card-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
+              <h3 class="quick-card-title">Eixos e Cursos</h3>
+              <p class="quick-card-desc">Confira os 9 eixos temáticos e cursos disponíveis para 2026.</p>
+              <span class="quick-card-cta"> Explorar <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
+            </a>
+            <a href="pages/eixos.html" class="quick-card">
+              <div class="quick-card-icon"><i class="fas fa-user-plus" aria-hidden="true"></i></div>
+              <h3 class="quick-card-title">Inscrição em Cursos</h3>
+              <p class="quick-card-desc">Veja a programação 2026 e inscreva-se nos cursos disponíveis.</p>
+              <span class="quick-card-cta"> Inscrever-se <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
+            </a>
+            <div class="quick-card quick-card--disabled" aria-disabled="true">
+              <div class="quick-card-icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></div>
+              <h3 class="quick-card-title">Materiais de Apoio</h3>
+              <p class="quick-card-desc">Baixe manuais, guias e materiais complementares.</p>
+              <span class="quick-card-cta quick-card-cta--soon">Em breve</span>
+            </div>
+            <div class="quick-card quick-card--disabled" aria-disabled="true">
+              <div class="quick-card-icon"><i class="fas fa-video" aria-hidden="true"></i></div>
+              <h3 class="quick-card-title">Vídeos e Tutoriais</h3>
+              <p class="quick-card-desc">Assista a guias rápidos e conteúdos de apoio.</p>
+              <span class="quick-card-cta quick-card-cta--soon">Em breve</span>
+            </div>
+            <a href="pages/noticias.html" class="quick-card">
+              <div class="quick-card-icon"><i class="fas fa-newspaper" aria-hidden="true"></i></div>
+              <h3 class="quick-card-title">Notícias</h3>
+              <p class="quick-card-desc">Acompanhe as novidades e eventos da Escola de Governo.</p>
+              <span class="quick-card-cta"> Ver notícias <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
+            </a>
+            <div class="quick-card quick-card--disabled" aria-disabled="true">
+              <div class="quick-card-icon"><i class="fas fa-balance-scale" aria-hidden="true"></i></div>
+              <h3 class="quick-card-title">Legislação Correlata</h3>
+              <p class="quick-card-desc">Acesse a legislação relacionada à Escola de Governo.</p>
+              <span class="quick-card-cta quick-card-cta--soon">Em breve</span>
+            </div>
+          </div>
         </div>
-        <div class="quick-grid">
-          <a href="pages/eixos.html" class="quick-card quick-card--highlight">
-            <div class="quick-card-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
-            <h3 class="quick-card-title">Eixos e Cursos</h3>
-            <p class="quick-card-desc">Confira os 9 eixos temáticos e cursos disponíveis para 2026.</p>
-            <span class="quick-card-cta"> Explorar <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
-          </a>
-          <a href="https://forms.gle/Mdst5MLFSrDAh9Nv9" target="_blank" rel="noopener" class="quick-card">
-            <div class="quick-card-icon"><i class="fas fa-user-plus" aria-hidden="true"></i></div>
-            <h3 class="quick-card-title">Inscrição em Cursos</h3>
-            <p class="quick-card-desc">Formulário oficial de inscrição nos cursos da EGov-PL.</p>
-            <span class="quick-card-cta"> Inscrever-se <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
-          </a>
-          <div class="quick-card quick-card--disabled" aria-disabled="true">
-            <div class="quick-card-icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></div>
-            <h3 class="quick-card-title">Materiais de Apoio</h3>
-            <p class="quick-card-desc">Baixe manuais, guias e materiais complementares.</p>
-            <span class="quick-card-cta quick-card-cta--soon">Em breve</span>
-          </div>
-          <div class="quick-card quick-card--disabled" aria-disabled="true">
-            <div class="quick-card-icon"><i class="fas fa-video" aria-hidden="true"></i></div>
-            <h3 class="quick-card-title">Vídeos e Tutoriais</h3>
-            <p class="quick-card-desc">Assista a guias rápidos e conteúdos de apoio.</p>
-            <span class="quick-card-cta quick-card-cta--soon">Em breve</span>
-          </div>
-          <a href="pages/noticias.html" class="quick-card">
-            <div class="quick-card-icon"><i class="fas fa-newspaper" aria-hidden="true"></i></div>
-            <h3 class="quick-card-title">Notícias</h3>
-            <p class="quick-card-desc">Acompanhe as novidades e eventos da Escola de Governo.</p>
-            <span class="quick-card-cta"> Ver notícias <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
-          </a>
-          <div class="quick-card quick-card--disabled" aria-disabled="true">
-            <div class="quick-card-icon"><i class="fas fa-balance-scale" aria-hidden="true"></i></div>
-            <h3 class="quick-card-title">Legislação Correlata</h3>
-            <p class="quick-card-desc">Acesse a legislação relacionada à Escola de Governo.</p>
-            <span class="quick-card-cta quick-card-cta--soon">Em breve</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -141,7 +157,7 @@
         <div class="footer-grid">
           <div class="footer-info">
             <div class="footer-logo">
-              <img src="assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" />
+              <img src="assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" loading="lazy" decoding="async" />
             </div>
             <p></p>
           </div>
