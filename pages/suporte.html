@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato e Suporte · Escola de Governo Pedro Leopoldo</title>
-    <meta
-      name="description"
-      content="Canais oficiais de contato e suporte da Escola de Governo de Pedro Leopoldo — atendimento aos servidores municipais."
-    />
+    <meta name="description" content="Canais oficiais de contato e suporte da Escola de Governo de Pedro Leopoldo — atendimento aos servidores municipais." />
+    <meta name="theme-color" content="#3063ad" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,12 +26,14 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
     <!-- Header -->
     <header class="header" id="header">
       <div class="container header-container">
         <a href="../index.html" class="logo" aria-label="EGOV-PL · Início">
-          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
-          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
+          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" decoding="async" />
+          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" decoding="async" />
         </a>
         <nav class="nav" id="nav" aria-label="Navegação principal">
           <a href="../index.html" class="nav-link">Início</a>
@@ -53,190 +54,179 @@
       </div>
     </header>
 
-    <!-- Banner -->
-    <section class="page-banner">
-      <div class="page-banner__bg page-banner__bg--suporte" aria-hidden="true"></div>
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Navegação estrutural">
-          <a href="../index.html">Início</a>
-          <i class="fas fa-chevron-right" aria-hidden="true"></i>
-          <span>Suporte</span>
-        </nav>
-        <h1>Contato e Suporte</h1>
-        <p>Estamos prontos para ajudar servidores e parceiros da EGov-PL em dúvidas sobre cursos, inscrições, certificados e parcerias institucionais.</p>
-      </div>
-    </section>
-
-    <!-- Canais de contato -->
-    <section class="section-content suporte-canais-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Canais de atendimento</h2>
-          <p class="section-subtitle">Escolha o canal mais adequado para sua demanda.</p>
+    <main id="main">
+      <!-- Banner -->
+      <section class="page-banner" aria-labelledby="page-title">
+        <div class="page-banner__bg page-banner__bg--suporte" aria-hidden="true"></div>
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <a href="../index.html">Início</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Suporte</span>
+          </nav>
+          <h1 id="page-title">Contato e Suporte</h1>
+          <p>Estamos prontos para ajudar servidores e parceiros da EGov-PL em dúvidas sobre cursos, inscrições, certificados e parcerias institucionais.</p>
         </div>
+      </section>
 
-        <div class="suporte-grid">
-          <a href="tel:+553188143491" class="suporte-card">
-            <div class="suporte-card__icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
-            <div class="suporte-card__body">
-              <span class="suporte-card__kicker">Telefone</span>
-              <strong class="suporte-card__value">(31) 8814-3491</strong>
-              <span class="suporte-card__hint">Seg. a sex., 8h&ndash;17h</span>
-            </div>
-            <span class="suporte-card__cta">
-              Ligar agora <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </span>
-          </a>
+      <!-- Canais de contato -->
+      <section class="section-content suporte-canais-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Canais de atendimento</h2>
+            <p class="section-subtitle">Escolha o canal mais adequado para sua demanda.</p>
+          </div>
 
-          <a href="mailto:egov@pedroleopoldo.mg.gov.br" class="suporte-card">
-            <div class="suporte-card__icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-            <div class="suporte-card__body">
-              <span class="suporte-card__kicker">E-mail</span>
-              <strong class="suporte-card__value">egov@pedroleopoldo.mg.gov.br</strong>
-              <span class="suporte-card__hint">Resposta em até 2 dias úteis</span>
-            </div>
-            <span class="suporte-card__cta">
-              Enviar e-mail <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </span>
-          </a>
+          <div class="suporte-grid">
+            <a href="tel:+553188143491" class="suporte-card">
+              <div class="suporte-card__icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
+              <div class="suporte-card__body">
+                <span class="suporte-card__kicker">Telefone</span>
+                <strong class="suporte-card__value">(31) 8814-3491</strong>
+                <span class="suporte-card__hint">Seg. a sex., 8h&ndash;17h</span>
+              </div>
+              <span class="suporte-card__cta"> Ligar agora <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
+            </a>
 
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Prefeitura+de+Pedro+Leopoldo+MG"
-            target="_blank"
-            rel="noopener"
-            class="suporte-card"
-          >
-            <div class="suporte-card__icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
-            <div class="suporte-card__body">
-              <span class="suporte-card__kicker">Endereço</span>
-              <strong class="suporte-card__value">Prefeitura de Pedro Leopoldo</strong>
-              <span class="suporte-card__hint">Secretaria de Gestão e Finanças</span>
-            </div>
-            <span class="suporte-card__cta">
-              Ver no mapa <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </span>
-          </a>
-        </div>
+            <a href="mailto:egov@pedroleopoldo.mg.gov.br" class="suporte-card">
+              <div class="suporte-card__icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+              <div class="suporte-card__body">
+                <span class="suporte-card__kicker">E-mail</span>
+                <strong class="suporte-card__value">egov@pedroleopoldo.mg.gov.br</strong>
+                <span class="suporte-card__hint">Resposta em até 2 dias úteis</span>
+              </div>
+              <span class="suporte-card__cta"> Enviar e-mail <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
+            </a>
 
-        <div class="suporte-cta-row">
-          <div class="suporte-cta-card">
-            <div class="suporte-cta-card__icon" aria-hidden="true"><i class="fas fa-user-plus"></i></div>
-            <div class="suporte-cta-card__body">
-              <h3>Quer se inscrever em um curso?</h3>
-              <p>Use o formulário oficial de inscrição — todos os cursos da EGov-PL estão listados lá.</p>
-            </div>
-            <a href="https://forms.gle/Mdst5MLFSrDAh9Nv9" target="_blank" rel="noopener" class="btn btn-accent">
-              Acessar formulário
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            <a href="https://www.google.com/maps/search/?api=1&query=Prefeitura+de+Pedro+Leopoldo+MG" target="_blank" rel="noopener" class="suporte-card">
+              <div class="suporte-card__icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+              <div class="suporte-card__body">
+                <span class="suporte-card__kicker">Endereço</span>
+                <strong class="suporte-card__value">Prefeitura de Pedro Leopoldo</strong>
+                <span class="suporte-card__hint">Secretaria de Gestão e Finanças</span>
+              </div>
+              <span class="suporte-card__cta"> Ver no mapa <i class="fas fa-arrow-right" aria-hidden="true"></i> </span>
             </a>
           </div>
+
+          <div class="suporte-cta-row">
+            <div class="suporte-cta-card">
+              <div class="suporte-cta-card__icon" aria-hidden="true"><i class="fas fa-user-plus"></i></div>
+              <div class="suporte-cta-card__body">
+                <h3>Quer se inscrever em um curso?</h3>
+                <p>Veja a programação 2026 e inscreva-se diretamente pelo card do curso desejado.</p>
+              </div>
+              <a href="eixos.html" class="btn btn-accent">
+                Ver cursos disponíveis
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FAQ -->
-    <section class="section-content suporte-faq-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Perguntas frequentes</h2>
-          <p class="section-subtitle">Respostas rápidas para as dúvidas mais comuns dos servidores.</p>
+      <!-- FAQ -->
+      <section class="section-content suporte-faq-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Perguntas frequentes</h2>
+            <p class="section-subtitle">Respostas rápidas para as dúvidas mais comuns dos servidores.</p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <div class="faq-item__summary-inner">
+                  <span class="faq-item__question">Quem pode participar dos cursos da EGov-PL?</span>
+                  <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                </div>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Os cursos são voltados prioritariamente a servidores públicos da Prefeitura Municipal de Pedro Leopoldo. Em casos específicos, vagas
+                  excedentes podem ser disponibilizadas a parceiros institucionais.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <div class="faq-item__summary-inner">
+                  <span class="faq-item__question">Como faço minha inscrição?</span>
+                  <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                </div>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  As inscrições são feitas pelo formulário oficial do Google Forms, divulgado a cada novo curso. Acesse a página
+                  <a href="eixos.html">Eixos e Cursos</a> para ver a programação de 2026 ou use o botão <strong>Acessar formulário</strong> acima.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <div class="faq-item__summary-inner">
+                  <span class="faq-item__question">Os cursos emitem certificado?</span>
+                  <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                </div>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Sim. Ao concluir o curso com frequência mínima e aproveitamento, o servidor recebe certificado oficial emitido pela Escola de Governo, válido
+                  para fins de progressão e capacitação funcional.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <div class="faq-item__summary-inner">
+                  <span class="faq-item__question">Qual o formato dos cursos?</span>
+                  <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                </div>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Os cursos são oferecidos em duas modalidades: <strong>presencial</strong> e <strong>EAD</strong>. Cada curso especifica sua modalidade na
+                  programação oficial.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <div class="faq-item__summary-inner">
+                  <span class="faq-item__question">Perdi o prazo de inscrição. E agora?</span>
+                  <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                </div>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Em caso de vagas remanescentes, novas inscrições podem ser abertas. Entre em contato pelo telefone ou e-mail da EGov-PL para verificar a
+                  disponibilidade.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__summary">
+                <div class="faq-item__summary-inner">
+                  <span class="faq-item__question">Minha secretaria quer propor uma parceria. Como fazemos?</span>
+                  <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                </div>
+              </summary>
+              <div class="faq-item__content">
+                <p>
+                  Envie a proposta para <a href="mailto:egov@pedroleopoldo.mg.gov.br">egov@pedroleopoldo.mg.gov.br</a>
+                  com uma descrição da demanda formativa, público-alvo e objetivos. Nossa equipe avalia e retorna em até 5 dias úteis.
+                </p>
+              </div>
+            </details>
+          </div>
         </div>
-
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary class="faq-item__summary">
-              <div class="faq-item__summary-inner">
-                <span class="faq-item__question">Quem pode participar dos cursos da EGov-PL?</span>
-                <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-              </div>
-            </summary>
-            <div class="faq-item__content">
-              <p>
-                Os cursos são voltados prioritariamente a servidores públicos da Prefeitura Municipal de Pedro Leopoldo.
-                Em casos específicos, vagas excedentes podem ser disponibilizadas a parceiros institucionais.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-item__summary">
-              <div class="faq-item__summary-inner">
-                <span class="faq-item__question">Como faço minha inscrição?</span>
-                <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-              </div>
-            </summary>
-            <div class="faq-item__content">
-              <p>
-                As inscrições são feitas pelo formulário oficial do Google Forms, divulgado a cada novo curso. Acesse
-                a página <a href="eixos.html">Eixos e Cursos</a> para ver a programação de 2026 ou use o botão
-                <strong>Acessar formulário</strong> acima.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-item__summary">
-              <div class="faq-item__summary-inner">
-                <span class="faq-item__question">Os cursos emitem certificado?</span>
-                <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-              </div>
-            </summary>
-            <div class="faq-item__content">
-              <p>
-                Sim. Ao concluir o curso com frequência mínima e aproveitamento, o servidor recebe certificado oficial
-                emitido pela Escola de Governo, válido para fins de progressão e capacitação funcional.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-item__summary">
-              <div class="faq-item__summary-inner">
-                <span class="faq-item__question">Qual o formato dos cursos?</span>
-                <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-              </div>
-            </summary>
-            <div class="faq-item__content">
-              <p>
-                Os cursos são oferecidos em três modalidades: <strong>presencial</strong>, <strong>EAD</strong> e
-                <strong>semipresencial</strong>. Cada curso específica sua modalidade na programação oficial.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-item__summary">
-              <div class="faq-item__summary-inner">
-                <span class="faq-item__question">Perdi o prazo de inscrição. E agora?</span>
-                <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-              </div>
-            </summary>
-            <div class="faq-item__content">
-              <p>
-                Em caso de vagas remanescentes, novas inscrições podem ser abertas. Entre em contato pelo telefone ou
-                e-mail da EGov-PL para verificar a disponibilidade.
-              </p>
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary class="faq-item__summary">
-              <div class="faq-item__summary-inner">
-                <span class="faq-item__question">Minha secretaria quer propor uma parceria. Como fazemos?</span>
-                <span class="faq-item__chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
-              </div>
-            </summary>
-            <div class="faq-item__content">
-              <p>
-                Envie a proposta para <a href="mailto:egov@pedroleopoldo.mg.gov.br">egov@pedroleopoldo.mg.gov.br</a>
-                com uma descrição da demanda formativa, público-alvo e objetivos. Nossa equipe avalia e retorna em
-                até 5 dias úteis.
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -244,7 +234,7 @@
         <div class="footer-grid">
           <div class="footer-info">
             <div class="footer-logo">
-              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" />
+              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" loading="lazy" decoding="async" />
             </div>
             <p></p>
           </div>

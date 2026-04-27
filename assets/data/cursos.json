@@ -1,0 +1,173 @@
+{
+  "_schema": "Estrutura: eixos > trilhas > cursos. Hoje cada eixo usa uma trilha 'default' (nome: null) que renderiza só os cards. Quando trilhas reais forem definidas, dividir o array 'trilhas' e dar nome a cada uma — o renderer mostra o sub-cabeçalho automaticamente. 'formsDefault' são os Forms genéricos reutilizados por todos os cursos EAD; se um curso precisar de Form próprio, basta sobrescrever 'inscricaoFormId' / 'certificadoUrl' no próprio curso.",
+  "formsDefault": {
+    "inscricaoFormId": "1FAIpQLSdg_NLb90QdmCNNKdQwFAi2gakIJedTTmSuxkqQJJPmzNqQZQ",
+    "certificadoUrl": "https://forms.gle/iRGvfDAc5JPsftF66"
+  },
+  "eixos": {
+    "governanca": {
+      "nome": "Governança e Gestão Pública",
+      "trilhas": [
+        {
+          "id": "default",
+          "nome": null,
+          "cursos": [
+            {
+              "id": "gestao-resultados-2026-05",
+              "titulo": "Gestão Pública para Resultados",
+              "mes": "maio",
+              "modalidade": "presencial",
+              "responsavel": "SATD",
+              "icone": "fas fa-chart-bar",
+              "descricao": "Conceitos e ferramentas para gestão para resultados com foco em planejamento, indicadores, monitoramento e avaliação.",
+              "inscricaoUrl": "https://www.sympla.com.br/"
+            },
+            {
+              "id": "etica-setor-publico-2026-05",
+              "titulo": "Ética no Setor Público",
+              "mes": "maio",
+              "modalidade": "ead",
+              "responsavel": "Enap",
+              "icone": "fas fa-balance-scale",
+              "descricao": "Princípios éticos, integridade, conduta profissional e prevenção de conflitos de interesse. Curso EAD ofertado pela Enap.",
+              "acessoCursoUrl": "https://www.escolavirtual.gov.br/curso/4"
+            },
+            {
+              "id": "comissao-recursal-2026-04",
+              "titulo": "Formação para Membros da Comissão Recursal de Avaliação de Desempenho",
+              "mes": "abril",
+              "modalidade": "presencial",
+              "responsavel": "DIRGEP",
+              "icone": "fas fa-users-cog",
+              "descricao": "Aspectos legais e procedimentais para atuação em comissões recursais, com foco em análise técnica e tomada de decisão.",
+              "inscricaoLabel": "Convocação"
+            },
+            {
+              "id": "gestao-inovacao-presencial-2026-06",
+              "titulo": "Gestão da Inovação no Setor Público",
+              "mes": "junho",
+              "modalidade": "presencial",
+              "responsavel": "SATD",
+              "icone": "fas fa-lightbulb",
+              "descricao": "Conceitos e práticas de inovação aplicadas ao setor público, com foco na transformação digital e cultura inovadora.",
+              "inscricaoUrl": "https://www.sympla.com.br/"
+            },
+            {
+              "id": "gestao-inovacao-ead-2026-06",
+              "titulo": "Gestão da Inovação no Setor Público",
+              "mes": "junho",
+              "modalidade": "ead",
+              "responsavel": "Enap",
+              "icone": "fas fa-laptop",
+              "descricao": "Versão em modalidade EAD pela Enap, com foco em inovação aplicada e cultura inovadora no setor público.",
+              "acessoCursoUrl": "https://www.escolavirtual.gov.br/curso/416/"
+            },
+            {
+              "id": "avaliacao-desempenho-2026-06",
+              "titulo": "Avaliação de Desempenho",
+              "mes": "junho",
+              "modalidade": "presencial",
+              "responsavel": "DIRGEP",
+              "icone": "fas fa-clipboard-check",
+              "descricao": "Instrumentos, métodos e ferramentas para avaliação de desempenho individual de servidores municipais.",
+              "inscricaoUrl": "https://www.sympla.com.br/"
+            },
+            {
+              "id": "fundamentos-gestao-publica-2026-07",
+              "titulo": "Fundamentos da Gestão Pública",
+              "mes": "julho",
+              "modalidade": "presencial",
+              "responsavel": "SAGA",
+              "icone": "fas fa-landmark",
+              "descricao": "Introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
+              "inscricaoUrl": "https://www.sympla.com.br/"
+            }
+          ]
+        }
+      ]
+    },
+    "licitacoes": {
+      "nome": "Licitações e Contratos Administrativos",
+      "trilhas": [
+        {
+          "id": "default",
+          "nome": null,
+          "cursos": [
+            {
+              "id": "padronizacao-contratacao-2026-08",
+              "titulo": "Padronização dos Procedimentos de Contratação",
+              "mes": "agosto",
+              "modalidade": "presencial",
+              "responsavel": "SAGA",
+              "icone": "fas fa-tasks",
+              "descricao": "Organização e uniformização de fluxos e procedimentos para garantir eficiência e conformidade.",
+              "inscricaoUrl": "https://www.sympla.com.br/"
+            },
+            {
+              "id": "planejamento-estrategico-contratacoes-2026-09",
+              "titulo": "Planejamento Estratégico das Contratações Públicas",
+              "mes": "setembro",
+              "modalidade": "presencial",
+              "responsavel": "SAGA",
+              "icone": "fas fa-project-diagram",
+              "descricao": "Planejamento das contratações alinhado às necessidades institucionais, com base na legislação vigente.",
+              "inscricaoUrl": "https://www.sympla.com.br/"
+            },
+            {
+              "id": "gestao-fiscalizacao-contratos-2026-10",
+              "titulo": "Gestão e Fiscalização de Contratos, sob o enfoque da Lei nº 14.133/21",
+              "mes": "outubro",
+              "modalidade": "presencial",
+              "responsavel": "SAGA",
+              "icone": "fas fa-search",
+              "descricao": "Práticas de acompanhamento, execução e fiscalização contratual, com foco na conformidade legal e resultados.",
+              "inscricaoUrl": "https://www.sympla.com.br/"
+            }
+          ]
+        }
+      ]
+    },
+    "governo-digital": {
+      "nome": "Governo Digital, Transformação Digital e Inovação",
+      "trilhas": [
+        {
+          "id": "default",
+          "nome": null,
+          "cursos": [
+            {
+              "id": "workshop-sei-2026-04",
+              "titulo": "Workshop SEI! Usar na Prática",
+              "mes": "abril",
+              "modalidade": "presencial",
+              "responsavel": "SATD",
+              "icone": "fas fa-file-signature",
+              "descricao": "Capacitação prática no Sistema Eletrônico de Informações (SEI), com foco no uso das ferramentas digitais para tramitação de processos administrativos. Realizado em 24/04/2026.",
+              "inscricaoLabel": "O evento encerrado..."
+            }
+          ]
+        }
+      ]
+    },
+    "atendimento": {
+      "nome": "Atendimento ao Cidadão e Experiência do Usuário",
+      "trilhas": [
+        {
+          "id": "default",
+          "nome": null,
+          "cursos": [
+            {
+              "id": "fundamentos-atendimento-2026-07",
+              "titulo": "Fundamentos do atendimento público de qualidade",
+              "mes": "julho",
+              "modalidade": "presencial",
+              "responsavel": "DIRGEP",
+              "icone": "fas fa-headset",
+              "descricao": "Princípios e práticas para um atendimento eficiente, humanizado e centrado no cidadão.",
+              "inscricaoUrl": "https://www.sympla.com.br/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

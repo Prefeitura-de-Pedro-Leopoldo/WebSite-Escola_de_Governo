@@ -88,6 +88,16 @@
   border-radius: var(--radius-sm);
   font-size: 1rem;
   flex-shrink: 0;
+  transition:
+    background-color var(--duration-fast) var(--ease-in-out),
+    color var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-base) var(--ease-spring);
+}
+
+.principio:hover > i {
+  background: var(--brand-primary);
+  color: var(--text-on-brand);
+  transform: rotate(-6deg) scale(1.08);
 }
 
 .principio strong {

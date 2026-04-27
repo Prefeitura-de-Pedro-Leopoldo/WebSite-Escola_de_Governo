@@ -103,6 +103,9 @@ export function initCursoFilter() {
   const grid = document.querySelector('.cursos-grid');
   if (!grid) return;
 
+  // Empty state ja foi renderizado (trilha sem cursos) — nada a filtrar.
+  if (grid.querySelector('.cursos-empty')) return;
+
   const cards = grid.querySelectorAll('.curso-card');
   let visible = 0;
 

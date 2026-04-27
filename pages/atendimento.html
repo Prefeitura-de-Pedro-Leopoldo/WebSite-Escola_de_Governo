@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atendimento ao Cidadão - Escola de Governo Pedro Leopoldo</title>
+    <title>Atendimento ao Cidadão · Escola de Governo Pedro Leopoldo</title>
+    <meta name="description" content="Eixo Atendimento ao Cidadão e Experiência do Usuário — atendimento eficiente, humanizado e centrado no cidadão." />
+    <meta name="theme-color" content="#3063ad" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,12 +26,14 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
     <!-- Header -->
     <header class="header" id="header">
       <div class="container header-container">
         <a href="../index.html" class="logo">
-          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
-          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
+          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" decoding="async" />
+          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" decoding="async" />
         </a>
         <nav class="nav" id="nav">
           <a href="../index.html" class="nav-link">Início</a>
@@ -49,65 +54,50 @@
       </div>
     </header>
 
-    <!-- Banner -->
-    <section class="page-banner page-banner--eixo">
-      <div class="page-banner__bg page-banner__bg--atendimento"></div>
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="../index.html">Início</a>
-          <i class="fas fa-chevron-right"></i>
-          <a href="eixos.html">Eixos e Cursos</a>
-          <i class="fas fa-chevron-right"></i>
-          <span>Atendimento ao Cidadão</span>
-        </nav>
-        <div class="page-banner__eixo-header">
-          <div class="page-banner__icon">
-            <img src="../assets/img/eixos/atendimento-ao-cidadao-e-experiencia-do-usuario.png" alt="" aria-hidden="true" />
-          </div>
-          <div>
-            <h1>Atendimento ao Cidadão e Experiência do Usuário</h1>
-            <p>Princípios e práticas para um atendimento eficiente, humanizado e centrado no cidadão.</p>
-          </div>
-        </div>
-        <div class="page-banner__meta">
-          <span><i class="fas fa-book-open"></i> 1 curso programado</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Cursos Programados -->
-    <section class="section-content section-bg-light">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Cursos Programados</h2>
-          <p class="section-subtitle">Confira os cursos deste eixo previstos para 2026.</p>
-        </div>
-
-        <div class="cursos-grid">
-          <div class="curso-card">
-            <div class="curso-card__header">
-              <span class="curso-card__mes">Julho</span>
+    <main id="main">
+      <!-- Banner -->
+      <section class="page-banner page-banner--eixo" aria-labelledby="page-title">
+        <div class="page-banner__bg page-banner__bg--atendimento" aria-hidden="true"></div>
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <a href="../index.html">Início</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="eixos.html">Eixos e Cursos</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Atendimento ao Cidadão</span>
+          </nav>
+          <div class="page-banner__eixo-header">
+            <div class="page-banner__icon">
+              <img src="../assets/img/eixos/atendimento-ao-cidadao-e-experiencia-do-usuario.png" alt="" aria-hidden="true" decoding="async" />
             </div>
-            <div class="curso-card__body">
-              <div class="curso-card__icon">
-                <i class="fas fa-headset"></i>
-              </div>
-              <h3>Fundamentos do atendimento público de qualidade</h3>
+            <div>
+              <h1 id="page-title">Atendimento ao Cidadão e Experiência do Usuário</h1>
               <p>Princípios e práticas para um atendimento eficiente, humanizado e centrado no cidadão.</p>
             </div>
-            <div class="curso-card__footer">
-              <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">Em breve</span>
-            </div>
+          </div>
+          <div class="page-banner__meta">
+            <span><i class="fas fa-book-open" aria-hidden="true"></i> 1 curso programado</span>
           </div>
         </div>
+      </section>
 
-        <div class="back-link">
-          <a href="eixos.html"><i class="fas fa-arrow-left"></i> Voltar para Eixos e Cursos</a>
+      <!-- Cursos Programados -->
+      <section class="section-content section-bg-light">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Cursos Programados</h2>
+            <p class="section-subtitle">Confira os cursos deste eixo previstos para 2026.</p>
+          </div>
+
+          <div class="cursos-grid" data-cursos-eixo="atendimento"></div>
+
+          <div class="back-link">
+            <a href="eixos.html"><i class="fas fa-arrow-left"></i> Voltar para Eixos e Cursos</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!--
+      <!--
     Trilhas Formativas (desativado até validação — reativar quando aprovado)
     <section class="section-content section-bg-light">
       <div class="container">
@@ -127,8 +117,7 @@
         </div>
       </div>
     </section>
-    -->
-
+    --></main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -136,7 +125,7 @@
         <div class="footer-grid">
           <div class="footer-info">
             <div class="footer-logo">
-              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" />
+              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" loading="lazy" decoding="async" />
             </div>
             <p></p>
           </div>

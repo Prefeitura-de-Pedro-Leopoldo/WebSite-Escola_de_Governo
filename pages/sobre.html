@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre - Escola de Governo Pedro Leopoldo</title>
+    <title>Sobre · Escola de Governo Pedro Leopoldo</title>
+    <meta name="description" content="História, princípios e missão da Escola de Governo de Pedro Leopoldo (EGov-PL). Decreto nº 2.552/2026." />
+    <meta name="theme-color" content="#3063ad" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,12 +26,14 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
     <!-- Header -->
     <header class="header" id="header">
       <div class="container header-container">
         <a href="../index.html" class="logo">
-          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
-          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
+          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" decoding="async" />
+          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" decoding="async" />
         </a>
         <nav class="nav" id="nav">
           <a href="../index.html" class="nav-link">Início</a>
@@ -49,127 +54,128 @@
       </div>
     </header>
 
-    <!-- Banner -->
-    <section class="page-banner">
-      <div class="page-banner__bg page-banner__bg--sobre"></div>
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="../index.html">Início</a>
-          <i class="fas fa-chevron-right"></i>
-          <span>Sobre</span>
-        </nav>
-        <h1>Sobre a Escola de Governo</h1>
-        <p>Conheça a história, os princípios e a missão da Escola de Governo de Pedro Leopoldo.</p>
-      </div>
-    </section>
+    <main id="main">
+      <!-- Banner -->
+      <section class="page-banner" aria-labelledby="page-title">
+        <div class="page-banner__bg page-banner__bg--sobre" aria-hidden="true"></div>
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <a href="../index.html">Início</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Sobre</span>
+          </nav>
+          <h1 id="page-title">Sobre a Escola de Governo</h1>
+          <p>Conheça a história, os princípios e a missão da Escola de Governo de Pedro Leopoldo.</p>
+        </div>
+      </section>
 
-    <!-- Conteudo -->
-    <section class="section-content">
-      <div class="container">
-        <div class="sobre-grid">
-          <div class="sobre-content">
-            <h2 class="section-title text-left">Sobre o Projeto</h2>
-            <p>
-              A Escola de Governo de Pedro Leopoldo (EGov-PL) foi criada por meio do Decreto nº 2.552, de 5 de março de 2026, com o objetivo de promover a
-              capacitação contínua dos servidores públicos municipais, alinhada às diretrizes de modernização, desburocratização e eficiência administrativa.
-            </p>
-            <p>
-              A Escola de Governo representa o compromisso da Prefeitura com a valorização do servidor e a qualidade dos serviços prestados à população. Sua
-              missão é promover um ambiente de aprendizado contínuo, incentivando a inovação e as melhores práticas de administração pública.
-            </p>
-            <p>
-              O projeto representa um marco na capacitação profissional do serviço público municipal, oferecendo formação de qualidade em temas estratégicos
-              para a gestão pública, desde governança e ética até licitações e atendimento ao cidadão.
-            </p>
+      <!-- Conteudo -->
+      <section class="section-content">
+        <div class="container">
+          <div class="sobre-grid">
+            <div class="sobre-content">
+              <h2 class="section-title text-left">Sobre o Projeto</h2>
+              <p>
+                A Escola de Governo de Pedro Leopoldo (EGov-PL) foi criada por meio do Decreto nº 2.552, de 5 de março de 2026, com o objetivo de promover a
+                capacitação contínua dos servidores públicos municipais, alinhada às diretrizes de modernização, desburocratização e eficiência administrativa.
+              </p>
+              <p>
+                A Escola de Governo representa o compromisso da Prefeitura com a valorização do servidor e a qualidade dos serviços prestados à população. Sua
+                missão é promover um ambiente de aprendizado contínuo, incentivando a inovação e as melhores práticas de administração pública.
+              </p>
+              <p>
+                O projeto representa um marco na capacitação profissional do serviço público municipal, oferecendo formação de qualidade em temas estratégicos
+                para a gestão pública, desde governança e ética até licitações e atendimento ao cidadão.
+              </p>
 
-            <div class="principios">
-              <h3>Princípios Norteadores</h3>
-              <div class="principios-grid">
-                <div class="principio">
+              <div class="principios">
+                <h3>Princípios Norteadores</h3>
+                <div class="principios-grid">
+                  <div class="principio">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                      <strong>Capacitação Contínua</strong>
+                      <p>Formação permanente dos servidores públicos.</p>
+                    </div>
+                  </div>
+                  <div class="principio">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                      <strong>Inovação</strong>
+                      <p>Modernização das práticas de gestão pública.</p>
+                    </div>
+                  </div>
+                  <div class="principio">
+                    <i class="fas fa-eye"></i>
+                    <div>
+                      <strong>Transparência</strong>
+                      <p>Compromisso com a ética e a prestação de contas.</p>
+                    </div>
+                  </div>
+                  <div class="principio">
+                    <i class="fas fa-users"></i>
+                    <div>
+                      <strong>Valorização do Servidor</strong>
+                      <p>Desenvolvimento profissional e bem-estar.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sobre-extra">
+                <h3>Metodologia da EGov-PL</h3>
+                <div class="metodologia-content">
+                  <div class="metodologia-visual">
+                    <img src="../assets/img/metodologia.svg" alt="Metodologia da EGov-PL" class="metodologia-img" loading="lazy" decoding="async" />
+                  </div>
+                  <div class="metodologia-texto">
+                    <h4>Formação em Trilhas</h4>
+                    <p>A aprendizagem é organizada em trilhas temáticas, de forma sistêmica, progressiva e orientada a competências.</p>
+                    <ul class="metodologia-lista">
+                      <li><i class="fas fa-chalkboard-teacher"></i> Instrutores selecionados</li>
+                      <li><i class="fas fa-users"></i> Comunidades de aprendizagem</li>
+                      <li><i class="fas fa-exchange-alt"></i> Intercâmbio de boas práticas entre órgãos e instituições públicas parceiras</li>
+                    </ul>
+                    <div class="metodologia-modalidades">
+                      <span class="modalidade-tag">Presencial</span>
+                      <span class="modalidade-tag">EAD</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sobre-visual">
+              <div class="sobre-card-stack">
+                <div class="sobre-stat-card">
+                  <i class="fas fa-university"></i>
+                  <span class="stat-big">e-Gov</span>
+                  <span>Pedro Leopoldo</span>
+                </div>
+                <div class="sobre-stat-card card-green">
                   <i class="fas fa-graduation-cap"></i>
-                  <div>
-                    <strong>Capacitação Contínua</strong>
-                    <p>Formação permanente dos servidores públicos.</p>
-                  </div>
+                  <span class="stat-big">9</span>
+                  <span>Eixos Temáticos</span>
                 </div>
-                <div class="principio">
-                  <i class="fas fa-lightbulb"></i>
-                  <div>
-                    <strong>Inovação</strong>
-                    <p>Modernização das práticas de gestão pública.</p>
-                  </div>
-                </div>
-                <div class="principio">
-                  <i class="fas fa-eye"></i>
-                  <div>
-                    <strong>Transparência</strong>
-                    <p>Compromisso com a ética e a prestação de contas.</p>
-                  </div>
-                </div>
-                <div class="principio">
-                  <i class="fas fa-users"></i>
-                  <div>
-                    <strong>Valorização do Servidor</strong>
-                    <p>Desenvolvimento profissional e bem-estar.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sobre-extra">
-              <h3>Metodologia da EGov-PL</h3>
-              <div class="metodologia-content">
-                <div class="metodologia-visual">
-                  <img src="../assets/img/metodologia.svg" alt="Metodologia da EGov-PL" class="metodologia-img" />
-                </div>
-                <div class="metodologia-texto">
-                  <h4>Formação em Trilhas</h4>
-                  <p>A aprendizagem é organizada em trilhas temáticas, de forma sistêmica, progressiva e orientada a competências.</p>
-                  <ul class="metodologia-lista">
-                    <li><i class="fas fa-chalkboard-teacher"></i> Instrutores selecionados</li>
-                    <li><i class="fas fa-users"></i> Comunidades de aprendizagem</li>
-                    <li><i class="fas fa-exchange-alt"></i> Intercâmbio de boas práticas entre órgãos e instituições públicas parceiras</li>
-                  </ul>
-                  <div class="metodologia-modalidades">
-                    <span class="modalidade-tag">Presencial</span>
-                    <span class="modalidade-tag">EAD</span>
-                    <span class="modalidade-tag">Semipresencial</span>
-                  </div>
+                <a href="#" target="_blank" class="sobre-stat-card card-legislation">
+                  <i class="fas fa-balance-scale"></i>
+                  <span class="stat-big">Legislação</span>
+                  <span>Acesse no Google Drive</span>
+                </a>
+                <div class="sobre-stat-card">
+                  <i class="fas fa-chalkboard-teacher"></i>
+                  <span class="stat-big">10</span>
+                  <span>Cursos em 2026</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="sobre-visual">
-            <div class="sobre-card-stack">
-              <div class="sobre-stat-card">
-                <i class="fas fa-university"></i>
-                <span class="stat-big">e-Gov</span>
-                <span>Pedro Leopoldo</span>
-              </div>
-              <div class="sobre-stat-card card-green">
-                <i class="fas fa-graduation-cap"></i>
-                <span class="stat-big">9</span>
-                <span>Eixos Temáticos</span>
-              </div>
-              <a href="#" target="_blank" class="sobre-stat-card card-legislation">
-                <i class="fas fa-balance-scale"></i>
-                <span class="stat-big">Legislação</span>
-                <span>Acesse no Google Drive</span>
-              </a>
-              <div class="sobre-stat-card">
-                <i class="fas fa-chalkboard-teacher"></i>
-                <span class="stat-big">10</span>
-                <span>Cursos em 2026</span>
-              </div>
-            </div>
+
+          <div class="back-link">
+            <a href="../index.html"><i class="fas fa-arrow-left"></i> Voltar para a Página Inicial</a>
           </div>
         </div>
-
-        <div class="back-link">
-          <a href="../index.html"><i class="fas fa-arrow-left"></i> Voltar para a Página Inicial</a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -177,7 +183,7 @@
         <div class="footer-grid">
           <div class="footer-info">
             <div class="footer-logo">
-              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" />
+              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" loading="lazy" decoding="async" />
             </div>
             <p></p>
           </div>
