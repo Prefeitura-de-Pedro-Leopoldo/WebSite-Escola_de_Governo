@@ -17,8 +17,10 @@
 
 /* --- Components --- */
 @import url('components/_buttons.css');
+@import url('components/_forms.css');
 @import url('components/_breadcrumb.css');
 @import url('components/_cards.css');
+@import url('components/_cursos.css');
 @import url('components/_back-to-top.css');
 
 /* --- Pages --- */

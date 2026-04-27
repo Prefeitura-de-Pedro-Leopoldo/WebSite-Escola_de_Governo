@@ -6,6 +6,9 @@
    ================================================================ */
 
 :root {
+  /* Form controls e scrollbars nativos respeitam o tema */
+  color-scheme: light;
+
   /* ==============================================================
      1 · PALETA INSTITUCIONAL
      ============================================================== */
@@ -119,6 +122,20 @@
   --shadow-ring:  0 0 0 3px rgba(48, 99, 173, 0.20);
   --shadow-ring-accent: 0 0 0 3px rgba(77, 173, 51, 0.20);
 
+  /* Focus ring (acessibilidade — keyboard) */
+  --focus-ring-color:  var(--brand-primary);
+  --focus-ring-width:  2px;
+  --focus-ring-offset: 2px;
+
+  /* Selection */
+  --selection-bg: rgba(77, 173, 51, 0.22);
+  --selection-fg: var(--text-primary);
+
+  /* Scrollbar */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(22, 31, 54, 0.18);
+  --scrollbar-thumb-hover: rgba(22, 31, 54, 0.32);
+
   /* ==============================================================
      4 · ESCALA DE ESPAÇAMENTO (base 4px)
      ============================================================== */
@@ -223,6 +240,20 @@
    DARK THEME — inversão completa de surfaces mantendo brand
    ================================================================ */
 [data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Selection (mais visivel sobre fundo escuro) */
+  --selection-bg: rgba(107, 193, 85, 0.32);
+  --selection-fg: #ffffff;
+
+  /* Scrollbar */
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.12);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.24);
+
+  /* Focus ring */
+  --focus-ring-color: var(--brand-primary);
+
   /* Remap surfaces */
   --surface-bg:       #0b1120;
   --surface-card:     #131a2e;

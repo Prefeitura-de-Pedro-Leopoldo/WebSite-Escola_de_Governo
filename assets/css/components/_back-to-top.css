@@ -39,7 +39,11 @@
 }
 
 .back-to-top:active {
-  transform: translateY(-1px) scale(1);
+  transform: translateY(-1px) scale(0.96);
+}
+
+.back-to-top:focus-visible {
+  outline-offset: 4px;
 }
 
 /* ---------------- Back Link (footer de seções) ---------------- */

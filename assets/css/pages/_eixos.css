@@ -22,6 +22,13 @@
   gap: var(--space-2);
   text-align: center;
   flex: 1;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background-color var(--duration-fast) var(--ease-in-out);
+}
+
+.summary-item:hover {
+  background: var(--brand-soft-bg);
 }
 
 .summary-number {
@@ -61,7 +68,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: var(--space-8);
+  padding: 0;
   background: var(--surface-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
@@ -123,34 +130,48 @@
   transform: scaleY(1);
 }
 
-/* Icon box */
+/* Banner com a ilustracao do eixo (topo do card, largura cheia) */
 .eixo-card-v2__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 72px;
-  border-radius: var(--radius-md);
-  background: var(--brand-soft-bg);
-  margin-bottom: var(--space-5);
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 120px;
+  margin: 0;
+  padding: var(--space-3);
+  background: var(--surface-muted);
   overflow: hidden;
-  padding: var(--space-2);
-  transition: transform var(--duration-base) var(--ease-spring);
-}
-
-.eixo-card-v2:hover .eixo-card-v2__icon {
-  transform: scale(1.04);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .eixo-card-v2__icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
+  transition: transform var(--duration-base) var(--ease-spring);
+}
+
+.eixo-card-v2:hover .eixo-card-v2__icon img {
+  transform: scale(1.05);
 }
 
 .eixo-card-v2__icon i {
-  font-size: 1.4rem;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
   color: var(--brand-primary);
+}
+
+/* Sutil overlay degrade na base do banner para integrar com o conteudo */
+.eixo-card-v2__icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.08) 100%);
+  pointer-events: none;
 }
 
 /* Body */
@@ -158,6 +179,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding: var(--space-6) var(--space-6) 0;
 }
 
 .eixo-card-v2__body h3 {
@@ -196,8 +218,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--space-6);
-  padding-top: var(--space-5);
+  margin: var(--space-6) var(--space-6) 0;
+  padding: var(--space-5) 0 var(--space-6);
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -481,11 +503,14 @@
   background: var(--surface-muted);
   border-radius: var(--radius-sm);
   font-size: var(--fs-xs);
-  transition: background-color var(--duration-fast) var(--ease-in-out);
+  transition:
+    background-color var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-fast) var(--ease-out);
 }
 
 .crono-item:hover {
   background: var(--brand-soft-bg);
+  transform: translateX(3px);
 }
 
 .crono-item--destaque {

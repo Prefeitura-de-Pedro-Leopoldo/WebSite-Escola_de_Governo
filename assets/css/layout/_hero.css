@@ -65,6 +65,30 @@
   align-items: center;
 }
 
+/* Stagger de entrada — orquestrado via --anim-delay no HTML
+   (logo ~0ms, actions ~140ms, stats ~280ms). Sutil, editorial. */
+.hero-anim {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: hero-enter 700ms var(--ease-out) forwards;
+  animation-delay: var(--anim-delay, 0ms);
+}
+
+@keyframes hero-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
 /* --- Logo --- */
 .hero-logo {
   width: clamp(220px, 26vw, 340px);
