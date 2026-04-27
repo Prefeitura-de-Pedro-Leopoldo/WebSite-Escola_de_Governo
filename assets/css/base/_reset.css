@@ -51,9 +51,15 @@
 }
 
 *:focus-visible {
-  outline: none;
-  box-shadow: var(--shadow-ring);
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
   border-radius: var(--radius-xs);
+  transition: outline-offset var(--duration-fast) var(--ease-out);
+}
+
+/* Remove outline default em mouse (mantem so para teclado) */
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 html {
@@ -123,6 +129,18 @@ h4 { font-size: var(--fs-lg); }
 h5 { font-size: var(--fs-md); }
 h6 { font-size: var(--fs-sm); }
 
+/* Tipografia editorial automatica:
+   - balance: distribui linhas de titulos para nao deixar orfas
+   - pretty:  evita orfas e melhora quebras em paragrafos longos
+   Suporte: Chrome 114+, Safari 17.4+, Firefox 121+ (degrada graciosamente) */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 /* Display serif para contextos específicos */
 .display-serif,
 .hero h1,
@@ -133,10 +151,10 @@ h6 { font-size: var(--fs-sm); }
   letter-spacing: var(--tracking-tightest);
 }
 
-/* Selection color */
+/* Selection — verde institucional (15-22%) com texto legivel */
 ::selection {
-  background: var(--brand-primary);
-  color: var(--text-on-brand);
+  background: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 /* ================================================================
@@ -214,12 +232,107 @@ h6 { font-size: var(--fs-sm); }
 .text-balance { text-wrap: balance; }
 .text-pretty  { text-wrap: pretty; }
 
-/* Reduz movimento para quem prefere */
+/* ================================================================
+   SCROLLBAR — sutil, institucional, adapta ao tema
+   ================================================================ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border: 2px solid var(--surface-bg);
+  border-radius: var(--radius-pill);
+  transition: background var(--duration-fast) var(--ease-in-out);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ================================================================
+   ACESSIBILIDADE & UTILITIES
+   ================================================================ */
+
+/* Conteudo visualmente oculto, mas acessivel a leitores de tela */
+.visually-hidden,
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip link — primeiro elemento focavel da pagina */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-4);
+  z-index: 9999;
+  padding: var(--space-3) var(--space-5);
+  background: var(--brand-primary);
+  color: var(--text-on-brand);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top var(--duration-fast) var(--ease-out);
+}
+
+.skip-link:focus-visible {
+  top: var(--space-4);
+}
+
+/* Stack — espacamento vertical consistente entre filhos diretos */
+.stack > * + * {
+  margin-top: var(--stack-gap, var(--space-4));
+}
+.stack-sm { --stack-gap: var(--space-2); }
+.stack-md { --stack-gap: var(--space-4); }
+.stack-lg { --stack-gap: var(--space-6); }
+.stack-xl { --stack-gap: var(--space-10); }
+
+/* Cluster — flex-wrap para grupos horizontais (tags, botoes, links) */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap, var(--space-3));
+  align-items: var(--cluster-align, center);
+}
+
+/* ================================================================
+   PREFERENCIAS DE MOVIMENTO — respeita usuarios com sensibilidade
+   ================================================================ */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

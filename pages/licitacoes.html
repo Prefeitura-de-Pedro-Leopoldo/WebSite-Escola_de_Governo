@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Licitações e Contratos - Escola de Governo Pedro Leopoldo</title>
+    <title>Licitações e Contratos · Escola de Governo Pedro Leopoldo</title>
+    <meta name="description" content="Eixo Licitações e Contratos Administrativos — planejamento, padronização e gestão contratual sob a Lei 14.133/21." />
+    <meta name="theme-color" content="#3063ad" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,12 +26,14 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
     <!-- Header -->
     <header class="header" id="header">
       <div class="container header-container">
         <a href="../index.html" class="logo">
-          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" />
-          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" />
+          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" decoding="async" />
+          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" decoding="async" />
         </a>
         <nav class="nav" id="nav">
           <a href="../index.html" class="nav-link">Início</a>
@@ -49,104 +54,78 @@
       </div>
     </header>
 
-    <!-- Banner -->
-    <section class="page-banner page-banner--eixo">
-      <div class="page-banner__bg page-banner__bg--licitacoes"></div>
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="../index.html">Início</a>
-          <i class="fas fa-chevron-right"></i>
-          <a href="eixos.html">Eixos e Cursos</a>
-          <i class="fas fa-chevron-right"></i>
-          <span>Licitações e Contratos</span>
-        </nav>
-        <div class="page-banner__eixo-header">
-          <div class="page-banner__icon">
-            <img src="../assets/img/eixos/licitacoes-e-contratos-administrativos.png" alt="" aria-hidden="true" />
+    <main id="main">
+      <!-- Banner -->
+      <section class="page-banner page-banner--eixo" aria-labelledby="page-title">
+        <div class="page-banner__bg page-banner__bg--licitacoes" aria-hidden="true"></div>
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Você está em">
+            <a href="../index.html">Início</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="eixos.html">Eixos e Cursos</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Licitações e Contratos</span>
+          </nav>
+          <div class="page-banner__eixo-header">
+            <div class="page-banner__icon">
+              <img src="../assets/img/eixos/licitacoes-e-contratos-administrativos.png" alt="" aria-hidden="true" decoding="async" />
+            </div>
+            <div>
+              <h1 id="page-title">Licitações e Contratos Administrativos</h1>
+              <p>Planejamento estratégico de contratações, padronização de procedimentos e gestão contratual sob a Lei 14.133/21.</p>
+            </div>
           </div>
-          <div>
-            <h1>Licitações e Contratos Administrativos</h1>
-            <p>Planejamento estratégico de contratações, padronização de procedimentos e gestão contratual sob a Lei 14.133/21.</p>
+          <div class="page-banner__meta">
+            <span><i class="fas fa-book-open" aria-hidden="true"></i> 3 cursos programados</span>
           </div>
         </div>
-        <div class="page-banner__meta">
-          <span><i class="fas fa-book-open"></i> 3 cursos programados</span>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Cursos -->
+      <!-- Cursos Programados -->
+      <section class="section-content section-bg-light">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Cursos Programados</h2>
+            <p class="section-subtitle">Confira os cursos deste eixo previstos para 2026.</p>
+          </div>
+
+          <div class="cursos-grid" data-cursos-eixo="licitacoes"></div>
+
+          <div class="back-link">
+            <a href="eixos.html"><i class="fas fa-arrow-left"></i> Voltar para Eixos e Cursos</a>
+          </div>
+        </div>
+      </section>
+
+      <!--
+    Trilhas Formativas (desativado até validação — reativar quando aprovado)
     <section class="section-content section-bg-light">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Cursos Programados</h2>
-          <p class="section-subtitle">Confira os cursos deste eixo previstos para 2026.</p>
+          <h2 class="section-title">Trilhas Formativas</h2>
+          <p class="section-subtitle">A formação deste eixo é organizada em trilhas progressivas e orientadas a competências.</p>
         </div>
-
-        <div class="cursos-grid">
-          <div class="curso-card">
-            <div class="curso-card__header">
-              <span class="curso-card__mes">Agosto</span>
+        <div class="trilhas-grid">
+          <div class="trilha-card">
+            <div class="trilha-card__icon"><i class="fas fa-shopping-cart"></i></div>
+            <div class="trilha-card__body">
+              <h3>Compras Públicas</h3>
+              <p class="trilha-card__meta"><i class="fas fa-clock"></i> Total de 42 horas</p>
             </div>
-            <div class="curso-card__body">
-              <div class="curso-card__icon">
-                <i class="fas fa-tasks"></i>
-              </div>
-              <h3>Padronização dos Procedimentos de Contratação</h3>
-              <p>Organização e uniformização de fluxos e procedimentos para garantir eficiência e conformidade.</p>
-            </div>
-            <div class="curso-card__footer">
-              <div class="curso-card__meta">
-                <span><i class="fas fa-user-circle"></i> -</span>
-              </div>
-              <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">Em breve</span>
-            </div>
+            <div class="trilha-card__footer"><span class="trilha-card__cta--soon">Cursos em breve</span></div>
           </div>
-
-          <div class="curso-card">
-            <div class="curso-card__header">
-              <span class="curso-card__mes">Setembro</span>
+          <div class="trilha-card">
+            <div class="trilha-card__icon"><i class="fas fa-file-signature"></i></div>
+            <div class="trilha-card__body">
+              <h3>Contratações Públicas</h3>
+              <p class="trilha-card__meta"><i class="fas fa-clock"></i> Total de 58 horas</p>
             </div>
-            <div class="curso-card__body">
-              <div class="curso-card__icon">
-                <i class="fas fa-project-diagram"></i>
-              </div>
-              <h3>Planejamento Estratégico das Contratações Públicas</h3>
-              <p>Planejamento das contratações alinhado às necessidades institucionais, com base na legislação vigente.</p>
-            </div>
-            <div class="curso-card__footer">
-              <div class="curso-card__meta">
-                <span><i class="fas fa-user-circle"></i> -</span>
-              </div>
-              <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">Em breve</span>
-            </div>
+            <div class="trilha-card__footer"><span class="trilha-card__cta--soon">Cursos em breve</span></div>
           </div>
-
-          <div class="curso-card">
-            <div class="curso-card__header">
-              <span class="curso-card__mes">Outubro</span>
-            </div>
-            <div class="curso-card__body">
-              <div class="curso-card__icon">
-                <i class="fas fa-search"></i>
-              </div>
-              <h3>Gestão e Fiscalização de Contratos (Lei 14.133/21)</h3>
-              <p>Práticas de acompanhamento, execução e fiscalização contratual, com foco na conformidade legal e resultados.</p>
-            </div>
-            <div class="curso-card__footer">
-              <div class="curso-card__meta">
-                <span><i class="fas fa-user-circle"></i> -</span>
-              </div>
-              <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">Em breve</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="back-link">
-          <a href="eixos.html"><i class="fas fa-arrow-left"></i> Voltar para Eixos e Cursos</a>
         </div>
       </div>
     </section>
+    --></main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -154,7 +133,7 @@
         <div class="footer-grid">
           <div class="footer-info">
             <div class="footer-logo">
-              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" />
+              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" loading="lazy" decoding="async" />
             </div>
             <p></p>
           </div>

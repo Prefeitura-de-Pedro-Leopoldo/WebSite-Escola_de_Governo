@@ -370,3 +370,156 @@
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(255, 255, 255, 0.10);
 }
+
+/* ---------------- Empty state (quando nenhum curso do mês atual/passado) ---------------- */
+.cursos-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-10) var(--space-6);
+  background: var(--surface-card);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+}
+
+.cursos-empty__icon {
+  font-size: 2.25rem;
+  color: var(--brand-primary);
+  margin-bottom: var(--space-4);
+  opacity: 0.7;
+}
+
+.cursos-empty h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+  letter-spacing: var(--tracking-tighter);
+}
+
+.cursos-empty p {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  max-width: 48ch;
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-5);
+}
+
+.cursos-empty__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--brand-primary);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: gap var(--duration-fast) var(--ease-in-out);
+}
+
+.cursos-empty__link:hover {
+  gap: var(--space-3);
+}
+
+.cursos-empty__link i {
+  font-size: 0.75em;
+}
+
+/* ================================================================
+   Trilha Cards (trilhas formativas dentro do eixo)
+   ================================================================ */
+.trilhas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.trilha-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  background: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color var(--duration-fast) var(--ease-in-out),
+    box-shadow var(--duration-fast) var(--ease-in-out),
+    transform var(--duration-fast) var(--ease-in-out);
+}
+
+.trilha-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-default);
+}
+
+.trilha-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--brand-soft-bg);
+  color: var(--brand-primary);
+  margin-bottom: var(--space-4);
+}
+
+.trilha-card__icon i {
+  font-size: 1.1rem;
+}
+
+.trilha-card__body {
+  flex: 1;
+}
+
+.trilha-card__body h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tighter);
+  margin-bottom: var(--space-3);
+}
+
+.trilha-card__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--brand-accent);
+}
+
+.trilha-card__meta i {
+  font-size: 0.9em;
+}
+
+.trilha-card__footer {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.trilha-card__cta--soon {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: var(--surface-muted);
+  color: var(--text-muted);
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+}
+
+[data-theme="dark"] .trilha-card__cta--soon {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.10);
+}

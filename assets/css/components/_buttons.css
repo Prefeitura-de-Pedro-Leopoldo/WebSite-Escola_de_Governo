@@ -36,9 +36,12 @@
   line-height: 1;
 }
 
-.btn:focus-visible {
-  outline: none;
-  box-shadow: var(--shadow-ring);
+/* Estado disabled — coerente entre todas as variantes */
+.btn[disabled],
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* ---------------- Primary ---------------- */
@@ -57,8 +60,9 @@
 }
 
 .btn-primary:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.985);
   background: var(--brand-primary-active);
+  box-shadow: 0 1px 2px rgba(22, 31, 54, 0.10);
 }
 
 /* ---------------- Outline ---------------- */
@@ -82,7 +86,8 @@
 }
 
 .btn-outline:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.985);
+  background: var(--brand-soft-bg-hover);
 }
 
 /* ---------------- Accent (verde) ---------------- */
@@ -100,6 +105,12 @@
   box-shadow: var(--shadow-accent);
 }
 
+.btn-accent:active {
+  transform: translateY(0) scale(0.985);
+  background: var(--green-700);
+  box-shadow: 0 1px 2px rgba(22, 31, 54, 0.10);
+}
+
 /* ---------------- Ghost ---------------- */
 .btn-ghost {
   background: transparent;
@@ -109,6 +120,11 @@
 
 .btn-ghost:hover {
   background: var(--brand-soft-bg);
+}
+
+.btn-ghost:active {
+  background: var(--brand-soft-bg-hover);
+  transform: scale(0.985);
 }
 
 /* ---------------- Sizes ---------------- */

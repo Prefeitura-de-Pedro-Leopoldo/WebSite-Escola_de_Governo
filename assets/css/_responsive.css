@@ -16,6 +16,9 @@
   .cursos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .trilhas-grid {
+    grid-template-columns: 1fr;
+  }
   .quick-grid {
     grid-template-columns: repeat(2, 1fr);
   }

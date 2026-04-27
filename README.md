@@ -40,8 +40,7 @@ Site institucional da Escola de Governo de Pedro Leopoldo (EGov-PL) — platafor
 │       ├── logo-dark.png   · Logo para fundos escuros
 │       ├── hero-white.png  · Hero background (tema claro)
 │       └── hero-dark.png   · Hero background (tema escuro)
-├── docs/                   · Documentos institucionais (identidade visual, trilhas)
-└── _partials/              · Referência de blocos HTML reutilizáveis (head, header, footer)
+└── docs/                   · Documentos institucionais (identidade visual, trilhas)
 ```
 
 ## Design System
