@@ -73,25 +73,55 @@
       <section class="section-content noticias-destaque-section">
         <div class="container">
           <article class="noticia-hero">
-            <div class="noticia-hero__media noticia-hero__media--institucional" aria-hidden="true">
-              <div class="noticia-hero__media-icon"><i class="fas fa-landmark"></i></div>
-              <span class="noticia-hero__tag">Destaque</span>
+            <div class="noticia-hero__media noticia-hero__media--carousel" data-hero-carousel>
+              <div class="noticia-hero__carousel" aria-roledescription="carrossel" aria-label="Imagens institucionais">
+                <figure class="noticia-hero__slide is-active">
+                  <span class="noticia-hero__frame">
+                    <img src="../assets/img/imagens%20portal/aulaMagna.jpg" alt="Atividade institucional da EGov-PL" loading="eager" decoding="async" />
+                  </span>
+                </figure>
+                <figure class="noticia-hero__slide">
+                  <span class="noticia-hero__frame">
+                    <img src="../assets/img/imagens%20portal/IMG_8970.jpg" alt="Equipe da Escola de Governo" loading="lazy" decoding="async" />
+                  </span>
+                </figure>
+                <figure class="noticia-hero__slide">
+                  <span class="noticia-hero__frame">
+                    <img src="../assets/img/imagens%20portal/IMG_9399.JPG" alt="Encontro institucional" loading="lazy" decoding="async" />
+                  </span>
+                </figure>
+                <figure class="noticia-hero__slide">
+                  <span class="noticia-hero__frame">
+                    <img src="../assets/img/imagens%20portal/IMG_9413.jpg" alt="Servidores em formação" loading="lazy" decoding="async" />
+                  </span>
+                </figure>
+                <figure class="noticia-hero__slide">
+                  <span class="noticia-hero__frame">
+                    <img src="../assets/img/imagens%20portal/IMG_9446.JPG" alt="Atividade da EGov-PL" loading="lazy" decoding="async" />
+                  </span>
+                </figure>
+                <figure class="noticia-hero__slide">
+                  <span class="noticia-hero__frame">
+                    <img src="../assets/img/imagens%20portal/IMG_9479.jpg" alt="Programação institucional" loading="lazy" decoding="async" />
+                  </span>
+                </figure>
+                <figure class="noticia-hero__slide">
+                  <span class="noticia-hero__frame">
+                    <img src="../assets/img/imagens%20portal/IMG_9527.JPG" alt="Momento institucional" loading="lazy" decoding="async" />
+                  </span>
+                </figure>
+              </div>
+              <div class="noticia-hero__dots" role="tablist" aria-label="Selecionar imagem" data-hero-dots></div>
             </div>
             <div class="noticia-hero__body">
               <div class="noticia-meta">
-                <span class="noticia-kicker noticia-kicker--primary">Institucional</span>
-                <time class="noticia-data" datetime="2026-04-06">06 de abril de 2026</time>
-                <span class="noticia-read-time"><i class="fas fa-clock" aria-hidden="true"></i> 3 min de leitura</span>
+                <time class="noticia-data" datetime="2026-04-06">23 de abril de 2026</time>
               </div>
               <h2 class="noticia-hero__title">EGOV-PL inicia comunicação oficial do ciclo formativo de 2026</h2>
               <p class="noticia-hero__excerpt">
                 A Escola de Governo de Pedro Leopoldo passa a concentrar em um único portal as notícias, os eixos temáticos, o cronograma anual e os canais de
                 apoio aos servidores municipais — consolidando toda a comunicação institucional.
               </p>
-              <a href="#" class="noticia-hero__cta">
-                Ler matéria completa
-                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-              </a>
             </div>
           </article>
         </div>
@@ -115,50 +145,41 @@
           </div>
 
           <div class="noticias-grid">
-            <article class="noticia-card" data-category="portal">
-              <div class="noticia-card__media noticia-card__media--portal" aria-hidden="true">
-                <div class="noticia-card__media-icon"><i class="fas fa-desktop"></i></div>
+            <article class="noticia-card" data-category="cursos">
+              <div class="noticia-card__media noticia-card__media--cursos noticia-card__media--image" aria-hidden="true">
+                <span class="noticia-card__frame">
+                  <img src="../assets/img/imagens%20portal/WorkshopSeiUsar.png" alt="Workshop SEI! Usar na prática" loading="lazy" decoding="async" />
+                </span>
               </div>
               <div class="noticia-card__body">
                 <div class="noticia-meta">
-                  <span class="noticia-kicker">Portal</span>
-                  <time class="noticia-data" datetime="2026-04-04">04/04/2026</time>
+                  <span class="noticia-kicker">Cursos</span>
+                  <time class="noticia-data" datetime="2026-04-24">24/04/2026</time>
                 </div>
-                <h3 class="noticia-card__title">Portal da EGOV-PL organiza notícias, cursos e informações institucionais</h3>
-                <p class="noticia-card__excerpt">
-                  A página de notícias passa a reunir comunicados oficiais, facilitando o acompanhamento das ações formativas.
-                </p>
-                <a href="#" class="noticia-card__cta"> Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i> </a>
+                <h3 class="noticia-card__title">Workshop SEI! Usar na prática</h3>
+                <p class="noticia-card__excerpt">Capacitação prática no Sistema Eletrônico de Informações (SEI) para servidores municipais.</p>
+                <span class="noticia-card__cta noticia-card__cta--static">Evento realizado dia 24/04/2026</span>
               </div>
             </article>
 
             <article class="noticia-card" data-category="cursos">
               <div class="noticia-card__media noticia-card__media--cursos" aria-hidden="true">
-                <div class="noticia-card__media-icon"><i class="fas fa-book-open"></i></div>
+                <div class="noticia-card__media-icon"><i class="fas fa-gavel"></i></div>
               </div>
               <div class="noticia-card__body">
                 <div class="noticia-meta">
                   <span class="noticia-kicker">Cursos</span>
-                  <time class="noticia-data" datetime="2026-03-31">31/03/2026</time>
+                  <time class="noticia-data" datetime="2026-04-29">29/04/2026</time>
                 </div>
-                <h3 class="noticia-card__title">EGOV-PL divulga a programação oficial de cursos para 2026</h3>
-                <p class="noticia-card__excerpt">Dez cursos em três eixos ativos, além de uma Aula Magna de abertura, compõem a primeira agenda formativa.</p>
-                <a href="#" class="noticia-card__cta"> Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i> </a>
-              </div>
-            </article>
-
-            <article class="noticia-card" data-category="evento">
-              <div class="noticia-card__media noticia-card__media--evento" aria-hidden="true">
-                <div class="noticia-card__media-icon"><i class="fas fa-graduation-cap"></i></div>
-              </div>
-              <div class="noticia-card__body">
-                <div class="noticia-meta">
-                  <span class="noticia-kicker noticia-kicker--accent">Evento</span>
-                  <time class="noticia-data" datetime="2026-04-10">10/04/2026</time>
-                </div>
-                <h3 class="noticia-card__title">Aula Magna marca a abertura oficial das atividades de 2026</h3>
-                <p class="noticia-card__excerpt">O encontro de abertura apresenta a proposta institucional da EGOV-PL e inaugura o ciclo de capacitação.</p>
-                <a href="#" class="noticia-card__cta"> Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i> </a>
+                <h3 class="noticia-card__title">Formação para Membros da Comissão Recursal</h3>
+                <p class="noticia-card__excerpt">
+                  Encontro formativo voltado aos integrantes da Comissão Recursal, abordando procedimentos, fundamentação de decisões e boas práticas
+                  administrativas.
+                </p>
+                <a href="governanca.html" class="noticia-card__cta">
+                  Mais informações
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
               </div>
             </article>
           </div>
