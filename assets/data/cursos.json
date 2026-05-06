@@ -20,7 +20,7 @@
               "responsavel": "SATD",
               "icone": "fas fa-chart-bar",
               "descricao": "Conceitos e ferramentas para gestão para resultados com foco em planejamento, indicadores, monitoramento e avaliação.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "emBreve": true
             },
             {
               "id": "etica-setor-publico-2026-05",
@@ -30,12 +30,13 @@
               "responsavel": "Enap",
               "icone": "fas fa-balance-scale",
               "descricao": "Princípios éticos, integridade, conduta profissional e prevenção de conflitos de interesse. Curso EAD ofertado pela Enap.",
-              "acessoCursoUrl": "https://www.escolavirtual.gov.br/curso/4"
+              "acessoCursoUrl": "https://www.escolavirtual.gov.br/curso/4",
+              "emBreve": true
             },
             {
-              "id": "comissao-recursal-2026-04",
+              "id": "comissao-recursal-2026-05",
               "titulo": "Formação para Membros da Comissão Recursal de Avaliação de Desempenho",
-              "mes": "abril",
+              "mes": "maio",
               "modalidade": "presencial",
               "responsavel": "DIRGEP",
               "icone": "fas fa-users-cog",
@@ -80,7 +81,7 @@
               "responsavel": "SAGA",
               "icone": "fas fa-landmark",
               "descricao": "Introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "emBreve": true
             }
           ]
         }

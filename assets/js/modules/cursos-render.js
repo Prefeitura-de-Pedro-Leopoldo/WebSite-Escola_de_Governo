@@ -20,6 +20,14 @@ function buildModalidadeTag(modalidade) {
 let formsDefault = {};
 
 function buildFooter(curso) {
+  if (curso.emBreve) {
+    return `
+      <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">
+        Em breve
+      </span>
+    `;
+  }
+
   if (curso.modalidade === 'presencial') {
     const customLabel = curso.inscricaoLabel;
     const url = curso.inscricaoUrl;
