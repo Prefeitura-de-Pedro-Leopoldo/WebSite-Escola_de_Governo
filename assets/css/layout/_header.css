@@ -1,5 +1,5 @@
 /* ================================================================
-   Header — navegação institucional
+   Header - navegação institucional
    ================================================================ */
 .header {
   position: fixed;
@@ -25,11 +25,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg,
-    var(--brand-primary) 0%,
-    var(--brand-primary) 50%,
-    var(--brand-accent) 50%,
-    var(--brand-accent) 100%);
+  background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-primary) 50%, var(--brand-accent) 50%, var(--brand-accent) 100%);
 }
 
 .header.scrolled {
@@ -65,9 +61,15 @@
   transition: opacity var(--duration-base) var(--ease-in-out);
 }
 
-.logo-header--dark { display: none; }
-[data-theme="dark"] .logo-header--light { display: none; }
-[data-theme="dark"] .logo-header--dark { display: block; }
+.logo-header--dark {
+  display: none;
+}
+[data-theme="dark"] .logo-header--light {
+  display: none;
+}
+[data-theme="dark"] .logo-header--dark {
+  display: block;
+}
 
 /* ---------------- Nav ---------------- */
 .nav {
@@ -162,7 +164,7 @@
   border-color: var(--brand-primary);
 }
 
-/* Thumb deslizante — centralizado verticalmente via translateY(-50%)
+/* Thumb deslizante - centralizado verticalmente via translateY(-50%)
    para eliminar qualquer desalinhamento por padding/border inconsistente. */
 .theme-toggle::before {
   content: "";
@@ -175,7 +177,7 @@
   border-radius: 50%;
   box-shadow:
     0 2px 4px rgba(22, 31, 54, 0.18),
-    0 1px 2px rgba(22, 31, 54, 0.10),
+    0 1px 2px rgba(22, 31, 54, 0.1),
     inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   transform: translateY(-50%) translateX(0);
   transition:
@@ -218,7 +220,7 @@
 }
 
 /* Ícones posicionados absolutamente para centralização perfeita
-   — elimina qualquer interferência de baseline/line-height do FontAwesome
+   - elimina qualquer interferência de baseline/line-height do FontAwesome
    ou do flexbox do container. */
 .theme-toggle i {
   position: absolute;
@@ -241,8 +243,12 @@
   transform: translateY(-50%) rotate(var(--t-icon-rot)) scale(var(--t-icon-scale));
 }
 
-.theme-toggle .icon-sun  { left: var(--t-pad); }
-.theme-toggle .icon-moon { right: var(--t-pad); }
+.theme-toggle .icon-sun {
+  left: var(--t-pad);
+}
+.theme-toggle .icon-moon {
+  right: var(--t-pad);
+}
 
 .theme-toggle i::before {
   display: block;

@@ -28,7 +28,7 @@
     transform var(--duration-fast) var(--ease-in-out);
 }
 
-/* Linha institucional superior — invisível por padrão, aparece no hover */
+/* Linha institucional superior - invisível por padrão, aparece no hover */
 .quick-card::before {
   content: "";
   position: absolute;
@@ -165,13 +165,12 @@
 
 [data-theme="dark"] .quick-card-cta--soon {
   background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ---------------- Card Highlight (destaque institucional) ---------------- */
 .quick-card--highlight {
-  background:
-    linear-gradient(135deg, var(--blue-700) 0%, var(--blue-600) 100%);
+  background: linear-gradient(135deg, var(--blue-700) 0%, var(--blue-600) 100%);
   border-color: transparent;
   color: var(--white);
 }
@@ -217,7 +216,7 @@
 }
 
 .quick-card--highlight .quick-card-desc {
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .quick-card--highlight .quick-card-cta {
@@ -345,7 +344,7 @@
   margin-top: 0;
 }
 
-/* Variante "Em breve" — sem interação, visual neutro */
+/* Variante "Em breve" - sem interação, visual neutro */
 .curso-card__cta--soon {
   display: inline-flex;
   align-items: center;
@@ -368,7 +367,7 @@
 
 [data-theme="dark"] .curso-card__cta--soon {
   background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ---------------- Empty state (quando nenhum curso do mês atual/passado) ---------------- */
@@ -521,5 +520,5 @@
 
 [data-theme="dark"] .trilha-card__cta--soon {
   background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.1);
 }

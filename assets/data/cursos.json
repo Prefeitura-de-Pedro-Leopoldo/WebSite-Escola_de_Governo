@@ -1,5 +1,5 @@
 {
-  "_schema": "Estrutura: eixos > trilhas > cursos. Hoje cada eixo usa uma trilha 'default' (nome: null) que renderiza só os cards. Quando trilhas reais forem definidas, dividir o array 'trilhas' e dar nome a cada uma — o renderer mostra o sub-cabeçalho automaticamente. 'formsDefault' são os Forms genéricos reutilizados por todos os cursos EAD; se um curso precisar de Form próprio, basta sobrescrever 'inscricaoFormId' / 'certificadoUrl' no próprio curso.",
+  "_schema": "Estrutura: eixos > trilhas > cursos. Hoje cada eixo usa uma trilha 'default' (nome: null) que renderiza só os cards. Quando trilhas reais forem definidas, dividir o array 'trilhas' e dar nome a cada uma - o renderer mostra o sub-cabeçalho automaticamente. 'formsDefault' são os Forms genéricos reutilizados por todos os cursos EAD; se um curso precisar de Form próprio, basta sobrescrever 'inscricaoFormId' / 'certificadoUrl' no próprio curso.",
   "formsDefault": {
     "inscricaoFormId": "1FAIpQLSdg_NLb90QdmCNNKdQwFAi2gakIJedTTmSuxkqQJJPmzNqQZQ",
     "certificadoUrl": "https://forms.gle/iRGvfDAc5JPsftF66"
@@ -34,9 +34,32 @@
               "emBreve": true
             },
             {
-              "id": "comissao-recursal-2026-05",
-              "titulo": "Formação para Membros da Comissão Recursal de Avaliação de Desempenho",
+              "id": "comissao-recursal-2026-05-t1",
+              "titulo": "Formação para Membros da Comissão Recursal - 1ª turma",
               "mes": "maio",
+              "data": "07/05",
+              "modalidade": "presencial",
+              "responsavel": "DIRGEP",
+              "icone": "fas fa-users-cog",
+              "descricao": "Aspectos legais e procedimentais para atuação em comissões recursais, com foco em análise técnica e tomada de decisão.",
+              "inscricaoLabel": "Convocação"
+            },
+            {
+              "id": "fundamentos-gestao-publica-2026-05-t1",
+              "titulo": "Fundamentos da Gestão Pública - 1ª turma",
+              "mes": "maio",
+              "data": "14/05",
+              "modalidade": "presencial",
+              "responsavel": "SAGA",
+              "icone": "fas fa-landmark",
+              "descricao": "Introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
+              "emBreve": true
+            },
+            {
+              "id": "comissao-recursal-2026-05-t2",
+              "titulo": "Formação para Membros da Comissão Recursal - 2ª turma",
+              "mes": "maio",
+              "data": "21/05",
               "modalidade": "presencial",
               "responsavel": "DIRGEP",
               "icone": "fas fa-users-cog",
@@ -137,13 +160,14 @@
           "cursos": [
             {
               "id": "workshop-sei-2026-04",
-              "titulo": "Workshop SEI! Usar na prática! Usar na Prática",
+              "titulo": "Workshop SEI! Usar na prática",
               "mes": "abril",
+              "data": "24/04",
               "modalidade": "presencial",
               "responsavel": "SATD",
               "icone": "fas fa-file-signature",
-              "descricao": "Capacitação prática no Sistema Eletrônico de Informações (SEI), com foco no uso das ferramentas digitais para tramitação de processos administrativos. Realizado em 24/04/2026.",
-              "inscricaoLabel": "O evento encerrado..."
+              "descricao": "Capacitação prática no Sistema Eletrônico de Informações (SEI), com foco no uso das ferramentas digitais para tramitação de processos administrativos.",
+              "inscricaoLabel": "Encerrado"
             }
           ]
         }

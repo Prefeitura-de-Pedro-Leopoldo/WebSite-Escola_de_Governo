@@ -81,7 +81,7 @@
     transform var(--duration-fast) var(--ease-in-out);
 }
 
-/* Barra lateral institucional — invisível por padrão */
+/* Barra lateral institucional - invisível por padrão */
 .eixo-card-v2::before {
   content: "";
   position: absolute;
@@ -170,7 +170,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.08) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.08) 100%);
   pointer-events: none;
 }
 
@@ -381,7 +381,7 @@
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-4);
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-pill);
   font-size: var(--fs-2xs);
@@ -468,7 +468,6 @@
   color: var(--brand-accent);
   font-size: 0.9em;
 }
-
 
 /* ================================================================
    Cronograma
@@ -585,11 +584,21 @@
   flex-shrink: 0;
 }
 
-.crono-dot.governanca      { background: var(--brand-primary); }
-.crono-dot.governo-digital { background: var(--amber); }
-.crono-dot.licitacoes      { background: var(--purple); }
-.crono-dot.atendimento     { background: var(--red); }
-.crono-dot.aula-magna      { background: var(--brand-accent); }
+.crono-dot.governanca {
+  background: var(--brand-primary);
+}
+.crono-dot.governo-digital {
+  background: var(--amber);
+}
+.crono-dot.licitacoes {
+  background: var(--purple);
+}
+.crono-dot.atendimento {
+  background: var(--red);
+}
+.crono-dot.aula-magna {
+  background: var(--brand-accent);
+}
 
 .crono-dot-inline {
   display: inline-block;
@@ -599,11 +608,21 @@
   margin-right: var(--space-1);
 }
 
-.crono-dot-inline.governanca      { background: var(--brand-primary); }
-.crono-dot-inline.governo-digital { background: var(--amber); }
-.crono-dot-inline.licitacoes      { background: var(--purple); }
-.crono-dot-inline.atendimento     { background: var(--red); }
-.crono-dot-inline.aula-magna      { background: var(--brand-accent); }
+.crono-dot-inline.governanca {
+  background: var(--brand-primary);
+}
+.crono-dot-inline.governo-digital {
+  background: var(--amber);
+}
+.crono-dot-inline.licitacoes {
+  background: var(--purple);
+}
+.crono-dot-inline.atendimento {
+  background: var(--red);
+}
+.crono-dot-inline.aula-magna {
+  background: var(--brand-accent);
+}
 
 .crono-item strong {
   color: var(--text-primary);

@@ -1,5 +1,5 @@
 /* ================================================================
-   Hero — composição institucional imersiva
+   Hero - composição institucional imersiva
    Background: hero-white.png (light) / hero-dark.png (dark)
    ================================================================ */
 .hero {
@@ -14,7 +14,7 @@
   isolation: isolate;
 }
 
-/* Camada 1 — imagem de fundo */
+/* Camada 1 - imagem de fundo */
 .hero-bg-image {
   position: absolute;
   inset: 0;
@@ -37,7 +37,7 @@
   background: var(--hero-overlay);
 }
 
-/* Camada 2 — padrão institucional sutil */
+/* Camada 2 - padrão institucional sutil */
 .hero-bg-pattern {
   position: absolute;
   inset: 0;
@@ -49,11 +49,11 @@
 
 [data-theme="dark"] .hero-bg-pattern {
   background:
-    radial-gradient(ellipse at 78% 22%, rgba(110, 155, 214, 0.10) 0%, transparent 45%),
+    radial-gradient(ellipse at 78% 22%, rgba(110, 155, 214, 0.1) 0%, transparent 45%),
     radial-gradient(ellipse at 18% 82%, rgba(107, 193, 85, 0.08) 0%, transparent 42%);
 }
 
-/* Camada 3 — conteúdo */
+/* Camada 3 - conteúdo */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -65,7 +65,7 @@
   align-items: center;
 }
 
-/* Stagger de entrada — orquestrado via --anim-delay no HTML
+/* Stagger de entrada - orquestrado via --anim-delay no HTML
    (logo ~0ms, actions ~140ms, stats ~280ms). Sutil, editorial. */
 .hero-anim {
   opacity: 0;
@@ -103,9 +103,15 @@
   filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.55));
 }
 
-.hero-logo--dark { display: none; }
-[data-theme="dark"] .hero-logo--light { display: none; }
-[data-theme="dark"] .hero-logo--dark { display: block; }
+.hero-logo--dark {
+  display: none;
+}
+[data-theme="dark"] .hero-logo--light {
+  display: none;
+}
+[data-theme="dark"] .hero-logo--dark {
+  display: block;
+}
 
 /* --- Badge institucional --- */
 .hero-badge {

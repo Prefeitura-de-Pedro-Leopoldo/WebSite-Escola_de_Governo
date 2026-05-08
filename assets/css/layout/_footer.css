@@ -1,5 +1,5 @@
 /* ================================================================
-   Footer — institucional, fundo escuro constante
+   Footer - institucional, fundo escuro constante
    Markup: .footer-info > .footer-logo + .footer-links (h4 + a) + .footer-contact (h4 + p)
    ================================================================ */
 .footer {
@@ -18,11 +18,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg,
-    var(--brand-primary) 0%,
-    var(--brand-primary) 50%,
-    var(--brand-accent) 50%,
-    var(--brand-accent) 100%);
+  background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-primary) 50%, var(--brand-accent) 50%, var(--brand-accent) 100%);
   z-index: 2;
 }
 
@@ -89,7 +85,7 @@
   gap: var(--space-2);
 }
 
-/* Títulos das colunas — alto contraste (branco sólido) */
+/* Títulos das colunas - alto contraste (branco sólido) */
 .footer-links h4,
 .footer-contact h4 {
   font-family: var(--font-sans);
@@ -122,7 +118,7 @@
   gap: var(--space-2);
   padding: 4px 0;
   font-size: var(--fs-sm);
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(255, 255, 255, 0.8);
   transition:
     color var(--duration-fast) var(--ease-in-out),
     padding-left var(--duration-fast) var(--ease-in-out);
@@ -142,7 +138,7 @@
   padding: 4px 0;
   margin: 0;
   font-size: var(--fs-sm);
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(255, 255, 255, 0.8);
   line-height: var(--lh-normal);
 }
 
@@ -155,7 +151,7 @@
 
 /* ---------------- Bottom ---------------- */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--space-5) 0;
   display: flex;
   justify-content: space-between;
@@ -163,7 +159,7 @@
   flex-wrap: wrap;
   gap: var(--space-3);
   font-size: var(--fs-xs);
-  color: rgba(255, 255, 255, 0.60);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-bottom p {
