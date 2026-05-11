@@ -23,7 +23,7 @@ function buildFooter(curso) {
   if (curso.emBreve) {
     return `
       <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">
-        Em breve
+        Inscrições liberadas em breve
       </span>
     `
   }
@@ -34,7 +34,7 @@ function buildFooter(curso) {
 
     // Sem URL: badge informativo nao-clicavel (ex: "Convocação", "Encerrado")
     if (!url) {
-      const label = customLabel || "Em breve"
+      const label = customLabel || "Inscrições liberadas em breve"
       return `
         <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">
           ${escapeHtml(label)}
