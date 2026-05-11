@@ -43,10 +43,18 @@ function buildFooter(curso) {
     }
 
     const label = customLabel || "Inscrever-se no Sympla"
+    const detalheBtn = curso.detalhe
+      ? `
+      <a class="curso-card__btn curso-card__btn--secondary" href="curso.html?id=${encodeURIComponent(curso.id)}">
+        <i class="fas fa-circle-info"></i> Saiba mais
+      </a>
+    `
+      : ""
     return `
       <a class="curso-card__btn curso-card__btn--primary" href="${url}" target="_blank" rel="noopener">
         <i class="fas fa-ticket-alt"></i> ${escapeHtml(label)}
       </a>
+      ${detalheBtn}
     `
   }
 
@@ -76,7 +84,7 @@ function buildCard(curso) {
   const mes = curso.mes ? capitalize(curso.mes) : ""
   const periodo = curso.data ? `${curso.data} · ${mes}` : mes
   return `
-    <div class="curso-card" data-modalidade="${curso.modalidade}">
+    <div class="curso-card" data-modalidade="${curso.modalidade}" data-mes="${escapeHtml((curso.mes || "").toLowerCase())}">
       <div class="curso-card__header">
         <span class="curso-card__mes">${escapeHtml(periodo)}</span>
         ${buildModalidadeTag(curso.modalidade)}
@@ -131,7 +139,8 @@ function ordemCronologica(curso) {
 }
 
 function renderTrilha(trilha) {
-  const cursosOrdenados = [...trilha.cursos].sort((a, b) => ordemCronologica(a) - ordemCronologica(b))
+  const cursosVisiveis = trilha.cursos.filter(c => !c.ocultarNoEixo)
+  const cursosOrdenados = [...cursosVisiveis].sort((a, b) => ordemCronologica(a) - ordemCronologica(b))
   const cardsHtml = cursosOrdenados.map(buildCard).join("")
   if (!trilha.nome) return cardsHtml
   return `
@@ -199,14 +208,14 @@ export async function initCursosRender() {
       return
     }
 
-    const allCursos = eixo.trilhas.flatMap(t => t.cursos)
+    const allCursos = eixo.trilhas.flatMap(t => t.cursos).filter(c => !c.ocultarNoEixo)
     if (!allCursos.length) {
       container.innerHTML = buildEmptyState()
       return
     }
 
     container.innerHTML = eixo.trilhas
-      .filter(t => t.cursos.length > 0)
+      .filter(t => t.cursos.some(c => !c.ocultarNoEixo))
       .map(renderTrilha)
       .join("")
 

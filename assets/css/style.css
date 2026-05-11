@@ -21,6 +21,7 @@
 @import url('components/_breadcrumb.css');
 @import url('components/_cards.css');
 @import url('components/_cursos.css');
+@import url('components/_eventos-destaque.css');
 @import url('components/_back-to-top.css');
 
 /* --- Pages --- */
@@ -28,6 +29,7 @@
 @import url('pages/_noticias.css');
 @import url('pages/_sobre.css');
 @import url('pages/_suporte.css');
+@import url('pages/_curso-detalhe.css');
 
 /* --- Responsive --- */
 @import url('_responsive.css');

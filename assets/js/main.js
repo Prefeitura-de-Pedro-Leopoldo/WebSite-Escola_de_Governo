@@ -11,6 +11,8 @@ import { initThemeToggle } from './modules/theme-toggle.js';
 import { initNoticiasFilter } from './modules/noticias-filter.js';
 import { initCursoFilter } from './modules/curso-filter.js';
 import { initCursosRender } from './modules/cursos-render.js';
+import { initCursoDetalhe } from './modules/curso-detalhe.js';
+import { initEventosDestaque } from './modules/eventos-destaque.js';
 import { initHeroCarousel } from './modules/hero-carousel.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -22,5 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initNoticiasFilter();
     initHeroCarousel();
     await initCursosRender();
+    await initCursoDetalhe();
+    await initEventosDestaque();
     initCursoFilter();
 });

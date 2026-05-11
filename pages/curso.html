@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso · Escola de Governo Pedro Leopoldo</title>
+    <meta name="description" content="Detalhes do curso ofertado pela Escola de Governo de Pedro Leopoldo (EGov-PL)." />
+    <meta name="theme-color" content="#3063ad" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+      ;(function () {
+        try {
+          var stored = localStorage.getItem("egovpl-theme")
+          var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+          document.documentElement.setAttribute("data-theme", theme)
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container header-container">
+        <a href="../index.html" class="logo">
+          <img src="../assets/img/logo-light.png" alt="EGOV-PL" class="logo-header logo-header--light" decoding="async" />
+          <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-header logo-header--dark" decoding="async" />
+        </a>
+        <nav class="nav" id="nav">
+          <a href="../index.html" class="nav-link">Início</a>
+          <a href="eixos.html" class="nav-link active">Eixos e Cursos</a>
+          <a href="noticias.html" class="nav-link">Notícias</a>
+          <a href="sobre.html" class="nav-link">Sobre</a>
+          <a href="suporte.html" class="nav-link">Suporte</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro/escuro">
+            <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
+            <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" data-curso-detalhe>
+      <!-- O conteúdo é renderizado dinamicamente por curso-detalhe.js a partir de ?id=... -->
+      <section class="curso-detalhe__loading" aria-live="polite">
+        <div class="container">
+          <p><i class="fas fa-spinner fa-spin"></i> Carregando informações do curso...</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <img src="../assets/img/logo-dark.png" alt="EGOV-PL" class="logo-footer" loading="lazy" decoding="async" />
+            </div>
+            <p></p>
+          </div>
+          <div class="footer-links">
+            <h4>Navegação</h4>
+            <a href="../index.html">Início</a>
+            <a href="eixos.html">Eixos e Cursos</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="suporte.html">Suporte</a>
+          </div>
+          <div class="footer-links">
+            <h4>Recursos</h4>
+            <a href="https://drive.google.com/drive/folders/1VpYNCkYTSp7_v_X11wPgX9sx_tGoGmjT" target="_blank">Materiais de Apoio</a>
+            <a href="https://drive.google.com/drive/folders/1LsyiYnRhSxU3vvQrpRYj-drcZ2_BgsMP" target="_blank">Vídeos e Tutoriais</a>
+          </div>
+          <div class="footer-contact">
+            <h4>Contato e Suporte</h4>
+            <p><i class="fas fa-phone-alt"></i> (31) 8814-3491</p>
+            <p><i class="fas fa-envelope"></i> egov@pedroleopoldo.mg.gov.br</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Escola de Governo - Prefeitura Municipal de Pedro Leopoldo</p>
+          <p>&copy; 2026 Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo"><i class="fas fa-chevron-up"></i></button>
+    <script type="module" src="../assets/js/main.js"></script>
+  </body>
+</html>

@@ -120,10 +120,16 @@ export function initCursoFilter() {
   let visible = 0
 
   cards.forEach(card => {
-    const mesEl = card.querySelector(".curso-card__mes")
-    if (!mesEl) return
-
-    const mesNum = MONTHS[mesEl.textContent.trim().toLowerCase()]
+    // Preferimos data-mes (renderizado por cursos-render); fallback ao texto.
+    let mesKey = (card.dataset.mes || "").toLowerCase()
+    if (!mesKey) {
+      const mesEl = card.querySelector(".curso-card__mes")
+      if (!mesEl) return
+      // Texto pode vir como "24/04 · Abril" — pega a última palavra.
+      const txt = mesEl.textContent.trim().toLowerCase()
+      mesKey = txt.split(/\s+/).pop() || ""
+    }
+    const mesNum = MONTHS[mesKey]
     if (!mesNum) return
 
     if (isAvailable(mesNum, currentYear, currentMonth)) {

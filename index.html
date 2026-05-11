@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script>
       // Aplica tema antes do render para evitar flash.
       ;(function () {
@@ -99,6 +100,13 @@
               <span class="stat-label">Cursos em 2026</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Eventos em Destaque -->
+      <section class="eventos-destaque" aria-label="Eventos em destaque" data-eventos-destaque data-base-path="">
+        <div class="container">
+          <div data-eventos-destaque-slot></div>
         </div>
       </section>
 
@@ -191,6 +199,7 @@
       <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script type="module" src="assets/js/main.js"></script>
   </body>
 </html>
