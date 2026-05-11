@@ -56,7 +56,7 @@ function getStatus(curso) {
 const STATUS_LABEL = {
   abertas: "Inscrições abertas",
   convocacao: "Convocação",
-  "em-breve": "Em breve",
+  "em-breve": "Inscrições liberadas em breve",
   realizado: "Evento realizado",
 }
 
