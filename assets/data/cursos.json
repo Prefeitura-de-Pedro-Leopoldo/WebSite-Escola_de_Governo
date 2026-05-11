@@ -38,7 +38,8 @@
               "modalidade": "presencial",
               "icone": "fas fa-chart-bar",
               "descricao": "Conceitos e ferramentas para a implementação da gestão para resultados na prefeitura com foco em planejamento, indicadores, monitoramento e avaliação das ações.",
-              "inscricaoUrl": "https://www.sympla.com.br/evento/gestao-publica-para-resultados/3420307",
+              "inscricaoUrlPendente": "https://www.sympla.com.br/evento/gestao-publica-para-resultados/3420307",
+              "emBreve": true,
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "28 de maio de 2026",
@@ -235,7 +236,8 @@
               "responsavel": "EGov-PL",
               "icone": "fas fa-comments",
               "descricao": "Reflexão sobre o papel da comunicação pública no fortalecimento da confiança entre cidadão e Estado, com foco na atuação cotidiana do servidor municipal.",
-              "inscricaoUrl": "https://www.sympla.com.br/evento/comunicacao-que-aproxima/3420517",
+              "inscricaoUrlPendente": "https://www.sympla.com.br/evento/comunicacao-que-aproxima/3420517",
+              "emBreve": true,
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "21 de maio de 2026",
