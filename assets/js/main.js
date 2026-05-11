@@ -14,6 +14,7 @@ import { initCursosRender } from './modules/cursos-render.js';
 import { initCursoDetalhe } from './modules/curso-detalhe.js';
 import { initEventosDestaque } from './modules/eventos-destaque.js';
 import { initHeroCarousel } from './modules/hero-carousel.js';
+import { initCustomCursor } from './modules/custom-cursor.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     initThemeToggle();
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     await initCursoDetalhe();
     await initEventosDestaque();
     initCursoFilter();
+    initCustomCursor();
 });

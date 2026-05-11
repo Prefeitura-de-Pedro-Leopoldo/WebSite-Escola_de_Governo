@@ -212,7 +212,14 @@ function initSwiper(root) {
   const pag = root.querySelector(".eventos-destaque__pagination")
   if (!el) return
 
-  // eslint-disable-next-line no-new
+  // Ao clicar nas setas, dispara evento para o cursor customizado
+  // executar uma "balançada" — feedback visual na interação.
+  const triggerCursorShake = () => {
+    document.dispatchEvent(new CustomEvent("cursor:shake"))
+  }
+  prev && prev.addEventListener("click", triggerCursorShake)
+  next && next.addEventListener("click", triggerCursorShake)
+
   new window.Swiper(el, {
     effect: "creative",
     grabCursor: true,

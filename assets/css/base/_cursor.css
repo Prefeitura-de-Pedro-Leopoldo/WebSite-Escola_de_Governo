@@ -1,0 +1,218 @@
+/* ================================================================
+   Cursor customizado — capelo de formatura animado sobre os botões
+   de inscrição no Sympla. Em todos os outros lugares mantém o
+   cursor nativo do sistema, sem alterações.
+   ================================================================ */
+
+/* Quando o cursor customizado (JS) está ativo, ocultamos o cursor nativo
+   apenas sobre os alvos de inscrição — para que apenas o capelo flutuante
+   apareça, sem competir com a seta do sistema. */
+.js-custom-cursor .curso-card__btn--primary,
+.js-custom-cursor .curso-card__btn--primary *,
+.js-custom-cursor .curso-card__btn--secondary,
+.js-custom-cursor .curso-card__btn--secondary *,
+.js-custom-cursor .curso-detalhe__cta--primary,
+.js-custom-cursor .curso-detalhe__cta--primary *,
+.js-custom-cursor a[href*="sympla.com.br"],
+.js-custom-cursor a[href*="sympla.com.br"] *,
+.js-custom-cursor .evento-card,
+.js-custom-cursor .evento-card *,
+.js-custom-cursor .eventos-destaque__nav,
+.js-custom-cursor .eventos-destaque__nav * {
+  cursor: none !important;
+}
+
+/* Texto abaixo do card no carrossel não é clicável — força cursor padrão
+   independentemente de outras regras. */
+.evento-info,
+.evento-info * {
+  cursor: default !important;
+}
+
+/* ---------------- Elemento do cursor customizado ---------------- */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate3d(-200px, -200px, 0);
+  will-change: transform;
+}
+
+.custom-cursor__inner {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  scale: 0.55;
+  rotate: -14deg;
+  transition:
+    opacity 0.12s ease-out,
+    scale 0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+    rotate 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter:
+    drop-shadow(0 1px 2px rgba(11, 17, 32, 0.25))
+    drop-shadow(0 6px 14px rgba(48, 99, 173, 0.35))
+    drop-shadow(0 18px 28px rgba(48, 99, 173, 0.18));
+  will-change: opacity, scale, rotate;
+}
+
+.custom-cursor.visible .custom-cursor__inner {
+  opacity: 1;
+  scale: 1;
+  rotate: 0deg;
+  animation: cursor-float 2.4s ease-in-out 0.32s infinite;
+}
+
+.custom-cursor svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* ---------------- Variantes (capelo / canudo) ---------------- */
+.custom-cursor__icon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  scale: 0.85;
+  transition: opacity 0.18s ease, scale 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.custom-cursor.cap .custom-cursor__icon--cap,
+.custom-cursor.diploma .custom-cursor__icon--diploma {
+  opacity: 1;
+  scale: 1;
+}
+
+/* Halo do diploma em azul EGov suave (coerência com a marca). */
+.custom-cursor.diploma .custom-cursor__halo {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(48, 99, 173, 0.32),
+    rgba(48, 99, 173, 0) 62%
+  );
+}
+
+/* Sombra limpa em azul-marinho — cria profundidade sem poluir. */
+.custom-cursor.diploma .custom-cursor__inner {
+  filter:
+    drop-shadow(0 1px 2px rgba(11, 17, 32, 0.22))
+    drop-shadow(0 6px 14px rgba(48, 99, 173, 0.28))
+    drop-shadow(0 18px 28px rgba(48, 99, 173, 0.18));
+}
+
+/* A fita do canudo balança como o borlote do capelo. */
+.custom-cursor__ribbon {
+  transform-origin: 14px 16px;
+  animation: ribbon-swing 1.8s ease-in-out infinite;
+}
+
+.custom-cursor:not(.visible) .custom-cursor__ribbon {
+  animation: none;
+}
+
+@keyframes ribbon-swing {
+  0%, 100% { rotate: -6deg; }
+  50%      { rotate: 6deg; }
+}
+
+/* ---------------- Balançada do cursor (ao clicar nas setas) ---------------- */
+/* Aplicada via JS quando o usuário aciona prev/next do carrossel.
+   Substitui temporariamente a animação float; pêndulo amortecido. */
+.custom-cursor.is-shaking .custom-cursor__inner {
+  animation: cursor-shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both !important;
+}
+
+@keyframes cursor-shake {
+  0%   { rotate: 0deg;    translate: 0 0; }
+  12%  { rotate: -18deg;  translate: -3px -1px; }
+  26%  { rotate: 16deg;   translate:  3px -1px; }
+  40%  { rotate: -12deg;  translate: -2px 0; }
+  54%  { rotate: 10deg;   translate:  2px 0; }
+  68%  { rotate: -6deg;   translate: -1px 0; }
+  82%  { rotate: 5deg;    translate:  1px 0; }
+  100% { rotate: 0deg;    translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor.is-shaking .custom-cursor__inner { animation: none !important; }
+}
+
+/* Halo radial que pulsa sutilmente atrás do capelo. */
+.custom-cursor__halo {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(77, 173, 51, 0.35),
+    rgba(77, 173, 51, 0) 60%
+  );
+  opacity: 0;
+  scale: 0.5;
+  transition: opacity 0.35s ease, scale 0.6s ease;
+  pointer-events: none;
+}
+
+.custom-cursor.visible .custom-cursor__halo {
+  opacity: 1;
+  scale: 1;
+  animation: cursor-halo-pulse 2.4s ease-in-out 0.5s infinite;
+}
+
+/* O borlote balança levemente (efeito "pendulo"). */
+.custom-cursor__tassel {
+  transform-origin: 19px 9px; /* prende no topo da borla */
+  animation: tassel-swing 1.6s ease-in-out infinite;
+}
+
+.custom-cursor:not(.visible) .custom-cursor__tassel {
+  animation: none;
+}
+
+/* ---------------- Keyframes ---------------- */
+@keyframes cursor-float {
+  0%, 100% { translate: 0 0; rotate: -6deg; }
+  50%      { translate: 0 -5px; rotate: 6deg; }
+}
+
+@keyframes cursor-halo-pulse {
+  0%, 100% { opacity: 0.7; scale: 0.95; }
+  50%      { opacity: 1; scale: 1.15; }
+}
+
+@keyframes tassel-swing {
+  0%, 100% { rotate: -12deg; }
+  50%      { rotate: 12deg; }
+}
+
+/* ---------------- Acessibilidade ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor__inner,
+  .custom-cursor__inner * {
+    animation: none !important;
+    transition: opacity 0.2s ease !important;
+  }
+}
+
+/* Em telas touch (sem mouse fino), não exibimos o cursor customizado. */
+@media (pointer: coarse) {
+  .custom-cursor { display: none !important; }
+  .js-custom-cursor .curso-card__btn--primary,
+  .js-custom-cursor .curso-card__btn--secondary,
+  .js-custom-cursor .curso-detalhe__cta--primary,
+  .js-custom-cursor a[href*="sympla.com.br"],
+  .js-custom-cursor .evento-card,
+  .js-custom-cursor .eventos-destaque__nav {
+    cursor: pointer !important;
+  }
+}
