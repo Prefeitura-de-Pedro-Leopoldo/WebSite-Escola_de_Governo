@@ -40,6 +40,40 @@ function ensureModal() {
       </header>
       <div class="form-modal__aviso" data-form-aviso hidden></div>
       <div class="form-modal__body" data-form-body>
+        <div class="diploma-loader" data-form-loader>
+          <div class="diploma-loader__stage" aria-hidden="true">
+            <span class="diploma-loader__ring"></span>
+            <span class="diploma-loader__ring diploma-loader__ring--inner"></span>
+            <svg class="diploma-loader__cap" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="cap-top-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%"  stop-color="#1a3d70"/>
+                  <stop offset="55%" stop-color="#3063ad"/>
+                  <stop offset="100%" stop-color="#4f87d9"/>
+                </linearGradient>
+                <linearGradient id="cap-base-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2a4f87"/>
+                  <stop offset="100%" stop-color="#142a4d"/>
+                </linearGradient>
+              </defs>
+              <!-- Base/copa -->
+              <path d="M10 22 Q22 26 34 22 L34 30 Q22 34 10 30 Z" fill="url(#cap-base-grad)"/>
+              <!-- Topo (mortarboard) -->
+              <path d="M4 18 L22 12 L40 18 L22 24 Z" fill="url(#cap-top-grad)"/>
+              <!-- Botão central -->
+              <circle cx="22" cy="18" r="1.6" fill="#ffb946"/>
+              <!-- Tassel inteiro: cordão + bob — balança em torno do botão central -->
+              <g class="tassel-group">
+                <line x1="22" y1="18" x2="32" y2="22"
+                      stroke="#ffb946" stroke-width="1.4" stroke-linecap="round"/>
+                <line x1="32" y1="22" x2="32" y2="30"
+                      stroke="#ffb946" stroke-width="1.4" stroke-linecap="round"/>
+                <circle cx="32" cy="32" r="2.2" fill="#e87b1c"/>
+              </g>
+            </svg>
+          </div>
+          <div class="diploma-loader__text">Preparando seu formulário</div>
+        </div>
         <iframe data-form-iframe title="Formulario" loading="lazy"
                 src="about:blank" frameborder="0" marginheight="0" marginwidth="0">
           Carregando...
@@ -75,6 +109,9 @@ function ensureModal() {
 }
 
 function handleIframeLoad() {
+  // Esconde o loader no primeiro load efetivo do iframe (formulário visível).
+  hideLoader();
+
   // Enquanto nao "armado", cada load reinicia o timer de quietude.
   // Quando o iframe ficar 2.5s sem disparar load, consideramos o form pronto
   // e armamos. Apos isso, qualquer novo load = submissao do usuario.
@@ -84,6 +121,20 @@ function handleIframeLoad() {
     return;
   }
   showSuccess();
+}
+
+function showLoader() {
+  const loader = modalEl?.querySelector('[data-form-loader]');
+  if (!loader) return;
+  loader.hidden = false;
+  loader.classList.remove('is-hiding');
+}
+
+function hideLoader() {
+  const loader = modalEl?.querySelector('[data-form-loader]');
+  if (!loader || loader.hidden) return;
+  loader.classList.add('is-hiding');
+  setTimeout(() => { loader.hidden = true; }, 360);
 }
 
 function showSuccess() {
@@ -128,6 +179,7 @@ export function openFormModal({ src, title, aviso, acessoUrl }) {
   armed = false;
   clearTimeout(armTimer);
 
+  showLoader();
   const iframe = modal.querySelector('[data-form-iframe]');
   iframe.src = src || 'about:blank';
 
@@ -145,6 +197,7 @@ export function closeFormModal() {
   modalEl.querySelector('[data-form-iframe]').src = 'about:blank';
   modalEl.querySelector('[data-form-body]').hidden = false;
   modalEl.querySelector('[data-form-success]').hidden = true;
+  hideLoader();
   armed = false;
   clearTimeout(armTimer);
   currentAcessoUrl = '';

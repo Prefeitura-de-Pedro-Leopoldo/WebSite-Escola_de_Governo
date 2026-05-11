@@ -193,6 +193,27 @@
   line-height: 1;
   letter-spacing: var(--tracking-tighter);
   font-variant-numeric: tabular-nums;
+  display: inline-flex;
+}
+
+.stat-digit {
+  display: inline-block;
+  min-width: 0.62em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-digit--rolling {
+  animation: stat-digit-tick 120ms steps(2, end) infinite;
+}
+
+@keyframes stat-digit-tick {
+  0%   { transform: translateY(-2px); }
+  100% { transform: translateY(0);    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-digit--rolling { animation: none; }
 }
 
 .stat-plus {
