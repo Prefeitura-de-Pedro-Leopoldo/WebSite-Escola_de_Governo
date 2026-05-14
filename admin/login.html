@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Login · Painel · EGov-PL</title>
+    <meta name="theme-color" content="#3063ad" />
+    <link rel="stylesheet" href="../assets/css/base/_variables.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("egovpl-theme");
+          var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        font-family: var(--font-sans);
+        background: var(--surface-bg);
+        color: var(--text-primary);
+        display: grid;
+        place-items: center;
+        padding: var(--space-6);
+        background-image:
+          radial-gradient(circle at 12% 18%, rgba(48, 99, 173, 0.10), transparent 45%),
+          radial-gradient(circle at 88% 82%, rgba(77, 173, 51, 0.10), transparent 45%);
+      }
+      .login-card {
+        width: min(440px, 100%);
+        background: var(--surface-card);
+        border: 1px solid var(--border-default);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-xl);
+        padding: var(--space-10) var(--space-8) var(--space-8);
+        position: relative;
+        overflow: hidden;
+      }
+      .login-card::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent));
+      }
+      .brand {
+        text-align: center;
+        margin-bottom: var(--space-8);
+      }
+      .brand-logo {
+        width: 64px; height: 64px;
+        margin: 0 auto var(--space-4);
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--blue-900), var(--blue-600));
+        display: grid; place-items: center;
+        color: #fff;
+        font-family: var(--font-display);
+        font-size: 1.7rem;
+        font-weight: var(--fw-bold);
+        box-shadow: var(--shadow-brand);
+      }
+      .brand h1 {
+        margin: 0 0 var(--space-1);
+        font-family: var(--font-display);
+        font-size: var(--fs-xl);
+        color: var(--text-primary);
+        font-weight: var(--fw-bold);
+      }
+      .brand p {
+        margin: 0;
+        color: var(--text-muted);
+        font-size: var(--fs-sm);
+      }
+      form { display: grid; gap: var(--space-4); }
+      .field label {
+        display: block;
+        font-size: var(--fs-2xs);
+        font-weight: var(--fw-bold);
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: var(--tracking-wider);
+        margin-bottom: var(--space-2);
+      }
+      .input-wrap {
+        position: relative;
+      }
+      .input-wrap i {
+        position: absolute;
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-faint);
+        font-size: 0.95rem;
+      }
+      input {
+        width: 100%;
+        padding: 12px 14px 12px 40px;
+        border: 1.5px solid var(--border-default);
+        border-radius: var(--radius-sm);
+        font-size: var(--fs-base);
+        font-family: inherit;
+        background: var(--surface-card);
+        color: var(--text-primary);
+        transition: var(--transition-fast);
+      }
+      input:focus {
+        outline: none;
+        border-color: var(--brand-primary);
+        box-shadow: var(--shadow-ring);
+      }
+      button[type="submit"] {
+        margin-top: var(--space-2);
+        padding: 13px;
+        background: var(--brand-primary);
+        color: var(--text-on-brand);
+        border: 0;
+        border-radius: var(--radius-sm);
+        font-weight: var(--fw-semibold);
+        font-family: inherit;
+        font-size: var(--fs-base);
+        cursor: pointer;
+        transition: var(--transition-fast);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      button[type="submit"]:hover {
+        background: var(--brand-primary-hover);
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-brand);
+      }
+      .err {
+        color: var(--red);
+        font-size: var(--fs-sm);
+        min-height: 1.2em;
+        text-align: center;
+        margin-top: 4px;
+      }
+      .hint {
+        margin-top: var(--space-6);
+        padding: var(--space-3) var(--space-4);
+        background: var(--brand-soft-bg);
+        border-left: 3px solid var(--brand-primary);
+        border-radius: var(--radius-xs);
+        font-size: var(--fs-sm);
+        color: var(--text-secondary);
+        line-height: var(--lh-relaxed);
+      }
+      .hint b { color: var(--text-primary); font-weight: var(--fw-semibold); }
+      .theme-toggle {
+        position: fixed;
+        top: var(--space-4);
+        right: var(--space-4);
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        background: var(--surface-card);
+        border: 1px solid var(--border-default);
+        color: var(--text-secondary);
+        cursor: pointer;
+        display: grid; place-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+      .theme-toggle:hover { color: var(--brand-primary); }
+      [data-theme="dark"] .icon-sun, [data-theme="light"] .icon-moon { display: none; }
+      .back-site {
+        margin-top: var(--space-4);
+        text-align: center;
+        font-size: var(--fs-sm);
+      }
+      .back-site a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: var(--fw-medium);
+      }
+      .back-site a:hover { color: var(--brand-primary); }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+      <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
+      <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+    </button>
+
+    <div class="login-card">
+      <div class="brand">
+        <div class="brand-logo">E</div>
+        <h1>Escola de Governo</h1>
+        <p>Painel Administrativo · Pedro Leopoldo</p>
+      </div>
+
+      <form id="loginForm" autocomplete="off">
+        <div class="field">
+          <label for="email">E-mail institucional</label>
+          <div class="input-wrap">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <input id="email" type="email" placeholder="seu@pedroleopoldo.mg.gov.br" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="password">Senha</label>
+          <div class="input-wrap">
+            <i class="fas fa-lock" aria-hidden="true"></i>
+            <input id="password" type="password" placeholder="••••••••" required />
+          </div>
+        </div>
+        <button type="submit"><i class="fas fa-right-to-bracket"></i> Entrar</button>
+        <div class="err" id="err"></div>
+      </form>
+
+      <div class="hint">
+        <b>Acesso de demonstração:</b><br />
+        E-mail: <b>admin@egov.pl</b> · Senha: <b>admin123</b>
+      </div>
+
+      <div class="back-site">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Voltar ao site</a>
+      </div>
+    </div>
+
+    <script>
+      const MOCK_USER = { email: "admin@egov.pl", password: "admin123" };
+      const form = document.getElementById("loginForm");
+      const err = document.getElementById("err");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        err.textContent = "";
+        const email = document.getElementById("email").value.trim().toLowerCase();
+        const pass = document.getElementById("password").value;
+        if (email === MOCK_USER.email && pass === MOCK_USER.password) {
+          sessionStorage.setItem("egov_admin_session", JSON.stringify({ email, name: "Administrador EGov-PL", ts: Date.now() }));
+          window.location.href = "dashboard.html";
+        } else {
+          err.textContent = "Credenciais inválidas. Verifique e tente novamente.";
+        }
+      });
+
+      if (sessionStorage.getItem("egov_admin_session")) {
+        window.location.replace("dashboard.html");
+      }
+
+      // Theme toggle
+      document.getElementById("themeToggle").addEventListener("click", () => {
+        const cur = document.documentElement.getAttribute("data-theme") || "light";
+        const next = cur === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        try { localStorage.setItem("egovpl-theme", next); } catch (_) {}
+      });
+    </script>
+  </body>
+</html>
