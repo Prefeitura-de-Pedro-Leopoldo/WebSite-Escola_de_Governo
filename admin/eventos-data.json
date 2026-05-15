@@ -1,14 +1,14 @@
 {
-  "geradoEm": "2026-05-14T15:26:32.703244",
+  "geradoEm": "2026-05-15T12:31:14.045097",
   "fonte": "docs/eventos/*.xlsx",
   "eventos": [
     {
       "id": "workshop-sei-usar-na-pratica",
       "title": "Workshop SEI! Usar na prática",
       "date": "2026-04-24",
-      "dateRaw": "24/04/2026 08h30",
+      "dateRaw": "Data: 24/04/2026 08h30",
       "time": "08h30",
-      "local": "Av. Lincoln Diogo Viana, 830, Avenida Lincoln Diogo Viana",
+      "local": "Local: Av. Lincoln Diogo Viana, 830, Avenida Lincoln Diogo Viana",
       "city": "Pedro Leopoldo",
       "status": "realizado",
       "totalInscritos": 79,
@@ -95,7 +95,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:43:44",
           "dataInscricao": "2026-04-14T12:18:29"
@@ -107,7 +107,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:48:43",
           "dataInscricao": "2026-04-14T12:18:39"
@@ -119,7 +119,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:42:53",
           "dataInscricao": "2026-04-14T12:22:32"
@@ -131,7 +131,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:39:43",
           "dataInscricao": "2026-04-14T12:26:39"
@@ -143,7 +143,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:42:42",
           "dataInscricao": "2026-04-14T12:31:01"
@@ -155,7 +155,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-14T12:34:42"
@@ -167,7 +167,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-14T12:43:50"
@@ -179,7 +179,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:40:21",
           "dataInscricao": "2026-04-14T12:45:38"
@@ -191,7 +191,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:41:31",
           "dataInscricao": "2026-04-14T12:46:18"
@@ -203,7 +203,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:41:23",
           "dataInscricao": "2026-04-14T12:47:05"
@@ -215,7 +215,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:30:58",
           "dataInscricao": "2026-04-14T12:56:07"
@@ -227,7 +227,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T09:21:42",
           "dataInscricao": "2026-04-14T12:57:04"
@@ -239,7 +239,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:29:23",
           "dataInscricao": "2026-04-14T12:58:41"
@@ -251,7 +251,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:43:34",
           "dataInscricao": "2026-04-14T14:00:12"
@@ -263,7 +263,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:45:35",
           "dataInscricao": "2026-04-14T14:19:20"
@@ -275,7 +275,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:29:05",
           "dataInscricao": "2026-04-14T14:39:39"
@@ -287,7 +287,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:45:26",
           "dataInscricao": "2026-04-14T15:00:24"
@@ -299,7 +299,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:41:47",
           "dataInscricao": "2026-04-15T09:57:24"
@@ -311,7 +311,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-15T09:58:36"
@@ -323,7 +323,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T10:26:31",
           "dataInscricao": "2026-04-15T09:58:44"
@@ -335,7 +335,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:42:26",
           "dataInscricao": "2026-04-15T09:59:21"
@@ -347,7 +347,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T10:36:20",
           "dataInscricao": "2026-04-15T09:59:36"
@@ -359,7 +359,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T09:03:05",
           "dataInscricao": "2026-04-15T10:00:26"
@@ -371,7 +371,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:58:46",
           "dataInscricao": "2026-04-15T10:01:09"
@@ -383,7 +383,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:44:06",
           "dataInscricao": "2026-04-15T10:02:42"
@@ -395,7 +395,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:47:11",
           "dataInscricao": "2026-04-15T10:08:47"
@@ -407,7 +407,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T10:28:14",
           "dataInscricao": "2026-04-15T10:21:30"
@@ -419,7 +419,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:43:13",
           "dataInscricao": "2026-04-15T10:26:42"
@@ -431,7 +431,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:41:57",
           "dataInscricao": "2026-04-15T10:50:44"
@@ -443,7 +443,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:28:26",
           "dataInscricao": "2026-04-15T11:43:42"
@@ -455,7 +455,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-15T12:20:43"
@@ -467,7 +467,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:43:01",
           "dataInscricao": "2026-04-15T13:16:33"
@@ -479,19 +479,19 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:43:54",
           "dataInscricao": "2026-04-15T13:30:55"
         },
         {
-          "nome": "Michele Cecilia da silva vieira vieira",
+          "nome": "Michele Cecilia da silva vieira",
           "email": "michelececilia10@gmail.com",
           "turma": "Turma Tarde - 13:30 Às 17:00",
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:29:16",
           "dataInscricao": "2026-04-15T15:52:22"
@@ -503,7 +503,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:39:08",
           "dataInscricao": "2026-04-15T16:18:20"
@@ -515,7 +515,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-15T17:30:11"
@@ -527,7 +527,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:40:48",
           "dataInscricao": "2026-04-15T17:37:26"
@@ -539,7 +539,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:40:37",
           "dataInscricao": "2026-04-15T17:42:23"
@@ -551,7 +551,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-15T18:43:10"
@@ -563,7 +563,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-15T19:13:21"
@@ -575,7 +575,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:42:09",
           "dataInscricao": "2026-04-15T19:14:35"
@@ -587,7 +587,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:44:55",
           "dataInscricao": "2026-04-15T19:57:16"
@@ -599,7 +599,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:45:09",
           "dataInscricao": "2026-04-15T20:28:01"
@@ -611,7 +611,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:44:46",
           "dataInscricao": "2026-04-15T20:47:14"
@@ -623,7 +623,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:32:14",
           "dataInscricao": "2026-04-16T08:38:57"
@@ -635,7 +635,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:39:26",
           "dataInscricao": "2026-04-16T09:14:25"
@@ -647,19 +647,19 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:47:52",
           "dataInscricao": "2026-04-16T09:32:33"
         },
         {
-          "nome": "JoãoCarlos Lages Silva",
+          "nome": "João Carlos Lages Silva",
           "email": "jclsilva@pedroleopoldo.mg.gov.br",
           "turma": "Turma Manhã - 08:30 Às 12:00",
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T08:41:06",
           "dataInscricao": "2026-04-16T09:50:17"
@@ -671,7 +671,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-16T10:15:46"
@@ -683,7 +683,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:43:21",
           "dataInscricao": "2026-04-16T10:19:55"
@@ -695,7 +695,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:33:16",
           "dataInscricao": "2026-04-16T14:02:04"
@@ -707,7 +707,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-16T16:24:11"
@@ -719,7 +719,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:32:26",
           "dataInscricao": "2026-04-16T16:39:11"
@@ -731,7 +731,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-16T17:06:50"
@@ -743,7 +743,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:30:16",
           "dataInscricao": "2026-04-16T18:15:53"
@@ -755,7 +755,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-17T12:28:17"
@@ -767,19 +767,19 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:53:13",
           "dataInscricao": "2026-04-17T14:09:32"
         },
         {
-          "nome": "Cleise Figueiredo dos Santos Santos",
+          "nome": "Cleise Figueiredo dos Santos",
           "email": "cfsantos@pedroleopoldo.mg.gov.br",
           "turma": "Turma Tarde - 13:30 Às 17:00",
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:38:29",
           "dataInscricao": "2026-04-17T14:19:54"
@@ -791,7 +791,7 @@
           "secretaria": "Controladoria Geral do Município",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-17T15:40:46"
@@ -803,7 +803,7 @@
           "secretaria": "Controladoria Geral do Município",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:30:26",
           "dataInscricao": "2026-04-17T15:47:42"
@@ -815,7 +815,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:53:25",
           "dataInscricao": "2026-04-17T16:55:31"
@@ -827,7 +827,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:31:05",
           "dataInscricao": "2026-04-22T08:28:15"
@@ -839,7 +839,7 @@
           "secretaria": "Desenvolvimento Econômico",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T14:36:13",
           "dataInscricao": "2026-04-22T10:35:11"
@@ -851,7 +851,7 @@
           "secretaria": "Saúde",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:29:54",
           "dataInscricao": "2026-04-22T10:48:06"
@@ -863,7 +863,7 @@
           "secretaria": "Saúde",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:29:42",
           "dataInscricao": "2026-04-22T10:49:01"
@@ -875,7 +875,7 @@
           "secretaria": "Saúde",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:30:02",
           "dataInscricao": "2026-04-22T10:50:57"
@@ -887,7 +887,7 @@
           "secretaria": "Saúde",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:29:33",
           "dataInscricao": "2026-04-22T10:55:45"
@@ -899,7 +899,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:28:13",
           "dataInscricao": "2026-04-22T13:03:55"
@@ -911,7 +911,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:32:52",
           "dataInscricao": "2026-04-22T16:15:07"
@@ -923,19 +923,19 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:32:44",
           "dataInscricao": "2026-04-22T16:20:25"
         },
         {
-          "nome": "Monica Márcia Lopes Francisco de Oliveira de Oliveira",
+          "nome": "Monica Márcia Lopes Francisco de Oliveira",
           "email": "monica.oliveira@pedroleopoldo.mg.gov.br",
           "turma": "Turma Tarde - 13:30 Às 17:00",
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:31:44",
           "dataInscricao": "2026-04-22T19:10:39"
@@ -947,7 +947,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:43:12",
           "dataInscricao": "2026-04-22T23:59:37"
@@ -959,7 +959,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:33:26",
           "dataInscricao": "2026-04-23T05:49:28"
@@ -971,7 +971,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:33:07",
           "dataInscricao": "2026-04-23T08:44:36"
@@ -983,7 +983,7 @@
           "secretaria": "Gestão e Finanças",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:23:27",
           "dataInscricao": "2026-04-23T10:23:55"
@@ -995,7 +995,7 @@
           "secretaria": "Chefia de Gabinete",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-04-23T16:13:52"
@@ -1007,7 +1007,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T10:24:46",
           "dataInscricao": "2026-04-23T16:29:35"
@@ -1019,7 +1019,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T13:28:55",
           "dataInscricao": "2026-04-23T18:15:43"
@@ -1031,7 +1031,7 @@
           "secretaria": "Educação",
           "cargo": null,
           "matricula": null,
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-04-24T14:15:31",
           "dataInscricao": "2026-04-23T22:44:44"
@@ -1039,7 +1039,7 @@
       ],
       "vagas": 80,
       "taxaOcupacao": 98.8,
-      "fonte": "Lista de participantes - Workshop_SEI_Usar_na_prtica (3385641).xlsx"
+      "fonte": "Lista de participantes - Workshop SEI! Usar na prática.xlsx"
     },
     {
       "id": "comissao-recursal-1-turma-2026-05",
@@ -1070,9 +1070,9 @@
       "id": "fundamentos-da-gestao-publica",
       "title": "Fundamentos da Gestão Pública",
       "date": "2026-05-14",
-      "dateRaw": "14/05/2026 09h",
+      "dateRaw": "Data: 14/05/2026 09h",
       "time": "09h",
-      "local": "Centro de Artes e Esportes Unificado - CEU, Rua Dama da Noite",
+      "local": "Local: Centro de Artes e Esportes Unificado - CEU, Rua Dama da Noite",
       "city": "Pedro Leopoldo",
       "status": "realizado",
       "totalInscritos": 38,
@@ -1080,61 +1080,21 @@
       "totalPresentes": 33,
       "totalAusentes": 5,
       "taxaPresenca": 86.8,
-      "turmas": {
-        "Ingresso Único": 38
-      },
-      "turmasPresentes": {
-        "Ingresso Único": 33
-      },
+      "turmas": {},
+      "turmasPresentes": {},
       "secretarias": {
-        "DIRGEP": 6,
-        "Diretoria de Gestão de Pessoas": 6,
-        "Gerência de Contratos": 2,
-        "SATD": 2,
-        "Diretoria de Compras Públicas": 2,
-        "Digerp": 1,
-        "Direitos Humanos e Politica sobre Drogas": 1,
-        "Saúde": 1,
-        "Sede - `Prefeitura": 1,
-        "Compras e licitações": 1,
-        "Gabinete": 1,
-        "Prefeitura de Pedro Leopoldo": 1,
-        "Gerência de Licitação": 1,
-        "Arquivo e patrimônio": 1,
-        "Diretoria de compras públicas": 1,
-        "Diretoria de gestão de pessoas": 1,
-        "Adjunta de Transformação de Digital": 1,
-        "Prédio": 1,
-        "Supervisão de folha de pagamento": 1,
-        "Adjunta de Transformação Digital": 1,
-        "ADMINISTRAÇÃO": 1,
-        "SATD- Secretária Adjunta de Transformação Digital": 1,
-        "Prefeitura": 1,
-        "Gestão e Finanças": 1,
-        "Contabilidade": 1
+        "Gestão e Finanças": 28,
+        "Secretaria Adjunta de Transformação Digital": 4,
+        "Governo": 3,
+        "Saúde": 2,
+        "Controladoria Geral do Município": 1
       },
       "secretariasPresentes": {
-        "Digerp": 1,
-        "DIRGEP": 6,
-        "Diretoria de Gestão de Pessoas": 6,
-        "Direitos Humanos e Politica sobre Drogas": 1,
-        "Sede - `Prefeitura": 1,
-        "Compras e licitações": 1,
-        "Prefeitura de Pedro Leopoldo": 1,
-        "Arquivo e patrimônio": 1,
-        "Gerência de Contratos": 2,
-        "Diretoria de compras públicas": 1,
-        "SATD": 2,
-        "Diretoria de gestão de pessoas": 1,
-        "Adjunta de Transformação de Digital": 1,
-        "Prédio": 1,
-        "Supervisão de folha de pagamento": 1,
-        "Diretoria de Compras Públicas": 1,
-        "Adjunta de Transformação Digital": 1,
-        "SATD- Secretária Adjunta de Transformação Digital": 1,
-        "Prefeitura": 1,
-        "Gestão e Finanças": 1,
-        "Contabilidade": 1
+        "Gestão e Finanças": 25,
+        "Saúde": 1,
+        "Controladoria Geral do Município": 1,
+        "Governo": 2,
+        "Secretaria Adjunta de Transformação Digital": 4
       },
       "timelineInscricoes": [
         [
@@ -1164,11 +1124,11 @@
         {
           "nome": "Polyana Parreiras",
           "email": "polyana.parreiras@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Digerp",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "supervisora",
           "matricula": "8753",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:22",
           "dataInscricao": "2026-05-11T14:10:48"
@@ -1176,11 +1136,11 @@
         {
           "nome": "RENATA DOS SANTOS NESTOR",
           "email": "renata.nestor@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "DIRGEP",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "ASSISTENTE ADMINISTRATIVO",
           "matricula": "08307",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:24",
           "dataInscricao": "2026-05-11T14:10:52"
@@ -1188,11 +1148,11 @@
         {
           "nome": "PATRICIA PEREIRA DE ARAUJO FERNANDES",
           "email": "paty2582@gmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de Gestão de Pessoas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Assistente Administrativo",
           "matricula": "8305",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:19",
           "dataInscricao": "2026-05-11T14:13:47"
@@ -1200,11 +1160,11 @@
         {
           "nome": "Pedro Alcantara",
           "email": "pedro.alcantara@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Direitos Humanos e Politica sobre Drogas",
+          "turma": null,
+          "secretaria": "Saúde",
           "cargo": "Diretora",
           "matricula": "35043",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:13:25",
           "dataInscricao": "2026-05-11T14:17:53"
@@ -1212,11 +1172,11 @@
         {
           "nome": "Luziana Lima",
           "email": "luzianalimacampos@gmail.com",
-          "turma": "Ingresso Único",
+          "turma": null,
           "secretaria": "Saúde",
           "cargo": "Assistente administrativo",
           "matricula": "34984",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-05-11T14:20:23"
@@ -1224,23 +1184,23 @@
         {
           "nome": "MONICA CRUZ VIEIRA",
           "email": "monica.vieira@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Sede - `Prefeitura",
+          "turma": null,
+          "secretaria": "Controladoria Geral do Município",
           "cargo": "Administração",
           "matricula": "0",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:13:10",
           "dataInscricao": "2026-05-11T14:22:36"
         },
         {
-          "nome": "Maria Inês Clemente Bassouto Estevam",
+          "nome": "Maria InêsClemente Bassouto Estevam",
           "email": "maria.estevam@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de Gestão de Pessoas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Gerente de Saúde Ocupacional",
           "matricula": "8295",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:15",
           "dataInscricao": "2026-05-11T14:23:50"
@@ -1248,11 +1208,11 @@
         {
           "nome": "Adriana Cristiene Demétrio",
           "email": "adriana.demetrio@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de Gestão de Pessoas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Assistente Administrativo",
           "matricula": "9257",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:41",
           "dataInscricao": "2026-05-11T15:35:16"
@@ -1260,11 +1220,11 @@
         {
           "nome": "Andréa Mara da Cruz Rocha",
           "email": "andrea.rocha@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "DIRGEP",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Assessor",
           "matricula": "35006",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:02",
           "dataInscricao": "2026-05-11T15:41:38"
@@ -1272,11 +1232,11 @@
         {
           "nome": "Adriane Marques",
           "email": "adrianemarquezcursos@gmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "DIRGEP",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "DCA-1",
           "matricula": "35078",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:37",
           "dataInscricao": "2026-05-11T16:13:50"
@@ -1284,11 +1244,11 @@
         {
           "nome": "TASSIA JUNQUEIRA",
           "email": "tassia.junqueira@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "DIRGEP",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "GERENTE",
           "matricula": "34996",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:27",
           "dataInscricao": "2026-05-11T16:49:50"
@@ -1296,11 +1256,11 @@
         {
           "nome": "Olga Arruda Cruz",
           "email": "olga_arruda@hotmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de Gestão de Pessoas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Supervisora",
           "matricula": "33291",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:10:13",
           "dataInscricao": "2026-05-11T16:58:37"
@@ -1308,11 +1268,11 @@
         {
           "nome": "Patrícia Duarte Costa Pereira",
           "email": "patricia.pereira@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Compras e licitações",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Gerente",
           "matricula": "34985",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:13:17",
           "dataInscricao": "2026-05-11T18:17:32"
@@ -1320,11 +1280,11 @@
         {
           "nome": "MARCIA ALVES",
           "email": "Libaniacassia@hotmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "Gabinete",
+          "turma": null,
+          "secretaria": "Governo",
           "cargo": "coordenadora de projetos",
           "matricula": "0",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-05-11T19:19:39"
@@ -1332,23 +1292,23 @@
         {
           "nome": "LEANDRO RAMOS MACEDO",
           "email": "leandro.macedo@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Prefeitura de Pedro Leopoldo",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Coordenador de Patrimônio e Logística",
           "matricula": "36494",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:12:50",
           "dataInscricao": "2026-05-12T09:12:40"
         },
         {
-          "nome": "Rodrigo Calazans Diogo",
+          "nome": "Rodrigo Calazans",
           "email": "rodrigo.diogo@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Gerência de Licitação",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Coordenador",
           "matricula": "36006",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-05-12T10:38:20"
@@ -1356,11 +1316,11 @@
         {
           "nome": "Diego Domiciano",
           "email": "diegoskywalker88@gmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "Arquivo e patrimônio",
+          "turma": null,
+          "secretaria": "Governo",
           "cargo": "DCA-4",
           "matricula": "170787",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:10:03",
           "dataInscricao": "2026-05-12T10:42:11"
@@ -1368,11 +1328,11 @@
         {
           "nome": "Adriana Paçanha Batista",
           "email": "adriana.batista@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Gerência de Contratos",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "DCA-3 SGF30000",
           "matricula": "36104",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:58",
           "dataInscricao": "2026-05-12T10:43:41"
@@ -1380,11 +1340,11 @@
         {
           "nome": "Breno Henrique da Silva Ramalho",
           "email": "breno.ramalho@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de compras públicas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Estagio Pós Graduação",
           "matricula": "12891553640",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:12:10",
           "dataInscricao": "2026-05-12T11:03:00"
@@ -1392,11 +1352,11 @@
         {
           "nome": "SAMU NASSER",
           "email": "samuel.nasta@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "SATD",
+          "turma": null,
+          "secretaria": "Secretaria Adjunta de Transformação Digital",
           "cargo": "Desenvolvedor full stack",
           "matricula": "31068",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:27",
           "dataInscricao": "2026-05-12T12:55:51"
@@ -1404,11 +1364,11 @@
         {
           "nome": "FABIANA CRISTINA DA SILVA",
           "email": "fabiana.silva@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de gestão de pessoas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Gerente de cargos, carreira e desenvolvimento",
           "matricula": "10013",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:12:20",
           "dataInscricao": "2026-05-12T15:34:11"
@@ -1416,11 +1376,11 @@
         {
           "nome": "Poliana Almeida Braga",
           "email": "poliana.braga@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Adjunta de Transformação de Digital",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Assistente Administrativo",
           "matricula": "10069",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:13:30",
           "dataInscricao": "2026-05-12T16:52:36"
@@ -1428,11 +1388,11 @@
         {
           "nome": "Libânia Alves",
           "email": "libaniacassia@hotmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "Prédio",
+          "turma": null,
+          "secretaria": "Governo",
           "cargo": "Assessoria",
           "matricula": "000001",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:10",
           "dataInscricao": "2026-05-12T18:46:22"
@@ -1440,11 +1400,11 @@
         {
           "nome": "PRISCILA MALAQUIAS",
           "email": "priscila.malaquias@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de Gestão de Pessoas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Analista Administrativo",
           "matricula": "36839",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:24",
           "dataInscricao": "2026-05-13T08:57:59"
@@ -1452,11 +1412,11 @@
         {
           "nome": "Thais Aparecida",
           "email": "thaisaparecidamtz@hotmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "Supervisão de folha de pagamento",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Assistente Administrativo",
           "matricula": "36840",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:10:56",
           "dataInscricao": "2026-05-13T08:58:54"
@@ -1464,11 +1424,11 @@
         {
           "nome": "Makerly Maia Toledo",
           "email": "makerlymaiatoledo@gmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de Gestão de Pessoas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Diretor",
           "matricula": "3499-5",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:13",
           "dataInscricao": "2026-05-13T10:21:04"
@@ -1476,11 +1436,11 @@
         {
           "nome": "Ana de Jesus",
           "email": "ana.jesus@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "DIRGEP",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "ANALISTA ADMINISTRATIVO",
           "matricula": "0",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:12:05",
           "dataInscricao": "2026-05-13T10:25:47"
@@ -1488,11 +1448,11 @@
         {
           "nome": "ALEXANDRE THADEU CLEMENTE BASSOUTO",
           "email": "alexandre@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "SATD",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Analista de Sistemas e Redes",
           "matricula": "8076",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:36",
           "dataInscricao": "2026-05-13T11:15:13"
@@ -1500,11 +1460,11 @@
         {
           "nome": "FLAVIO DAMASO",
           "email": "flavio.damaso@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de Compras Públicas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Diretor de Compras Públicas",
           "matricula": "05994",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:12:20",
           "dataInscricao": "2026-05-13T11:17:18"
@@ -1512,11 +1472,11 @@
         {
           "nome": "VICTOR HUGO PEREIRA REIS",
           "email": "victor.reis@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Adjunta de Transformação Digital",
+          "turma": null,
+          "secretaria": "Secretaria Adjunta de Transformação Digital",
           "cargo": "Gerente de Infraestrutura de TIC",
           "matricula": "9076",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:10:07",
           "dataInscricao": "2026-05-13T11:32:06"
@@ -1524,23 +1484,23 @@
         {
           "nome": "Arthur Serafim",
           "email": "arthur.serafim@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Gerência de Contratos",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Gerente de contratos e convênios públicos",
           "matricula": "36010",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:10:33",
           "dataInscricao": "2026-05-13T13:27:06"
         },
         {
-          "nome": "Ilda GRACIELE MOREIRA LEITE Leite",
+          "nome": "Ilda GRACIELE MOREIRA LEITE",
           "email": "graciele.leite@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "ADMINISTRAÇÃO",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "SUPERVISÃO DE ORDEM DE SERVIÇOS",
           "matricula": "35048",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-05-13T13:32:22"
@@ -1548,11 +1508,11 @@
         {
           "nome": "Lucelho Cristiano Vieira da Silva",
           "email": "lucelho.silva@elkys.com.br",
-          "turma": "Ingresso Único",
-          "secretaria": "DIRGEP",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Assessor em soluções Tecnologicas",
           "matricula": "3583-8",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:11",
           "dataInscricao": "2026-05-13T15:27:09"
@@ -1560,11 +1520,11 @@
         {
           "nome": "AURELIO COLLOR DUARTE GONCALVES NUNES",
           "email": "aurelio.nunes@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "SATD- Secretária Adjunta de Transformação Digital",
+          "turma": null,
+          "secretaria": "Secretaria Adjunta de Transformação Digital",
           "cargo": "Supervisor Cibersegurança",
           "matricula": "36118",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:35",
           "dataInscricao": "2026-05-13T16:28:54"
@@ -1572,11 +1532,11 @@
         {
           "nome": "ITALO SAMUEL PEÇANHA PINTO",
           "email": "italo.pecanha@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Prefeitura",
+          "turma": null,
+          "secretaria": "Secretaria Adjunta de Transformação Digital",
           "cargo": "Supervisor de Redes de Computadores",
           "matricula": "36116",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:11:07",
           "dataInscricao": "2026-05-13T19:09:49"
@@ -1584,11 +1544,11 @@
         {
           "nome": "Michele Oliveira Xavier Corradi",
           "email": "michele.corradi@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
+          "turma": null,
           "secretaria": "Gestão e Finanças",
           "cargo": "Supervisor em Planejamento",
           "matricula": "35982",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:10:49",
           "dataInscricao": "2026-05-13T19:16:39"
@@ -1596,11 +1556,11 @@
         {
           "nome": "Miriam Mara da Silva Ramalho",
           "email": "miriam.1969@hotmail.com",
-          "turma": "Ingresso Único",
-          "secretaria": "Contabilidade",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Contabilidade",
           "matricula": "70426368649",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": true,
           "dataCheckin": "2026-05-14T15:10:42",
           "dataInscricao": "2026-05-13T19:29:47"
@@ -1608,11 +1568,11 @@
         {
           "nome": "Kelen Lourenço Silva Oliveira",
           "email": "kelen.oliveira@pedroleopoldo.mg.gov.br",
-          "turma": "Ingresso Único",
-          "secretaria": "Diretoria de Compras Públicas",
+          "turma": null,
+          "secretaria": "Gestão e Finanças",
           "cargo": "Coordenador de Assessoramento",
           "matricula": "8113",
-          "pagamento": "Aprovado",
+          "pagamento": null,
           "presente": false,
           "dataCheckin": null,
           "dataInscricao": "2026-05-14T09:06:56"
@@ -1620,7 +1580,7 @@
       ],
       "vagas": 80,
       "taxaOcupacao": 47.5,
-      "fonte": "Lista de participantes - Fundamentos_da_Gesto_Pblica (3420275) (2).xlsx"
+      "fonte": "Lista de participantes - Fundamentos da Gestão Pública.xlsx"
     }
   ],
   "resumo": {
@@ -1634,35 +1594,14 @@
     "taxaPresencaGlobal": 85.1,
     "taxaOcupacaoGlobal": 73.8,
     "rankingSecretarias": {
+      "Gestão e Finanças": 52,
       "Educação": 47,
-      "Gestão e Finanças": 25,
-      "DIRGEP": 6,
-      "Diretoria de Gestão de Pessoas": 6,
-      "Saúde": 5,
-      "Controladoria Geral do Município": 2,
-      "Gerência de Contratos": 2,
-      "SATD": 2,
-      "Diretoria de Compras Públicas": 2,
+      "Saúde": 6,
+      "Secretaria Adjunta de Transformação Digital": 4,
+      "Controladoria Geral do Município": 3,
+      "Governo": 3,
       "Desenvolvimento Econômico": 1,
-      "Chefia de Gabinete": 1,
-      "Digerp": 1,
-      "Direitos Humanos e Politica sobre Drogas": 1,
-      "Sede - `Prefeitura": 1,
-      "Compras e licitações": 1,
-      "Gabinete": 1,
-      "Prefeitura de Pedro Leopoldo": 1,
-      "Gerência de Licitação": 1,
-      "Arquivo e patrimônio": 1,
-      "Diretoria de compras públicas": 1,
-      "Diretoria de gestão de pessoas": 1,
-      "Adjunta de Transformação de Digital": 1,
-      "Prédio": 1,
-      "Supervisão de folha de pagamento": 1,
-      "Adjunta de Transformação Digital": 1,
-      "ADMINISTRAÇÃO": 1,
-      "SATD- Secretária Adjunta de Transformação Digital": 1,
-      "Prefeitura": 1,
-      "Contabilidade": 1
+      "Chefia de Gabinete": 1
     }
   }
 }

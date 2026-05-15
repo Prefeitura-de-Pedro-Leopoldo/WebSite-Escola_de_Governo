@@ -20,8 +20,28 @@ import pandas as pd, os, json, re, unicodedata
 from collections import Counter
 
 FOLDER = os.path.dirname(os.path.abspath(__file__))
-OUT_PATH = os.path.normpath(os.path.join(FOLDER, '..', '..', 'admin', 'eventos-data.json'))
+# Sobe ate encontrar a raiz do projeto (que contem a pasta "admin") para
+# montar OUT_PATH de forma robusta independente de onde este script vive.
+def _find_project_root(start):
+    cur = start
+    for _ in range(8):
+        if os.path.isdir(os.path.join(cur, 'admin')) and os.path.isfile(os.path.join(cur, 'index.html')):
+            return cur
+        nxt = os.path.dirname(cur)
+        if nxt == cur: break
+        cur = nxt
+    return start
+PROJECT_ROOT = _find_project_root(FOLDER)
+OUT_PATH = os.path.join(PROJECT_ROOT, 'admin', 'eventos-data.json')
 MANUAL_PATH = os.path.join(FOLDER, 'manual.json')
+
+# Linhas adicionadas pelo exportador no rodape (ignorar):
+#   "Exportado em DD/MM/AAAA as HHhMM*"
+#   "* Horario de Brasilia"
+FOOTER_PATTERNS = (
+    re.compile(r'^\s*exportado em', re.IGNORECASE),
+    re.compile(r'^\s*\*\s*hor', re.IGNORECASE),
+)
 
 SECRETARIA_FIELDS = ('secretaria', 'secret�ria', 'lota��o', 'lotacao')
 
@@ -31,33 +51,71 @@ def strip_accents_lower(s):
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
     return s.lower().strip()
 
+# Aliases para typos / variacoes conhecidas (chave: nome canonico apos
+# normalizacao -- sem acentos, lowercase). Valor: nome canonico final.
+SECRETARIA_ALIASES = {
+    'controladoria geraldo municipio': 'Controladoria Geral do Município',
+    'controladoria geral do municipio': 'Controladoria Geral do Município',
+    'governo': 'Governo',
+    'saga': 'Governo',
+    'gestao e financas': 'Gestão e Finanças',
+    'gestao e administracao': 'Gestão e Finanças',
+    'saude': 'Saúde',
+    'educacao': 'Educação',
+    'desenvolvimento economico': 'Desenvolvimento Econômico',
+    'chefia de gabinete': 'Chefia de Gabinete',
+    # Adjunta de Transformacao Digital - todas as variacoes
+    'transformacao digital': 'Secretaria Adjunta de Transformação Digital',
+    'adjunta de transformacao digital': 'Secretaria Adjunta de Transformação Digital',
+    'satd': 'Secretaria Adjunta de Transformação Digital',
+}
+
 def normalize_secretaria(raw):
     if not isinstance(raw, str): return None
     s = raw.strip().strip('"').strip("'").rstrip('.').rstrip(',')
     if not s: return None
-    # remove "Secretaria Municipal de" prefix para encurtar
-    cleaned = re.sub(r'^Secretaria\s+Municipal\s+(de\s+)?', '', s, flags=re.I)
-    cleaned = re.sub(r'^Secretaria\s+(de\s+)?', '', cleaned, flags=re.I)
+    # remove prefixos comuns - aceita "Secretaria" / "Secretária" (com ou sem acento)
+    cleaned = re.sub(r'(?i)^Secret[aá]ri[ao]\s+Municipal\s+(de\s+)?', '', s)
+    cleaned = re.sub(r'(?i)^Secret[aá]ri[ao]\s+(adjunta\s+)?(de\s+)?', '', cleaned)
     cleaned = re.sub(r'\s*\([A-Z]{2,}\)\s*$', '', cleaned)  # remove sigla final
     cleaned = cleaned.strip()
-    if not cleaned: return s.strip()
-    # mantem capitalizacao primeira letra
-    return cleaned[0].upper() + cleaned[1:] if cleaned else s
+    if not cleaned: cleaned = s.strip()
+    # capitaliza primeira letra (mantem o restante para nao quebrar nomes proprios)
+    cleaned = cleaned[0].upper() + cleaned[1:] if cleaned else cleaned
+    # aplica alias se houver match canonico
+    key = strip_accents_lower(cleaned)
+    return SECRETARIA_ALIASES.get(key, cleaned)
 
 def find_header_row(df):
     for i in range(min(15, len(df))):
         cells = [str(c).lower() for c in df.iloc[i].tolist() if isinstance(c, str)]
-        if any('ordem de' in c for c in cells) and any('check-in' in c for c in cells):
+        # Formato antigo: contem "Ordem de" + "Check-in"
+        # Formato novo: contem "Nome" + "Check-in" (sem "Ordem de")
+        has_checkin = any('check-in' in c for c in cells)
+        if has_checkin and (any('ordem de' in c for c in cells) or any(c.strip() == 'nome' for c in cells)):
             return i
     return None
 
+
+def find_meta(df, label_lower):
+    """Procura nas primeiras linhas uma celula iniciando com `label_lower` (ex: 'data:', 'local:')."""
+    for i in range(min(8, len(df))):
+        for j in range(min(4, df.shape[1])):
+            v = df.iat[i, j] if i < df.shape[0] and j < df.shape[1] else None
+            if isinstance(v, str) and v.strip().lower().startswith(label_lower):
+                return v.strip()
+    return None
+
 def get_col(body, *keywords):
-    """Encontra coluna que contenha qualquer das keywords (case-insensitive)."""
-    for c in body.columns:
-        if not isinstance(c, str): continue
-        cl = strip_accents_lower(c)
-        for k in keywords:
-            if strip_accents_lower(k) in cl:
+    """Encontra coluna que contenha qualquer das keywords (case-insensitive).
+    Respeita a ordem de prioridade: tenta a primeira keyword em todas as colunas
+    antes de tentar a proxima. Isso garante que 'Secretaria' seja escolhida
+    antes de 'Lotacao' quando ambas existem (caso da planilha de Fundamentos)."""
+    for k in keywords:
+        kl = strip_accents_lower(k)
+        for c in body.columns:
+            if not isinstance(c, str): continue
+            if kl in strip_accents_lower(c):
                 return c
     return None
 
@@ -76,11 +134,19 @@ def safe_str(x):
 def process_file(path):
     df = pd.read_excel(path, sheet_name=0, header=None)
 
-    # Metadata: linhas 0-4
+    # Metadata: titulo na linha 0; "Data:" e "Local:" podem estar em linhas
+    # variaveis (formato antigo: linha 2; formato novo: linha 1).
     title = safe_str(df.iat[0, 0]) if df.shape[0] > 0 else None
-    raw_dt = safe_str(df.iat[2, 0]) if df.shape[0] > 2 else None
-    raw_local = safe_str(df.iat[2, 1]) if df.shape[0] > 2 else None
-    city = safe_str(df.iat[4, 1]) if df.shape[0] > 4 else None
+    raw_dt = find_meta(df, 'data:')
+    raw_local = find_meta(df, 'local:')
+    # cidade: primeira string nao-rotulo apos a linha do "Data:" (formato novo:
+    # "Pedro Leopoldo" em [2,1]; antigo: [4,1]).
+    city = None
+    for i in range(1, min(7, df.shape[0])):
+        v = safe_str(df.iat[i, 1]) if df.shape[1] > 1 else None
+        if v and not v.lower().startswith(('local:', 'data:')):
+            city = v
+            break
 
     # Cabecalho
     hdr = find_header_row(df)
@@ -88,7 +154,13 @@ def process_file(path):
         return None
     body = df.iloc[hdr+1:].copy().reset_index(drop=True)
     body.columns = df.iloc[hdr].tolist()
-    body = body[body.iloc[:, 1].notna()]
+    # filtra linhas vazias usando a coluna "Nome" (primeira coluna em ambos formatos)
+    body = body[body.iloc[:, 0].notna()]
+    # remove linhas de rodape adicionadas pelo exportador
+    def _is_footer(v):
+        s = str(v) if v is not None else ''
+        return any(p.search(s) for p in FOOTER_PATTERNS)
+    body = body[~body.iloc[:, 0].apply(_is_footer)]
 
     # Colunas relevantes
     col_nome = get_col(body, 'Nome')
@@ -131,7 +203,13 @@ def process_file(path):
         cargo = safe_str(r.get(col_cargo)) if col_cargo else None
         matricula = safe_str(r.get(col_matricula)) if col_matricula else None
 
-        aprovado = (pagamento or '').lower() == 'aprovado'
+        # Quando nao ha coluna "Estado de pagamento" no arquivo (formato novo),
+        # consideramos todos como aprovados, ja que so participantes confirmados
+        # constam na lista.
+        if col_pagamento is None:
+            aprovado = True
+        else:
+            aprovado = (pagamento or '').lower() == 'aprovado'
         if aprovado: total_aprovado += 1
         if presente: total_presentes += 1
         if tipo: turmas_counter[tipo] += 1
@@ -264,6 +342,7 @@ def main():
     eventos = []
     for f in sorted(os.listdir(FOLDER)):
         if not f.endswith('.xlsx'): continue
+        if f.startswith('~$'): continue  # arquivos de lock do Excel
         p = os.path.join(FOLDER, f)
         try:
             ev = process_file(p)

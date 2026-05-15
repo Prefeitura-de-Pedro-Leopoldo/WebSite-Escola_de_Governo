@@ -30,6 +30,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
   </head>
   <body>
     <div class="app-shell" id="appShell">
@@ -82,11 +86,19 @@
             <i class="fas fa-file-lines"></i>
             <span>Relatórios</span>
           </button>
+          <button class="nav-link" data-nav="autoreport" title="Auto-Relatório de Satisfação">
+            <i class="fas fa-file-pdf"></i>
+            <span>Auto-Relatório</span>
+          </button>
 
           <div class="sidebar__group-label">Operações</div>
           <button class="nav-link" data-nav="certificados" title="Emitir Certificados">
             <i class="fas fa-award"></i>
             <span>Emitir Certificados</span>
+          </button>
+          <button class="nav-link" data-nav="qrcode" title="Gerador de QR Code">
+            <i class="fas fa-qrcode"></i>
+            <span>QR Code</span>
           </button>
 
           <div class="sidebar__group-label">Sistema</div>
@@ -133,74 +145,64 @@
           <div class="main-inner" id="mainContent">
             <!-- ============== DASHBOARD ============== -->
             <section class="view is-active" id="view-dashboard">
-              <!-- 1. KPIs em destaque -->
-              <div class="kpi-grid" id="kpisGlobal"></div>
+              <div id="dashTabsHost"></div>
 
-              <!-- 2. Alertas críticos (danger/warn) - faixa horizontal compacta -->
-              <div class="alert-strip" id="alertStrip" hidden></div>
+              <!-- Aba 1: Visão geral -->
+              <div class="view-tabs__panel" data-tab-panel="overview">
+                <div class="kpi-grid" id="kpisGlobal"></div>
+                <div class="alert-strip" id="alertStrip" hidden></div>
 
-              <!-- 3. Highlights (positive/neutral) - compactos -->
-              <div class="section-block section-block--tight" id="highlightsBlock" hidden>
-                <div class="section-header section-header--compact">
-                  <div class="section-header__text">
-                    <h2>Destaques</h2>
+                <div class="section-block section-block--tight" id="highlightsBlock" hidden>
+                  <div class="section-header section-header--compact">
+                    <div class="section-header__text">
+                      <h2>Destaques</h2>
+                    </div>
                   </div>
+                  <div class="insights-grid insights-grid--compact" id="highlightsGrid"></div>
                 </div>
-                <div class="insights-grid insights-grid--compact" id="highlightsGrid"></div>
+
+                <div class="section-block">
+                  <div class="section-header section-header--compact">
+                    <div class="section-header__text">
+                      <h2>Eventos</h2>
+                      <p>Clique em um card para abrir a análise detalhada.</p>
+                    </div>
+                  </div>
+                  <div class="event-grid" id="eventGrid"></div>
+                </div>
               </div>
 
-              <!-- 4. Eventos -->
-              <div class="section-block">
-                <div class="section-header section-header--compact">
-                  <div class="section-header__text">
-                    <h2>Eventos</h2>
-                    <p>Clique em um card para abrir a análise detalhada.</p>
+              <!-- Aba 2: Gráficos consolidados -->
+              <div class="view-tabs__panel" data-tab-panel="charts" hidden>
+                <div class="grid-2">
+                  <div class="card">
+                    <div class="card__header">
+                      <div><h3>Inscritos vs Presentes</h3><p>Comparativo direto por evento.</p></div>
+                    </div>
+                    <div class="chart-wrap lg" id="wrap-globalBar"><canvas id="chartGlobalBar"></canvas></div>
+                  </div>
+                  <div class="card">
+                    <div class="card__header">
+                      <div><h3>Taxa de presença</h3><p>Verde &ge; 80% &middot; Âmbar 60-79% &middot; Vermelho &lt; 60%.</p></div>
+                    </div>
+                    <div class="chart-wrap lg" id="wrap-globalTaxa"><canvas id="chartGlobalTaxa"></canvas></div>
                   </div>
                 </div>
-                <div class="event-grid" id="eventGrid"></div>
+                <div class="grid-2">
+                  <div class="card">
+                    <div class="card__header">
+                      <div><h3>Ranking de secretarias</h3><p>Soma de inscrições de todos os eventos.</p></div>
+                    </div>
+                    <div class="chart-wrap lg" id="wrap-globalSec"><canvas id="chartGlobalSec"></canvas></div>
+                  </div>
+                  <div class="card">
+                    <div class="card__header">
+                      <div><h3>Presença consolidada</h3><p>Distribuição global de comparecimento.</p></div>
+                    </div>
+                    <div class="chart-wrap lg" id="wrap-globalDonut"><canvas id="chartGlobalDonut"></canvas></div>
+                  </div>
+                </div>
               </div>
-
-              <!-- 5. Gráficos detalhados - colapsáveis -->
-              <details class="collapsible-section" id="chartsDetails" open>
-                <summary class="collapsible-section__head">
-                  <span class="collapsible-section__title">
-                    <i class="fas fa-chart-line"></i> Indicadores consolidados
-                  </span>
-                  <span class="collapsible-section__hint">
-                    <i class="fas fa-chevron-down"></i>
-                  </span>
-                </summary>
-                <div class="collapsible-section__body">
-                  <div class="grid-2">
-                    <div class="card">
-                      <div class="card__header">
-                        <div><h3>Inscritos vs Presentes</h3><p>Comparativo direto por evento.</p></div>
-                      </div>
-                      <div class="chart-wrap lg" id="wrap-globalBar"><canvas id="chartGlobalBar"></canvas></div>
-                    </div>
-                    <div class="card">
-                      <div class="card__header">
-                        <div><h3>Taxa de presença</h3><p>Verde &ge; 80% &middot; Âmbar 60-79% &middot; Vermelho &lt; 60%.</p></div>
-                      </div>
-                      <div class="chart-wrap lg" id="wrap-globalTaxa"><canvas id="chartGlobalTaxa"></canvas></div>
-                    </div>
-                  </div>
-                  <div class="grid-2">
-                    <div class="card">
-                      <div class="card__header">
-                        <div><h3>Ranking de secretarias</h3><p>Soma de inscrições de todos os eventos.</p></div>
-                      </div>
-                      <div class="chart-wrap lg" id="wrap-globalSec"><canvas id="chartGlobalSec"></canvas></div>
-                    </div>
-                    <div class="card">
-                      <div class="card__header">
-                        <div><h3>Presença consolidada</h3><p>Distribuição global de comparecimento.</p></div>
-                      </div>
-                      <div class="chart-wrap lg" id="wrap-globalDonut"><canvas id="chartGlobalDonut"></canvas></div>
-                    </div>
-                  </div>
-                </div>
-              </details>
             </section>
 
             <!-- ============== ANÁLISE POR EVENTO ============== -->
@@ -220,6 +222,12 @@
 
             <!-- ============== CERTIFICADOS ============== -->
             <section class="view" id="view-certificados"></section>
+
+            <!-- ============== QR CODE ============== -->
+            <section class="view" id="view-qrcode"></section>
+
+            <!-- ============== AUTO-RELATÓRIO ============== -->
+            <section class="view" id="view-autoreport"></section>
           </div>
         </main>
       </div>
