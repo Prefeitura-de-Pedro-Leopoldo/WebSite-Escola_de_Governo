@@ -79,13 +79,13 @@
               "inscricaoLabel": "Convocação"
             },
             {
-              "id": "fundamentos-gestao-publica-2026-05-t1",
-              "titulo": "Fundamentos da Gestão Pública - 1ª turma",
+              "id": "fundamentos-gestao-publica-2026-05-t1-m1",
+              "titulo": "Fundamentos da Gestão Pública - 1ª turma : Módulo 1",
               "mes": "maio",
               "data": "14/05",
               "modalidade": "presencial",
               "icone": "fas fa-landmark",
-              "descricao": "Introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
+              "descricao": "Módulo 1 da formação: introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
               "inscricaoLabel": "O evento já encerrou...",
               "destaqueHome": true,
               "detalhe": {
@@ -102,6 +102,15 @@
                   "A formação prepara o participante para compreender o ambiente institucional em que atua, identificar competências e responsabilidades e contribuir para uma gestão mais transparente e orientada ao interesse público."
                 ]
               }
+            },
+            {
+              "id": "fundamentos-gestao-publica-2026-05-t1-m2",
+              "titulo": "Fundamentos da Gestão Pública - 1ª turma : Módulo 2",
+              "mes": "maio",
+              "modalidade": "presencial",
+              "icone": "fas fa-landmark",
+              "descricao": "Módulo 2 da formação: aprofundamento dos fundamentos da gestão pública, dando continuidade aos temas trabalhados no Módulo 1.",
+              "emBreve": true
             },
             {
               "id": "comissao-recursal-2026-06-t2",
@@ -162,6 +171,48 @@
           "id": "default",
           "nome": null,
           "cursos": [
+            {
+              "id": "mapa-gerenciamento-risco-2026-05-t1",
+              "titulo": "Elaboração do Mapa de Gerenciamento de Risco - 1ª turma",
+              "mes": "maio",
+              "data": "20/05",
+              "modalidade": "presencial",
+              "responsavel": "EGov-PL",
+              "icone": "fas fa-shield-alt",
+              "descricao": "Capacitação para a elaboração do mapa de gerenciamento de risco no planejamento das contratações públicas municipais.",
+              "inscricaoLabel": "Convocação",
+              "destaqueHome": true,
+              "detalhe": {
+                "dataExtenso": "20 de maio de 2026",
+                "diaSemana": "quarta-feira",
+                "horario": "14h (quatorze horas)",
+                "local": "Sala de reuniões da Secretaria de Gestão e Finanças",
+                "publicoAlvo": "Agentes de planejamento das contratações públicas das Secretarias Municipais",
+                "flyer": "assets/img/cursos/Sobre/Elaboração do Mapa de Gerenciamento de Risco 1ª TURMA.jpeg",
+                "flyerCarrossel": "assets/img/cursos/Carrossel/Elaboração do Mapa de Gerenciamento de Risco 1ª TURMA.jpeg"
+              }
+            },
+            {
+              "id": "mapa-gerenciamento-risco-2026-05-t2",
+              "titulo": "Elaboração do Mapa de Gerenciamento de Risco - 2ª turma",
+              "mes": "maio",
+              "data": "20/05",
+              "modalidade": "presencial",
+              "responsavel": "EGov-PL",
+              "icone": "fas fa-shield-alt",
+              "descricao": "Capacitação para a elaboração do mapa de gerenciamento de risco no planejamento das contratações públicas municipais.",
+              "inscricaoLabel": "Convocação",
+              "destaqueHome": true,
+              "detalhe": {
+                "dataExtenso": "20 de maio de 2026",
+                "diaSemana": "quarta-feira",
+                "horario": "15h (quinze horas)",
+                "local": "Sala de reuniões da Secretaria de Gestão e Finanças",
+                "publicoAlvo": "Agentes de planejamento das contratações públicas das Secretarias Municipais",
+                "flyer": "assets/img/cursos/Sobre/Elaboração do Mapa de Gerenciamento de Risco 2ª TURMA.jpeg",
+                "flyerCarrossel": "assets/img/cursos/Carrossel/Elaboração do Mapa de Gerenciamento de Risco 2ª TURMA.jpeg"
+              }
+            },
             {
               "id": "padronizacao-contratacao-2026-08",
               "titulo": "Padronização dos Procedimentos de Contratação",
