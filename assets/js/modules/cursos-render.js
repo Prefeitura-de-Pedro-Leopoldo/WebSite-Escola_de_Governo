@@ -20,6 +20,15 @@ function buildModalidadeTag(modalidade) {
 let formsDefault = {}
 
 function buildFooter(curso) {
+  // Botão "Saiba mais" — disponível em qualquer estado quando o curso tem detalhe.
+  const detalheBtn = curso.detalhe
+    ? `
+      <a class="curso-card__btn curso-card__btn--secondary" href="curso.html?id=${encodeURIComponent(curso.id)}">
+        <i class="fas fa-circle-info"></i> Saiba mais
+      </a>
+    `
+    : ""
+
   if (curso.emBreve) {
     return `
       <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">
@@ -39,17 +48,11 @@ function buildFooter(curso) {
         <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">
           ${escapeHtml(label)}
         </span>
+        ${detalheBtn}
       `
     }
 
     const label = customLabel || "Inscrever-se no Sympla"
-    const detalheBtn = curso.detalhe
-      ? `
-      <a class="curso-card__btn curso-card__btn--secondary" href="curso.html?id=${encodeURIComponent(curso.id)}">
-        <i class="fas fa-circle-info"></i> Saiba mais
-      </a>
-    `
-      : ""
     return `
       <a class="curso-card__btn curso-card__btn--primary" href="${url}" target="_blank" rel="noopener">
         <i class="fas fa-ticket-alt"></i> ${escapeHtml(label)}

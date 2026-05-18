@@ -69,7 +69,7 @@ function buildPage({ curso, eixoKey, eixoNome }) {
   const modalidade = curso.modalidade === "ead" ? "EAD" : "Presencial"
   const inscricaoBtn = curso.inscricaoUrl
     ? `<a class="curso-detalhe__cta curso-detalhe__cta--primary" href="${curso.inscricaoUrl}" target="_blank" rel="noopener">
-         <i class="fas fa-ticket-alt"></i> Inscrever-se no Sympla
+         <i class="fas fa-ticket-alt"></i> ${escapeHtml(curso.inscricaoLabel || "Inscrever-se no Sympla")}
        </a>`
     : ""
 
