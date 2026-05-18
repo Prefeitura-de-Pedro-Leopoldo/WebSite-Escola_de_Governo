@@ -1,5 +1,5 @@
 {
-  "_schema": "Estrutura: eixos > trilhas > cursos. Hoje cada eixo usa uma trilha 'default' (nome: null) que renderiza só os cards. Quando trilhas reais forem definidas, dividir o array 'trilhas' e dar nome a cada uma — o renderer mostra o sub-cabeçalho automaticamente. 'formsDefault' são os Forms genéricos reutilizados por todos os cursos EAD; se um curso precisar de Form próprio, basta sobrescrever 'inscricaoFormId' / 'certificadoUrl' no próprio curso.",
+  "_schema": "Estrutura: eixos > trilhas > cursos. Hoje cada eixo usa uma trilha 'default' (nome: null) que renderiza só os cards. Quando trilhas reais forem definidas, dividir o array 'trilhas' e dar nome a cada uma - o renderer mostra o sub-cabeçalho automaticamente. 'formsDefault' são os Forms genéricos reutilizados por todos os cursos EAD; se um curso precisar de Form próprio, basta sobrescrever 'inscricaoFormId' / 'certificadoUrl' no próprio curso.",
   "formsDefault": {
     "inscricaoFormId": "1FAIpQLSdg_NLb90QdmCNNKdQwFAi2gakIJedTTmSuxkqQJJPmzNqQZQ",
     "certificadoUrl": "https://forms.gle/iRGvfDAc5JPsftF66"
@@ -13,14 +13,48 @@
           "nome": null,
           "cursos": [
             {
+              "id": "aula-magna-2026-04",
+              "titulo": "Aula Magna da EGov-PL",
+              "mes": "abril",
+              "data": "23/04",
+              "modalidade": "presencial",
+              "responsavel": "EGov-PL",
+              "icone": "fas fa-graduation-cap",
+              "descricao": "Aula Magna de abertura do ciclo formativo de 2026 da Escola de Governo de Pedro Leopoldo.",
+              "inscricaoLabel": "Realizado",
+              "destaqueHome": true,
+              "ocultarNoEixo": true,
+              "detalhe": {
+                "dataExtenso": "23 de abril de 2026",
+                "local": "Pedro Leopoldo - MG",
+                "flyer": "assets/img/imagens portal/aulaMagna.jpg"
+              }
+            },
+            {
               "id": "gestao-resultados-2026-05",
               "titulo": "Gestão Pública para Resultados",
               "mes": "maio",
+              "data": "28/05",
               "modalidade": "presencial",
-              "responsavel": "SATD",
               "icone": "fas fa-chart-bar",
-              "descricao": "Conceitos e ferramentas para gestão para resultados com foco em planejamento, indicadores, monitoramento e avaliação.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "descricao": "Conceitos e ferramentas para a implementação da gestão para resultados na prefeitura com foco em planejamento, indicadores, monitoramento e avaliação das ações.",
+              "inscricaoUrlPendente": "https://www.sympla.com.br/evento/gestao-publica-para-resultados/3420307",
+              "emBreve": true,
+              "destaqueHome": true,
+              "detalhe": {
+                "dataExtenso": "28 de maio de 2026",
+                "diaSemana": "quinta-feira",
+                "horario": "9h (nove horas)",
+                "local": "Centro de Artes e Esportes Unificado – CEU",
+                "publicoAlvo": "Servidores municipais em geral",
+                "flyer": "assets/img/cursos/Sobre/Sympla - Gestão Pública Para Resultados.jpeg",
+                "flyerCarrossel": "assets/img/cursos/Carrossel/Gestão Pública para Resultados.jpeg",
+                "sobre": [
+                  "O curso Gestão Pública para Resultados apresenta conceitos, métodos e ferramentas para orientar a administração municipal por entregas concretas à sociedade, articulando planejamento, execução, monitoramento e avaliação.",
+                  "Os participantes serão estimulados a desenhar indicadores, acompanhar metas e aprimorar a tomada de decisão baseada em evidências, fortalecendo a entrega de valor público.",
+                  "A formação reúne fundamentos teóricos e práticas aplicadas ao contexto municipal, com exemplos e exercícios voltados à realidade dos servidores de Pedro Leopoldo."
+                ]
+              }
             },
             {
               "id": "etica-setor-publico-2026-05",
@@ -30,12 +64,49 @@
               "responsavel": "Enap",
               "icone": "fas fa-balance-scale",
               "descricao": "Princípios éticos, integridade, conduta profissional e prevenção de conflitos de interesse. Curso EAD ofertado pela Enap.",
-              "acessoCursoUrl": "https://www.escolavirtual.gov.br/curso/4"
+              "acessoCursoUrl": "https://www.escolavirtual.gov.br/curso/4",
+              "emBreve": true
             },
             {
-              "id": "comissao-recursal-2026-04",
-              "titulo": "Formação para Membros da Comissão Recursal de Avaliação de Desempenho",
-              "mes": "abril",
+              "id": "comissao-recursal-2026-05-t1",
+              "titulo": "Formação para Membros da Comissão Recursal - 1ª turma",
+              "mes": "maio",
+              "data": "07/05",
+              "modalidade": "presencial",
+              "responsavel": "DIRGEP",
+              "icone": "fas fa-users-cog",
+              "descricao": "Aspectos legais e procedimentais para atuação em comissões recursais, com foco em análise técnica e tomada de decisão.",
+              "inscricaoLabel": "Convocação"
+            },
+            {
+              "id": "fundamentos-gestao-publica-2026-05-t1",
+              "titulo": "Fundamentos da Gestão Pública - 1ª turma",
+              "mes": "maio",
+              "data": "14/05",
+              "modalidade": "presencial",
+              "icone": "fas fa-landmark",
+              "descricao": "Introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
+              "inscricaoUrl": "https://www.sympla.com.br/evento/fundamentos-da-gestao-publica/3420275",
+              "destaqueHome": true,
+              "detalhe": {
+                "dataExtenso": "14 de maio de 2026",
+                "diaSemana": "quinta-feira",
+                "horario": "9h (nove horas)",
+                "local": "Centro de Artes e Esportes Unificado – CEU",
+                "publicoAlvo": "Servidores municipais",
+                "flyer": "assets/img/cursos/Sobre/Sympla - Fundamentos da Gestão Pública.jpeg",
+                "flyerCarrossel": "assets/img/cursos/Carrossel/Fundamentos da Gestão Pública.jpeg",
+                "sobre": [
+                  "O curso Fundamentos da Gestão Pública oferece uma introdução estruturada aos princípios, à organização e ao funcionamento da administração pública brasileira, com olhar especial para o nível municipal.",
+                  "São discutidos temas como legalidade, impessoalidade, moralidade, publicidade e eficiência, articulando o regime jurídico-administrativo com a prática cotidiana do servidor.",
+                  "A formação prepara o participante para compreender o ambiente institucional em que atua, identificar competências e responsabilidades e contribuir para uma gestão mais transparente e orientada ao interesse público."
+                ]
+              }
+            },
+            {
+              "id": "comissao-recursal-2026-06-t2",
+              "titulo": "Formação para Membros da Comissão Recursal - 2ª turma",
+              "mes": "junho",
               "modalidade": "presencial",
               "responsavel": "DIRGEP",
               "icone": "fas fa-users-cog",
@@ -47,7 +118,6 @@
               "titulo": "Gestão da Inovação no Setor Público",
               "mes": "junho",
               "modalidade": "presencial",
-              "responsavel": "SATD",
               "icone": "fas fa-lightbulb",
               "descricao": "Conceitos e práticas de inovação aplicadas ao setor público, com foco na transformação digital e cultura inovadora.",
               "inscricaoUrl": "https://www.sympla.com.br/"
@@ -77,10 +147,9 @@
               "titulo": "Fundamentos da Gestão Pública",
               "mes": "julho",
               "modalidade": "presencial",
-              "responsavel": "SAGA",
               "icone": "fas fa-landmark",
               "descricao": "Introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "emBreve": true
             }
           ]
         }
@@ -98,7 +167,6 @@
               "titulo": "Padronização dos Procedimentos de Contratação",
               "mes": "agosto",
               "modalidade": "presencial",
-              "responsavel": "SAGA",
               "icone": "fas fa-tasks",
               "descricao": "Organização e uniformização de fluxos e procedimentos para garantir eficiência e conformidade.",
               "inscricaoUrl": "https://www.sympla.com.br/"
@@ -108,7 +176,6 @@
               "titulo": "Planejamento Estratégico das Contratações Públicas",
               "mes": "setembro",
               "modalidade": "presencial",
-              "responsavel": "SAGA",
               "icone": "fas fa-project-diagram",
               "descricao": "Planejamento das contratações alinhado às necessidades institucionais, com base na legislação vigente.",
               "inscricaoUrl": "https://www.sympla.com.br/"
@@ -118,7 +185,6 @@
               "titulo": "Gestão e Fiscalização de Contratos, sob o enfoque da Lei nº 14.133/21",
               "mes": "outubro",
               "modalidade": "presencial",
-              "responsavel": "SAGA",
               "icone": "fas fa-search",
               "descricao": "Práticas de acompanhamento, execução e fiscalização contratual, com foco na conformidade legal e resultados.",
               "inscricaoUrl": "https://www.sympla.com.br/"
@@ -136,13 +202,19 @@
           "cursos": [
             {
               "id": "workshop-sei-2026-04",
-              "titulo": "Workshop SEI! Usar na prática! Usar na Prática",
+              "titulo": "Workshop SEI! Usar na prática",
               "mes": "abril",
+              "data": "24/04",
               "modalidade": "presencial",
-              "responsavel": "SATD",
               "icone": "fas fa-file-signature",
-              "descricao": "Capacitação prática no Sistema Eletrônico de Informações (SEI), com foco no uso das ferramentas digitais para tramitação de processos administrativos. Realizado em 24/04/2026.",
-              "inscricaoLabel": "O evento encerrado..."
+              "descricao": "Capacitação prática no Sistema Eletrônico de Informações (SEI), com foco no uso das ferramentas digitais para tramitação de processos administrativos.",
+              "inscricaoLabel": "Encerrado",
+              "destaqueHome": true,
+              "detalhe": {
+                "dataExtenso": "24 de abril de 2026",
+                "local": "Pedro Leopoldo - MG",
+                "flyer": "assets/img/imagens portal/WorkshopSeiUsar.png"
+              }
             }
           ]
         }
@@ -155,6 +227,28 @@
           "id": "default",
           "nome": null,
           "cursos": [
+            {
+              "id": "comunicacao-que-aproxima-2026-05",
+              "titulo": "Comunicação que aproxima: O papel do servidor na construção da confiança pública",
+              "mes": "maio",
+              "data": "21/05",
+              "modalidade": "presencial",
+              "responsavel": "EGov-PL",
+              "icone": "fas fa-comments",
+              "descricao": "Reflexão sobre o papel da comunicação pública no fortalecimento da confiança entre cidadão e Estado, com foco na atuação cotidiana do servidor municipal.",
+              "inscricaoUrlPendente": "https://www.sympla.com.br/evento/comunicacao-que-aproxima/3420517",
+              "emBreve": true,
+              "destaqueHome": true,
+              "detalhe": {
+                "dataExtenso": "21 de maio de 2026",
+                "diaSemana": "quinta-feira",
+                "horario": "9h (nove horas)",
+                "local": "Centro de Artes e Esportes Unificado – CEU",
+                "publicoAlvo": "Servidores municipais",
+                "flyer": "assets/img/cursos/Sobre/Sympla - Comunicação que aproxima.jpeg",
+                "flyerCarrossel": "assets/img/cursos/Carrossel/Comunicação que aproxima.jpeg"
+              }
+            },
             {
               "id": "fundamentos-atendimento-2026-07",
               "titulo": "Fundamentos do atendimento público de qualidade",

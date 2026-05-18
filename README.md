@@ -1,6 +1,6 @@
 # Escola de Governo · Pedro Leopoldo
 
-Site institucional da Escola de Governo de Pedro Leopoldo (EGov-PL) — plataforma de capacitação contínua dos servidores públicos municipais.
+Site institucional da Escola de Governo de Pedro Leopoldo (EGov-PL) - plataforma de capacitação contínua dos servidores públicos municipais.
 
 ## Stack
 
@@ -25,13 +25,13 @@ Site institucional da Escola de Governo de Pedro Leopoldo (EGov-PL) — platafor
 │   └── suporte.html        · Contato e suporte
 ├── assets/
 │   ├── css/
-│   │   ├── style.css       · Entry — importa todos os módulos
+│   │   ├── style.css       · Entry - importa todos os módulos
 │   │   ├── base/           · _variables (tokens), _reset
 │   │   ├── components/     · _buttons, _cards, _breadcrumb, _back-to-top
 │   │   ├── layout/         · _header, _hero, _footer, _page-banner
 │   │   └── pages/          · _eixos, _noticias, _sobre, _suporte
 │   ├── js/
-│   │   ├── main.js         · Entry — inicializa módulos
+│   │   ├── main.js         · Entry - inicializa módulos
 │   │   └── modules/        · counter, fade-in, mobile-menu, scroll-effects, theme-toggle
 │   └── img/
 │       ├── banner-eixos/   · Banners individuais de cada eixo temático
@@ -49,22 +49,23 @@ Tokens semânticos em [`assets/css/base/_variables.css`](assets/css/base/_variab
 
 **Paleta oficial (EGov-PL):**
 
-| Token | Cor | Uso |
-|---|---|---|
-| `--brand-primary` | `#3063ad` | Azul institucional |
-| `--brand-accent` | `#4dad33` | Verde EGov |
-| `--blue-900` | `#161f36` | Azul escuro (superfícies escuras) |
-| `--off-white` | `#fafafa` | Fundo base |
+| Token             | Cor       | Uso                               |
+| ----------------- | --------- | --------------------------------- |
+| `--brand-primary` | `#3063ad` | Azul institucional                |
+| `--brand-accent`  | `#4dad33` | Verde EGov                        |
+| `--blue-900`      | `#161f36` | Azul escuro (superfícies escuras) |
+| `--off-white`     | `#fafafa` | Fundo base                        |
 
 **Tipografia:**
+
 - Display: `Gagifr` → `Fraunces` (fallback)
 - Sans: `Aonic` → `Manrope` (fallback)
 
 ## Convenções
 
 - **Commits**: `<tipo>(<escopo>): <descrição>` · tipos: `feat` `fix` `refactor` `style` `chore` `docs` `content`
-- **Branches**: git flow — `main` (produção) / `develop` (integração) / `feature/*` · `fix/*` · `chore/*` · `content/*`
-- **Nomes de arquivos**: kebab-case ASCII (sem acentos, sem espaços) — ex.: `governanca-e-gestao-publica.png`
+- **Branches**: git flow - `main` (produção) / `develop` (integração) / `feature/*` · `fix/*` · `chore/*` · `content/*`
+- **Nomes de arquivos**: kebab-case ASCII (sem acentos, sem espaços) - ex.: `governanca-e-gestao-publica.png`
 - **CSS**: BEM quando possível (`bloco__elemento--modificador`); tokens semânticos sempre que possível
 
 ## Como rodar
@@ -82,6 +83,6 @@ Acesse `http://localhost:8000`.
 ## Versionamento
 
 - `v0.0.1` · Commit inicial
-- `v0.1.0` · MVP — primeira versão funcional
+- `v0.1.0` · MVP - primeira versão funcional
 - `v0.2.0` · Reorganização estrutural (CSS modular, `pages/`)
 - `v0.3.0` · Redesign completo: design system, tema claro/escuro, nova identidade visual

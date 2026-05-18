@@ -4,7 +4,7 @@
    ================================================================ */
 
 /* ----------------------------------------------------------------
-   Grid de canais — 3 cards acionáveis
+   Grid de canais - 3 cards acionáveis
    ---------------------------------------------------------------- */
 .suporte-grid {
   display: grid;
@@ -139,7 +139,7 @@
 }
 
 /* ----------------------------------------------------------------
-   CTA row — banner de inscrição
+   CTA row - banner de inscrição
    ---------------------------------------------------------------- */
 .suporte-cta-row {
   margin-top: var(--space-4);
@@ -248,7 +248,7 @@
   content: "";
 }
 
-/* Wrapper flex — garante alinhamento independente do summary */
+/* Wrapper flex - garante alinhamento independente do summary */
 .faq-item__summary-inner {
   display: flex;
   align-items: center;
@@ -330,8 +330,14 @@
 }
 
 @keyframes faq-slide-in {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ----------------------------------------------------------------

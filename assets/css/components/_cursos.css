@@ -24,13 +24,13 @@
 }
 
 .curso-card__modalidade--presencial {
-  background: rgba(34, 139, 34, 0.10);
+  background: rgba(34, 139, 34, 0.1);
   color: #1f7a1f;
   border-color: rgba(34, 139, 34, 0.25);
 }
 
 .curso-card__modalidade--ead {
-  background: rgba(37, 99, 235, 0.10);
+  background: rgba(37, 99, 235, 0.1);
   color: #1d4ed8;
   border-color: rgba(37, 99, 235, 0.25);
 }
@@ -38,13 +38,13 @@
 [data-theme="dark"] .curso-card__modalidade--presencial {
   background: rgba(74, 222, 128, 0.12);
   color: #4ade80;
-  border-color: rgba(74, 222, 128, 0.30);
+  border-color: rgba(74, 222, 128, 0.3);
 }
 
 [data-theme="dark"] .curso-card__modalidade--ead {
   background: rgba(96, 165, 250, 0.14);
   color: #60a5fa;
-  border-color: rgba(96, 165, 250, 0.30);
+  border-color: rgba(96, 165, 250, 0.3);
 }
 
 /* ---------------- Botoes de acao ---------------- */
@@ -85,7 +85,7 @@
   background: var(--brand-primary);
   color: #fff;
   border-color: var(--brand-primary);
-  box-shadow: 0 1px 2px rgba(22, 31, 54, 0.10);
+  box-shadow: 0 1px 2px rgba(22, 31, 54, 0.1);
 }
 
 .curso-card__btn--primary:hover {
@@ -133,18 +133,14 @@
 }
 
 /* ================================================================
-   Skeleton loader — usado enquanto cursos.json carrega
+   Skeleton loader - usado enquanto cursos.json carrega
    ================================================================ */
 .cursos-grid[data-cursos-eixo]:empty::before,
 .cursos-grid[data-cursos-eixo]:empty::after {
   content: "";
   display: block;
   height: 320px;
-  background: linear-gradient(
-    90deg,
-    var(--surface-muted) 0%,
-    var(--surface-subtle) 50%,
-    var(--surface-muted) 100%);
+  background: linear-gradient(90deg, var(--surface-muted) 0%, var(--surface-subtle) 50%, var(--surface-muted) 100%);
   background-size: 200% 100%;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
@@ -152,8 +148,12 @@
 }
 
 @keyframes skeleton-shimmer {
-  0%   { background-position: -100% 0; }
-  100% { background-position: 100% 0; }
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 /* ================================================================
@@ -252,7 +252,7 @@
 
 .form-modal__aviso {
   padding: var(--space-3) var(--space-5);
-  background: rgba(234, 179, 8, 0.10);
+  background: rgba(234, 179, 8, 0.1);
   color: var(--text-primary);
   font-size: var(--fs-xs);
   border-bottom: 1px solid rgba(234, 179, 8, 0.25);

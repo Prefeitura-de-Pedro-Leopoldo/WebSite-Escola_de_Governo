@@ -112,9 +112,14 @@ button {
 }
 
 /* ================================================================
-   TIPOGRAFIA — hierarquia consistente
+   TIPOGRAFIA - hierarquia consistente
    ================================================================ */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-sans);
   color: var(--text-primary);
   line-height: var(--lh-tight);
@@ -122,18 +127,35 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--fw-bold);
 }
 
-h1 { font-size: var(--fs-5xl); }
-h2 { font-size: var(--fs-3xl); }
-h3 { font-size: var(--fs-xl); }
-h4 { font-size: var(--fs-lg); }
-h5 { font-size: var(--fs-md); }
-h6 { font-size: var(--fs-sm); }
+h1 {
+  font-size: var(--fs-5xl);
+}
+h2 {
+  font-size: var(--fs-3xl);
+}
+h3 {
+  font-size: var(--fs-xl);
+}
+h4 {
+  font-size: var(--fs-lg);
+}
+h5 {
+  font-size: var(--fs-md);
+}
+h6 {
+  font-size: var(--fs-sm);
+}
 
 /* Tipografia editorial automatica:
    - balance: distribui linhas de titulos para nao deixar orfas
    - pretty:  evita orfas e melhora quebras em paragrafos longos
    Suporte: Chrome 114+, Safari 17.4+, Firefox 121+ (degrada graciosamente) */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
@@ -151,7 +173,7 @@ p {
   letter-spacing: var(--tracking-tightest);
 }
 
-/* Selection — verde institucional (15-22%) com texto legivel */
+/* Selection - verde institucional (15-22%) com texto legivel */
 ::selection {
   background: var(--selection-bg);
   color: var(--selection-fg);
@@ -229,11 +251,15 @@ p {
 }
 
 /* Utilitários */
-.text-balance { text-wrap: balance; }
-.text-pretty  { text-wrap: pretty; }
+.text-balance {
+  text-wrap: balance;
+}
+.text-pretty {
+  text-wrap: pretty;
+}
 
 /* ================================================================
-   SCROLLBAR — sutil, institucional, adapta ao tema
+   SCROLLBAR - sutil, institucional, adapta ao tema
    ================================================================ */
 * {
   scrollbar-width: thin;
@@ -282,7 +308,7 @@ p {
   border: 0 !important;
 }
 
-/* Skip link — primeiro elemento focavel da pagina */
+/* Skip link - primeiro elemento focavel da pagina */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -302,16 +328,24 @@ p {
   top: var(--space-4);
 }
 
-/* Stack — espacamento vertical consistente entre filhos diretos */
+/* Stack - espacamento vertical consistente entre filhos diretos */
 .stack > * + * {
   margin-top: var(--stack-gap, var(--space-4));
 }
-.stack-sm { --stack-gap: var(--space-2); }
-.stack-md { --stack-gap: var(--space-4); }
-.stack-lg { --stack-gap: var(--space-6); }
-.stack-xl { --stack-gap: var(--space-10); }
+.stack-sm {
+  --stack-gap: var(--space-2);
+}
+.stack-md {
+  --stack-gap: var(--space-4);
+}
+.stack-lg {
+  --stack-gap: var(--space-6);
+}
+.stack-xl {
+  --stack-gap: var(--space-10);
+}
 
-/* Cluster — flex-wrap para grupos horizontais (tags, botoes, links) */
+/* Cluster - flex-wrap para grupos horizontais (tags, botoes, links) */
 .cluster {
   display: flex;
   flex-wrap: wrap;
@@ -320,7 +354,7 @@ p {
 }
 
 /* ================================================================
-   PREFERENCIAS DE MOVIMENTO — respeita usuarios com sensibilidade
+   PREFERENCIAS DE MOVIMENTO - respeita usuarios com sensibilidade
    ================================================================ */
 @media (prefers-reduced-motion: reduce) {
   html {
