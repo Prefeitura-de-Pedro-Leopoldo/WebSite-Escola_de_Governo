@@ -177,6 +177,14 @@
   max-width: 640px;
 }
 
+/* Variante: grade respons. para 5 métricas */
+.hero-stats--grid {
+  grid-template-columns: repeat(5, max-content);
+  justify-content: center;
+  max-width: 100%;
+  gap: clamp(var(--space-6), 4vw, var(--space-12));
+}
+
 .stat {
   text-align: center;
   display: flex;
@@ -189,6 +197,7 @@
   display: inline-flex;
   align-items: baseline;
   gap: 2px;
+  margin-bottom: 2px;
 }
 
 .stat-number {
@@ -199,6 +208,36 @@
   line-height: 1;
   letter-spacing: var(--tracking-tighter);
   font-variant-numeric: tabular-nums;
+  display: inline-flex;
+}
+
+.stat-desc {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  font-weight: var(--fw-medium);
+  line-height: 1.35;
+  margin-top: var(--space-2);
+  white-space: nowrap;
+}
+
+.stat-digit {
+  display: inline-block;
+  min-width: 0.62em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-digit--rolling {
+  animation: stat-digit-tick 120ms steps(2, end) infinite;
+}
+
+@keyframes stat-digit-tick {
+  0%   { transform: translateY(-2px); }
+  100% { transform: translateY(0);    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-digit--rolling { animation: none; }
 }
 
 .stat-plus {
@@ -207,21 +246,31 @@
   font-weight: var(--fw-bold);
   color: var(--brand-accent);
   line-height: 1;
-  margin-left: 2px;
 }
+.stat-value > .stat-plus + .stat-number { margin-left: 2px; }
+.stat-value > .stat-number + .stat-plus { margin-left: 2px; }
 
 .stat-label {
-  font-size: var(--fs-2xs);
-  color: var(--text-muted);
-  font-weight: var(--fw-semibold);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-widest);
-  margin-top: var(--space-1);
+  font-family: var(--font-sans);
+  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  color: var(--text-primary);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0;
+  margin-top: 0;
+  line-height: 1.2;
 }
 
 /* ================================================================
    RESPONSIVO
    ================================================================ */
+@media (max-width: 1024px) {
+  .hero-stats--grid {
+    grid-template-columns: repeat(3, max-content);
+    max-width: 100%;
+    gap: clamp(var(--space-5), 3vw, var(--space-10));
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
@@ -245,6 +294,12 @@
   .hero-stats {
     gap: var(--space-4);
   }
+
+  .hero-stats--grid {
+    grid-template-columns: repeat(2, max-content);
+    max-width: 100%;
+    gap: var(--space-6);
+  }
 }
 
 @media (max-width: 480px) {
@@ -257,6 +312,14 @@
     max-width: 280px;
     gap: 0;
   }
+
+  .hero-stats--grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 0;
+  }
+
+  .hero-stats--grid .stat-desc { white-space: normal; }
 
   .stat {
     padding: var(--space-4) 0;
