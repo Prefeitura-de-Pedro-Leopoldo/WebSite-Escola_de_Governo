@@ -287,8 +287,7 @@
               "responsavel": "EGov-PL",
               "icone": "fas fa-comments",
               "descricao": "Reflexão sobre o papel da comunicação pública no fortalecimento da confiança entre cidadão e Estado, com foco na atuação cotidiana do servidor municipal.",
-              "inscricaoUrlPendente": "https://www.sympla.com.br/evento/comunicacao-que-aproxima/3420517",
-              "emBreve": true,
+              "inscricaoUrl": "https://www.sympla.com.br/evento/comunicacao-que-aproxima/3420517",
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "21 de maio de 2026",
