@@ -81,11 +81,13 @@ function buildPage({ curso, eixoKey, eixoNome }) {
 
   function renderItem(f, indexNoLightbox, isClone, eager) {
     const loadAttr = eager ? `loading="eager" fetchpriority="high"` : `loading="lazy"`
+    // Mural usa thumb leve (~20KB webp). Fallback p/ original se thumb ausente.
+    const muralSrc = f.thumb || f.src
     return `
       <button type="button" class="curso-detalhe__mural-item${isClone ? " curso-detalhe__mural-item--clone" : ""}"
               data-mural-item data-index="${indexNoLightbox}"
               aria-label="Ampliar foto${f.alt ? `: ${escapeHtml(f.alt)}` : ""}"${isClone ? " tabindex=\"-1\"" : ""}>
-        <img src="../${encodeURI(f.src)}" alt="${escapeHtml(f.alt || "")}" ${loadAttr} decoding="async" draggable="false" />
+        <img src="../${encodeURI(muralSrc)}" alt="${escapeHtml(f.alt || "")}" ${loadAttr} decoding="async" draggable="false" />
       </button>`
   }
 
@@ -366,7 +368,8 @@ function initMuralLightbox(root, galeria) {
   function render() {
     const f = galeria.fotos[idx]
     if (!f) return
-    imgEl.src = "../" + encodeURI(f.src)
+    // Lightbox usa versão full (~1600px webp), fallback p/ original
+    imgEl.src = "../" + encodeURI(f.full || f.src)
     imgEl.alt = f.alt || ""
     capEl.textContent = f.alt || ""
   }

@@ -187,4 +187,61 @@ export async function initNoticiasFeed() {
     .join("")
 
   grid.innerHTML = html
+  initVerMais(grid, 3)
+}
+
+function initVerMais(grid, visiveisInicial) {
+  const cards = Array.from(grid.querySelectorAll(".noticia-card"))
+  if (cards.length <= visiveisInicial) return
+
+  let expandido = false
+  let filtroAtual = "todos"
+
+  const btn = document.createElement("button")
+  btn.type = "button"
+  btn.className = "noticias-ver-mais"
+  btn.addEventListener("click", () => {
+    expandido = true
+    aplicar()
+  })
+  grid.parentElement?.appendChild(btn)
+
+  function aplicar() {
+    let visiveis = 0
+    let totalDoFiltro = 0
+    cards.forEach(card => {
+      const match = filtroAtual === "todos" || card.dataset.category === filtroAtual
+      if (!match) {
+        card.hidden = true
+        return
+      }
+      totalDoFiltro++
+      if (expandido || visiveis < visiveisInicial) {
+        card.hidden = false
+        visiveis++
+      } else {
+        card.hidden = true
+      }
+    })
+
+    const restante = totalDoFiltro - visiveisInicial
+    if (!expandido && restante > 0) {
+      btn.hidden = false
+      btn.innerHTML = `Ver mais notícias (${restante}) <i class="fas fa-chevron-down" aria-hidden="true"></i>`
+    } else {
+      btn.hidden = true
+    }
+  }
+
+  // Intercepta cada filtro. setTimeout 0 garante que rodamos DEPOIS do
+  // initNoticiasFilter sobrescrever card.hidden por categoria.
+  document.querySelectorAll("[data-filter]").forEach(f => {
+    f.addEventListener("click", () => {
+      filtroAtual = f.dataset.filter
+      expandido = false // mudou de filtro → reseta para 3 visíveis
+      setTimeout(aplicar, 0)
+    })
+  })
+
+  aplicar()
 }
