@@ -4,6 +4,13 @@ Todas as mudanças relevantes deste projeto são registradas aqui.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.7.1] - 2026-05-20
+
+### Adicionado
+
+- **Registros do evento Elaboração do Mapa de Gerenciamento de Risco — 1ª turma**:
+  8 fotos disponíveis no mural da página do curso.
+
 ## [0.7.0] - 2026-05-20
 
 ### Adicionado
