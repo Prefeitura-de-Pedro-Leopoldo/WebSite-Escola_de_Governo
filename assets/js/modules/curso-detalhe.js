@@ -4,6 +4,9 @@
    lendo assets/data/cursos.json.
    ======================================== */
 
+import { getStatus, descreverLink, isLinkSympla } from "./curso-utils.js"
+import { openFormModal } from "./form-modal.js"
+
 const DATA_URL = new URL("../../data/cursos.json", import.meta.url)
 const MIDIAS_URL = new URL("../../data/midias.json", import.meta.url)
 
@@ -64,15 +67,59 @@ function eixoSlug(eixoKey) {
   return known.includes(eixoKey) ? eixoKey : "eixos"
 }
 
+const ROTULOS_BADGE = {
+  realizado: "Evento realizado",
+  convocacao: "Convocação",
+  "em-breve": "Inscrições liberadas em breve"
+}
+
+function buildInscricaoBtn(curso) {
+  const status = getStatus(curso)
+
+  // Badge informativa para status não-clicáveis
+  if (status !== "abertas") {
+    const label = curso.inscricaoLabel || ROTULOS_BADGE[status] || "Inscrições liberadas em breve"
+    return `<span class="curso-detalhe__cta curso-detalhe__cta--soon" aria-disabled="true">
+              ${escapeHtml(label)}
+            </span>`
+  }
+
+  // Status abertas — descobre tipo de link
+  const link = descreverLink(curso)
+  if (!link) {
+    return `<span class="curso-detalhe__cta curso-detalhe__cta--soon" aria-disabled="true">
+              Inscrições liberadas em breve
+            </span>`
+  }
+
+  // Forms → abre em modal (mesmo padrão dos cards de eixo)
+  if (link.tipo === "forms") {
+    return `<button type="button" class="curso-detalhe__cta curso-detalhe__cta--primary"
+                    data-form-open data-src="${escapeHtml(link.href)}"
+                    data-title="Inscrição - ${escapeHtml(curso.titulo)}">
+              <i class="fas fa-edit"></i> Inscrever-se
+            </button>`
+  }
+
+  // Externo (Sympla, Enap, etc.) — abre em nova aba
+  const isSympla = isLinkSympla(link.href)
+  const label = curso.inscricaoLabel ||
+    (isSympla ? "Inscrever-se no Sympla" :
+     curso.modalidade === "ead" ? "Acessar curso" :
+     "Inscrever-se")
+  const icone = isSympla ? "fas fa-ticket-alt" :
+    curso.modalidade === "ead" ? "fas fa-external-link-alt" :
+    "fas fa-ticket-alt"
+  return `<a class="curso-detalhe__cta curso-detalhe__cta--primary" href="${escapeHtml(link.href)}" target="_blank" rel="noopener">
+            <i class="${icone}"></i> ${escapeHtml(label)}
+          </a>`
+}
+
 function buildPage({ curso, eixoKey, eixoNome }) {
   const d = curso.detalhe || {}
   const flyer = d.flyer ? `../${d.flyer}` : ""
   const modalidade = curso.modalidade === "ead" ? "EAD" : "Presencial"
-  const inscricaoBtn = curso.inscricaoUrl
-    ? `<a class="curso-detalhe__cta curso-detalhe__cta--primary" href="${curso.inscricaoUrl}" target="_blank" rel="noopener">
-         <i class="fas fa-ticket-alt"></i> ${escapeHtml(curso.inscricaoLabel || "Inscrever-se no Sympla")}
-       </a>`
-    : ""
+  const inscricaoBtn = buildInscricaoBtn(curso)
 
   const eixoHref = `${eixoKey}.html`
   const bannerBg = eixoSlug(eixoKey)
@@ -235,6 +282,19 @@ export async function initCursoDetalhe() {
   const galeriaAtual = match.curso.detalhe && match.curso.detalhe.galeria
   initMuralAutoScroll(root)
   initMuralLightbox(root, galeriaAtual)
+  bindFormButtons(root)
+}
+
+function bindFormButtons(container) {
+  container.querySelectorAll("[data-form-open]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      openFormModal({
+        src: btn.dataset.src,
+        title: btn.dataset.title,
+        aviso: btn.dataset.aviso || ""
+      })
+    })
+  })
 }
 
 function initMuralAutoScroll(root) {
