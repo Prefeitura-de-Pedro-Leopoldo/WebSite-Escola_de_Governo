@@ -20,8 +20,8 @@
               "modalidade": "presencial",
               "responsavel": "EGov-PL",
               "icone": "fas fa-graduation-cap",
-              "descricao": "Aula Magna de abertura do ciclo formativo de 2026 da Escola de Governo de Pedro Leopoldo.",
-              "inscricaoLabel": "Realizado",
+              "descricao": "Planejamento estratégico, gestão de talentos e redes de colaboração, gestão da mudança e inovação no setor público.",
+              "realizado": true,
               "destaqueHome": true,
               "ocultarNoEixo": true,
               "detalhe": {
@@ -38,8 +38,8 @@
               "modalidade": "presencial",
               "icone": "fas fa-chart-bar",
               "descricao": "Conceitos e ferramentas para a implementação da gestão para resultados na prefeitura com foco em planejamento, indicadores, monitoramento e avaliação das ações.",
-              "inscricaoUrlPendente": "https://www.sympla.com.br/evento/gestao-publica-para-resultados/3420307",
               "emBreve": true,
+              "link": "https://www.sympla.com.br/evento/gestao-publica-para-resultados/3420307",
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "28 de maio de 2026",
@@ -47,8 +47,6 @@
                 "horario": "9h (nove horas)",
                 "local": "Centro de Artes e Esportes Unificado – CEU",
                 "publicoAlvo": "Servidores municipais em geral",
-                "flyer": "assets/img/cursos/Sobre/Sympla - Gestão Pública Para Resultados.jpeg",
-                "flyerCarrossel": "assets/img/cursos/Carrossel/Gestão Pública para Resultados.jpeg",
                 "sobre": [
                   "O curso Gestão Pública para Resultados apresenta conceitos, métodos e ferramentas para orientar a administração municipal por entregas concretas à sociedade, articulando planejamento, execução, monitoramento e avaliação.",
                   "Os participantes serão estimulados a desenhar indicadores, acompanhar metas e aprimorar a tomada de decisão baseada em evidências, fortalecendo a entrega de valor público.",
@@ -63,9 +61,9 @@
               "modalidade": "ead",
               "responsavel": "Enap",
               "icone": "fas fa-balance-scale",
-              "descricao": "Princípios éticos, integridade, conduta profissional e prevenção de conflitos de interesse. Curso EAD ofertado pela Enap.",
-              "acessoCursoUrl": "https://www.escolavirtual.gov.br/curso/4",
-              "emBreve": true
+              "descricao": "Princípios éticos, integridade, conduta profissional e prevenção de conflitos de interesse na administração pública.",
+              "emBreve": true,
+              "link": "https://www.escolavirtual.gov.br/curso/4"
             },
             {
               "id": "comissao-recursal-2026-05-t1",
@@ -76,7 +74,7 @@
               "responsavel": "DIRGEP",
               "icone": "fas fa-users-cog",
               "descricao": "Aspectos legais e procedimentais para atuação em comissões recursais, com foco em análise técnica e tomada de decisão.",
-              "inscricaoLabel": "Convocação"
+              "convocacao": true
             },
             {
               "id": "fundamentos-gestao-publica-2026-05-t1-m1",
@@ -85,8 +83,8 @@
               "data": "14/05",
               "modalidade": "presencial",
               "icone": "fas fa-landmark",
-              "descricao": "Módulo 1 da formação: introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
-              "inscricaoLabel": "O evento já encerrou...",
+              "descricao": "Introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
+              "realizado": true,
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "14 de maio de 2026",
@@ -94,8 +92,6 @@
                 "horario": "9h (nove horas)",
                 "local": "Centro de Artes e Esportes Unificado – CEU",
                 "publicoAlvo": "Servidores municipais",
-                "flyer": "assets/img/cursos/Sobre/Sympla - Fundamentos da Gestão Pública.jpeg",
-                "flyerCarrossel": "assets/img/cursos/Carrossel/Fundamentos da Gestão Pública.jpeg",
                 "sobre": [
                   "O curso Fundamentos da Gestão Pública oferece uma introdução estruturada aos princípios, à organização e ao funcionamento da administração pública brasileira, com olhar especial para o nível municipal.",
                   "São discutidos temas como legalidade, impessoalidade, moralidade, publicidade e eficiência, articulando o regime jurídico-administrativo com a prática cotidiana do servidor.",
@@ -109,7 +105,7 @@
               "mes": "junho",
               "modalidade": "presencial",
               "icone": "fas fa-landmark",
-              "descricao": "Módulo 2 da formação: aprofundamento dos fundamentos da gestão pública, dando continuidade aos temas trabalhados no Módulo 1.",
+              "descricao": "Introdução aos princípios, estruturas e funcionamento da administração pública, com foco em legalidade, eficiência, transparência e interesse público.",
               "emBreve": true
             },
             {
@@ -120,7 +116,7 @@
               "responsavel": "DIRGEP",
               "icone": "fas fa-users-cog",
               "descricao": "Aspectos legais e procedimentais para atuação em comissões recursais, com foco em análise técnica e tomada de decisão.",
-              "inscricaoLabel": "Convocação"
+              "convocacao": true
             },
             {
               "id": "gestao-inovacao-presencial-2026-06",
@@ -128,8 +124,9 @@
               "mes": "junho",
               "modalidade": "presencial",
               "icone": "fas fa-lightbulb",
-              "descricao": "Conceitos e práticas de inovação aplicadas ao setor público, com foco na transformação digital e cultura inovadora.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "descricao": "Conceitos e práticas de inovação aplicadas ao setor público, com foco na transformação digital, melhorias na prestação de serviços para o cidadão e cultura inovadora.",
+              "inscricaoAberta": true,
+              "link": "https://www.sympla.com.br/"
             },
             {
               "id": "gestao-inovacao-ead-2026-06",
@@ -138,8 +135,9 @@
               "modalidade": "ead",
               "responsavel": "Enap",
               "icone": "fas fa-laptop",
-              "descricao": "Versão em modalidade EAD pela Enap, com foco em inovação aplicada e cultura inovadora no setor público.",
-              "acessoCursoUrl": "https://www.escolavirtual.gov.br/curso/416/"
+              "descricao": "Conceitos de gestão da inovação articulados ao contexto da administração pública, desafios e possibilidades de inovação na prestação de serviços públicos mais efetivos.",
+              "inscricaoAberta": true,
+              "link": "https://www.escolavirtual.gov.br/curso/416/"
             },
             {
               "id": "avaliacao-desempenho-2026-06",
@@ -148,8 +146,9 @@
               "modalidade": "presencial",
               "responsavel": "DIRGEP",
               "icone": "fas fa-clipboard-check",
-              "descricao": "Instrumentos, métodos e ferramentas para avaliação de desempenho individual de servidores municipais.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "descricao": "Instrumentos, métodos e ferramentas para avaliação de desempenho individual de servidores municipais com foco em resultados e desenvolvimento.",
+              "inscricaoAberta": true,
+              "link": "https://www.sympla.com.br/"
             },
             {
               "id": "fundamentos-gestao-publica-2026-07",
@@ -179,17 +178,15 @@
               "modalidade": "presencial",
               "responsavel": "EGov-PL",
               "icone": "fas fa-shield-alt",
-              "descricao": "Capacitação para a elaboração do mapa de gerenciamento de risco no planejamento das contratações públicas municipais.",
-              "inscricaoLabel": "Convocação",
+              "descricao": "Capacitar os agentes de planejamento para a elaboração do Mapa de Gerenciamento de Riscos das contratações públicas, com foco na identificação, análise, avaliação e tratamento dos riscos, visando à produção de documentos claros, funcionais e em conformidade com a Nova Lei de Licitações e Contratos Administrativos – Lei nº 14.133/2021.",
+              "convocacao": true,
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "20 de maio de 2026",
                 "diaSemana": "quarta-feira",
                 "horario": "14h (quatorze horas)",
                 "local": "Sala de reuniões da Secretaria de Gestão e Finanças",
-                "publicoAlvo": "Agentes de planejamento das contratações públicas das Secretarias Municipais",
-                "flyer": "assets/img/cursos/Sobre/Elaboração do Mapa de Gerenciamento de Risco 1ª TURMA.jpeg",
-                "flyerCarrossel": "assets/img/cursos/Carrossel/Elaboração do Mapa de Gerenciamento de Risco 1ª TURMA.jpeg"
+                "publicoAlvo": "Agentes de planejamento das contratações públicas das Secretarias Municipais"
               }
             },
             {
@@ -200,17 +197,15 @@
               "modalidade": "presencial",
               "responsavel": "EGov-PL",
               "icone": "fas fa-shield-alt",
-              "descricao": "Capacitação para a elaboração do mapa de gerenciamento de risco no planejamento das contratações públicas municipais.",
-              "inscricaoLabel": "Convocação",
+              "descricao": "Capacitar os agentes de planejamento para a elaboração do Mapa de Gerenciamento de Riscos das contratações públicas, com foco na identificação, análise, avaliação e tratamento dos riscos, visando à produção de documentos claros, funcionais e em conformidade com a Nova Lei de Licitações e Contratos Administrativos – Lei nº 14.133/2021.",
+              "convocacao": true,
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "20 de maio de 2026",
                 "diaSemana": "quarta-feira",
                 "horario": "15h (quinze horas)",
                 "local": "Sala de reuniões da Secretaria de Gestão e Finanças",
-                "publicoAlvo": "Agentes de planejamento das contratações públicas das Secretarias Municipais",
-                "flyer": "assets/img/cursos/Sobre/Elaboração do Mapa de Gerenciamento de Risco 2ª TURMA.jpeg",
-                "flyerCarrossel": "assets/img/cursos/Carrossel/Elaboração do Mapa de Gerenciamento de Risco 2ª TURMA.jpeg"
+                "publicoAlvo": "Agentes de planejamento das contratações públicas das Secretarias Municipais"
               }
             },
             {
@@ -219,8 +214,9 @@
               "mes": "agosto",
               "modalidade": "presencial",
               "icone": "fas fa-tasks",
-              "descricao": "Organização e uniformização de fluxos e procedimentos para garantir eficiência e conformidade.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "descricao": "Organização e uniformização de fluxos e procedimentos nas contratações públicas para garantir eficiência e conformidade.",
+              "inscricaoAberta": true,
+              "link": "https://www.sympla.com.br/"
             },
             {
               "id": "planejamento-estrategico-contratacoes-2026-09",
@@ -229,7 +225,8 @@
               "modalidade": "presencial",
               "icone": "fas fa-project-diagram",
               "descricao": "Planejamento das contratações alinhado às necessidades institucionais, com base na legislação vigente.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "inscricaoAberta": true,
+              "link": "https://www.sympla.com.br/"
             },
             {
               "id": "gestao-fiscalizacao-contratos-2026-10",
@@ -238,7 +235,8 @@
               "modalidade": "presencial",
               "icone": "fas fa-search",
               "descricao": "Práticas de acompanhamento, execução e fiscalização contratual, com foco na conformidade legal e resultados.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "inscricaoAberta": true,
+              "link": "https://www.sympla.com.br/"
             }
           ]
         }
@@ -259,7 +257,7 @@
               "modalidade": "presencial",
               "icone": "fas fa-file-signature",
               "descricao": "Capacitação prática no Sistema Eletrônico de Informações (SEI), com foco no uso das ferramentas digitais para tramitação de processos administrativos.",
-              "inscricaoLabel": "Encerrado",
+              "realizado": true,
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "24 de abril de 2026",
@@ -287,16 +285,15 @@
               "responsavel": "EGov-PL",
               "icone": "fas fa-comments",
               "descricao": "Reflexão sobre o papel da comunicação pública no fortalecimento da confiança entre cidadão e Estado, com foco na atuação cotidiana do servidor municipal.",
-              "inscricaoUrl": "https://www.sympla.com.br/evento/comunicacao-que-aproxima/3420517",
+              "inscricaoAberta": true,
+              "link": "https://www.sympla.com.br/evento/comunicacao-que-aproxima/3420517",
               "destaqueHome": true,
               "detalhe": {
                 "dataExtenso": "21 de maio de 2026",
                 "diaSemana": "quinta-feira",
                 "horario": "9h (nove horas)",
                 "local": "Centro de Artes e Esportes Unificado – CEU",
-                "publicoAlvo": "Servidores municipais",
-                "flyer": "assets/img/cursos/Sobre/Sympla - Comunicação que aproxima.jpeg",
-                "flyerCarrossel": "assets/img/cursos/Carrossel/Comunicação que aproxima.jpeg"
+                "publicoAlvo": "Servidores municipais"
               }
             },
             {
@@ -307,7 +304,8 @@
               "responsavel": "DIRGEP",
               "icone": "fas fa-headset",
               "descricao": "Princípios e práticas para um atendimento eficiente, humanizado e centrado no cidadão.",
-              "inscricaoUrl": "https://www.sympla.com.br/"
+              "inscricaoAberta": true,
+              "link": "https://www.sympla.com.br/"
             }
           ]
         }

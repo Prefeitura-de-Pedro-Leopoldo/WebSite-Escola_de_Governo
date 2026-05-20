@@ -1,0 +1,83 @@
+# Changelog
+
+Todas as mudanças relevantes deste projeto são registradas aqui.
+Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
+e versionamento [SemVer](https://semver.org/lang/pt-BR/).
+
+## [0.6.0] - 2026-05-20
+
+### Adicionado
+
+- **Mural de fotos do evento** na página do curso, com carrossel infinito
+  em duas linhas (linha 1 → direita, linha 2 → esquerda), lightbox ao
+  clicar em qualquer foto, cursor customizado de câmera e setas de
+  navegação manual com loop infinito em ambos os sentidos.
+- **Auto-detecção de mídias** por pasta do curso: o script
+  `scripts/gerar-galerias.mjs` (executado em `npm run build` na Vercel)
+  varre `assets/img/cursos/<curso-id>/` e gera
+  `assets/data/midias.json` com `flyer.jpg`, `carrossel.jpg` e
+  `fotos/*.jpg`. Sem mais paths hardcoded no JSON.
+- **Feed de notícias dinâmico** em `pages/noticias.html`: gera um card
+  por curso de `cursos.json` com título, ementa e CTA adaptados ao
+  status (abertas / convocação / em-breve / realizado).
+- **Indicadores da home** auto-atualizados: contagem de eixos e cursos
+  via `data-auto` nos `<span class="stat-number">`.
+- **Esquema simplificado de cursos**:
+  - `inscricaoAberta: true` — mostra botão de inscrição.
+  - `convocacao: true` — evento por convocação.
+  - `realizado: true` — evento já aconteceu (também inferido pela data).
+  - `emBreve: true` — default quando nenhuma flag está marcada.
+  - `link: "https://..."` — URL única para Sympla, Forms ou Enap; o
+    sistema detecta o tipo automaticamente (Forms → modal embed; demais
+    → nova aba).
+- **Helpers compartilhados** em `assets/js/modules/curso-utils.js`:
+  `getStatus`, `getLinkInscricao`, `descreverLink`, `cursoDate`,
+  `isPast`, `temDataDefinida`. Lógica antes duplicada em três módulos.
+- **Cursor de câmera** (variante do `custom-cursor.js`) com SVG
+  detalhado seguindo a mesma qualidade dos cursores de capelo e
+  certificado, com LED piscando e halo azul EGov.
+- **Filtro automático por mês corrente** em `noticias.html` e nos cards
+  do eixo: cursos de meses futuros ficam ocultos até chegar o mês.
+- **Pipeline Vercel** (`vercel.json` + `package.json` + `.vercelignore`):
+  `npm run build` executa o gerador de mídias automaticamente em cada
+  deploy. `admin/` e `docs/` ficam fora da produção.
+- **Registros do evento Aula Magna** — 80 fotos disponíveis no mural.
+- **Registros do evento Fundamentos da Gestão Pública (Módulo 1)** —
+  10 fotos disponíveis no mural.
+
+### Alterado
+
+- **Estrutura de pastas de imagens** padronizada em kebab-case ASCII:
+  `assets/img/cursos/<curso-id>/{flyer.jpg, carrossel.jpg, fotos/foto-NN.jpg}`.
+  Nome da pasta = `id` do curso (match determinístico, não mais fuzzy).
+- **Ementas dos cursos** atualizadas conforme
+  `docs/proposta-trilhas-formativas.xlsx` (Fundamentos da Gestão
+  Pública, Ética no Setor Público, Gestão da Inovação presencial/EAD,
+  Avaliação de Desempenho, Padronização dos Procedimentos de
+  Contratação, Aula Magna).
+- **Migração de campos legados** no `cursos.json` (comportamento
+  idêntico):
+  - `inscricaoUrl` → `inscricaoAberta: true` + `link`.
+  - `acessoCursoUrl` → `link` (com `inscricaoAberta` ou `emBreve`).
+  - `inscricaoLabel: "Convocação"` → `convocacao: true`.
+  - `inscricaoLabel: "Realizado" | "Encerrado"` → `realizado: true`.
+  - `inscricaoUrlPendente` → `emBreve: true` + `link`.
+
+### Corrigido
+
+- `isPast(curso)` agora só retorna `true` quando há data concreta
+  (`data` ou `dataExtenso`). Antes, cursos com apenas `mes` definido
+  podiam ser falsamente classificados como "realizado" durante o
+  próprio mês (fallback ao dia 1).
+- Link "Saiba mais" em `noticias.html` apontava para `../curso.html`
+  (raiz) em vez de `curso.html` (mesmo diretório `/pages/`).
+- Auto-scroll do mural travava ao chegar em `scrollLeft = 0` (browser
+  proíbe valores negativos). Substituído por wrap manual em JS antes
+  da atribuição.
+- Conflito entre `scroll-behavior: smooth` (CSS) e o `requestAnimationFrame`
+  (JS) causava travamentos. Agora a animação é 100% controlada por rAF
+  com sistema de "boost" no clique das setas.
+
+## [0.5.1] e anteriores
+
+Ver histórico de tags no Git: `git tag --sort=-v:refname`.
