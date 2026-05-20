@@ -83,11 +83,6 @@ function excerto(curso) {
   return curso.descricao || ""
 }
 
-function temDataDefinida(curso) {
-  const d = curso.detalhe || {}
-  return Boolean(curso.data || d.dataExtenso)
-}
-
 function buildCard(curso, status, imgSrc, opts = {}) {
   const data = temDataDefinida(curso) ? formatarData(cursoDate(curso)) : { iso: "", curto: "" }
   const cta = ctaPorStatus(curso, status, opts)
