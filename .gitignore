@@ -26,3 +26,6 @@ yarn-error.log*
 *.tmp
 *.bak
 *.orig
+
+# --- Node ---
+node_modules/

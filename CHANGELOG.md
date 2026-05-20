@@ -4,6 +4,30 @@ Todas as mudanças relevantes deste projeto são registradas aqui.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.7.0] - 2026-05-20
+
+### Adicionado
+
+- **Pipeline de otimização de imagens** com [sharp](https://sharp.pixelplumbing.com/):
+  cada foto adicionada em `assets/img/cursos/<id>/` ganha derivados WebP
+  ao lado do original:
+  - `flyer.webp` e `carrossel.webp` (avulsos, ~1200–1400px).
+  - `fotos/foto-NN.thumb.webp` (~600px, usado no mural).
+  - `fotos/foto-NN.webp` (~1600px, usado no lightbox).
+  Cache por mtime — só regera quando o original muda. Aula Magna saiu
+  de 567 MB para 1,7 MB carregados no mural (redução de **99,7%**).
+- **Paginação no feed de notícias**: a página mostra os **3 cards mais
+  recentes** e oferece um botão **"Ver mais notícias (N)"** que revela
+  os demais. Ao trocar de filtro (Todos / Cursos / etc.), o limite é
+  reaplicado sobre a categoria e o contador do botão atualiza.
+
+### Alterado
+
+- Mural e lightbox passam a consumir `thumb` e `full` do `midias.json`
+  (com fallback para o original se os derivados ainda não tiverem sido
+  gerados).
+- `node_modules/` adicionado ao `.gitignore`.
+
 ## [0.6.2] - 2026-05-20
 
 ### Corrigido

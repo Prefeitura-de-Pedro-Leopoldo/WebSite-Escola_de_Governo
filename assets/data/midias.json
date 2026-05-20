@@ -6,391 +6,571 @@
       "fotos": [
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-01.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-01.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-01.webp",
           "alt": "foto 01"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-02.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-02.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-02.webp",
           "alt": "foto 02"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-03.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-03.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-03.webp",
           "alt": "foto 03"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-04.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-04.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-04.webp",
           "alt": "foto 04"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-05.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-05.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-05.webp",
           "alt": "foto 05"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-06.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-06.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-06.webp",
           "alt": "foto 06"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-07.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-07.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-07.webp",
           "alt": "foto 07"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-08.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-08.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-08.webp",
           "alt": "foto 08"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-09.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-09.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-09.webp",
           "alt": "foto 09"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-10.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-10.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-10.webp",
           "alt": "foto 10"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-11.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-11.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-11.webp",
           "alt": "foto 11"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-12.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-12.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-12.webp",
           "alt": "foto 12"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-13.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-13.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-13.webp",
           "alt": "foto 13"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-14.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-14.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-14.webp",
           "alt": "foto 14"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-15.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-15.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-15.webp",
           "alt": "foto 15"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-16.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-16.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-16.webp",
           "alt": "foto 16"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-17.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-17.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-17.webp",
           "alt": "foto 17"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-18.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-18.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-18.webp",
           "alt": "foto 18"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-19.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-19.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-19.webp",
           "alt": "foto 19"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-20.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-20.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-20.webp",
           "alt": "foto 20"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-21.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-21.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-21.webp",
           "alt": "foto 21"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-22.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-22.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-22.webp",
           "alt": "foto 22"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-23.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-23.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-23.webp",
           "alt": "foto 23"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-24.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-24.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-24.webp",
           "alt": "foto 24"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-25.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-25.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-25.webp",
           "alt": "foto 25"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-26.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-26.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-26.webp",
           "alt": "foto 26"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-27.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-27.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-27.webp",
           "alt": "foto 27"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-28.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-28.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-28.webp",
           "alt": "foto 28"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-29.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-29.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-29.webp",
           "alt": "foto 29"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-30.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-30.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-30.webp",
           "alt": "foto 30"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-31.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-31.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-31.webp",
           "alt": "foto 31"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-32.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-32.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-32.webp",
           "alt": "foto 32"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-33.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-33.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-33.webp",
           "alt": "foto 33"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-34.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-34.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-34.webp",
           "alt": "foto 34"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-35.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-35.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-35.webp",
           "alt": "foto 35"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-36.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-36.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-36.webp",
           "alt": "foto 36"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-37.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-37.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-37.webp",
           "alt": "foto 37"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-38.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-38.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-38.webp",
           "alt": "foto 38"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-39.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-39.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-39.webp",
           "alt": "foto 39"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-40.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-40.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-40.webp",
           "alt": "foto 40"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-41.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-41.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-41.webp",
           "alt": "foto 41"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-42.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-42.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-42.webp",
           "alt": "foto 42"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-43.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-43.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-43.webp",
           "alt": "foto 43"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-44.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-44.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-44.webp",
           "alt": "foto 44"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-45.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-45.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-45.webp",
           "alt": "foto 45"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-46.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-46.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-46.webp",
           "alt": "foto 46"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-47.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-47.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-47.webp",
           "alt": "foto 47"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-48.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-48.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-48.webp",
           "alt": "foto 48"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-49.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-49.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-49.webp",
           "alt": "foto 49"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-50.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-50.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-50.webp",
           "alt": "foto 50"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-51.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-51.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-51.webp",
           "alt": "foto 51"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-52.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-52.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-52.webp",
           "alt": "foto 52"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-53.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-53.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-53.webp",
           "alt": "foto 53"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-54.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-54.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-54.webp",
           "alt": "foto 54"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-55.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-55.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-55.webp",
           "alt": "foto 55"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-56.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-56.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-56.webp",
           "alt": "foto 56"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-57.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-57.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-57.webp",
           "alt": "foto 57"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-58.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-58.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-58.webp",
           "alt": "foto 58"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-59.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-59.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-59.webp",
           "alt": "foto 59"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-60.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-60.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-60.webp",
           "alt": "foto 60"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-61.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-61.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-61.webp",
           "alt": "foto 61"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-62.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-62.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-62.webp",
           "alt": "foto 62"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-63.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-63.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-63.webp",
           "alt": "foto 63"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-64.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-64.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-64.webp",
           "alt": "foto 64"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-65.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-65.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-65.webp",
           "alt": "foto 65"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-66.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-66.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-66.webp",
           "alt": "foto 66"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-67.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-67.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-67.webp",
           "alt": "foto 67"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-68.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-68.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-68.webp",
           "alt": "foto 68"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-69.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-69.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-69.webp",
           "alt": "foto 69"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-70.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-70.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-70.webp",
           "alt": "foto 70"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-71.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-71.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-71.webp",
           "alt": "foto 71"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-72.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-72.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-72.webp",
           "alt": "foto 72"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-73.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-73.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-73.webp",
           "alt": "foto 73"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-74.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-74.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-74.webp",
           "alt": "foto 74"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-75.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-75.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-75.webp",
           "alt": "foto 75"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-76.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-76.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-76.webp",
           "alt": "foto 76"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-77.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-77.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-77.webp",
           "alt": "foto 77"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-78.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-78.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-78.webp",
           "alt": "foto 78"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-79.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-79.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-79.webp",
           "alt": "foto 79"
         },
         {
           "src": "assets/img/cursos/aula-magna-2026-04/fotos/foto-80.jpg",
+          "thumb": "assets/img/cursos/aula-magna-2026-04/fotos/foto-80.thumb.webp",
+          "full": "assets/img/cursos/aula-magna-2026-04/fotos/foto-80.webp",
           "alt": "foto 80"
         }
       ]
     }
   },
   "comunicacao-que-aproxima-2026-05": {
-    "flyer": "assets/img/cursos/comunicacao-que-aproxima-2026-05/flyer.jpg",
-    "flyerCarrossel": "assets/img/cursos/comunicacao-que-aproxima-2026-05/carrossel.jpg"
+    "flyer": "assets/img/cursos/comunicacao-que-aproxima-2026-05/flyer.webp",
+    "flyerCarrossel": "assets/img/cursos/comunicacao-que-aproxima-2026-05/carrossel.webp"
   },
   "fundamentos-gestao-publica-2026-05-t1-m1": {
-    "flyer": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/flyer.jpg",
-    "flyerCarrossel": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/carrossel.jpg",
+    "flyer": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/flyer.webp",
+    "flyerCarrossel": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/carrossel.webp",
     "galeria": {
       "titulo": "Registros do evento",
       "descricao": "Fotos da realização em 14 de maio de 2026.",
       "fotos": [
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-01.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-01.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-01.webp",
           "alt": "foto 01"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-02.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-02.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-02.webp",
           "alt": "foto 02"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-03.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-03.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-03.webp",
           "alt": "foto 03"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-04.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-04.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-04.webp",
           "alt": "foto 04"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-05.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-05.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-05.webp",
           "alt": "foto 05"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-06.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-06.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-06.webp",
           "alt": "foto 06"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-07.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-07.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-07.webp",
           "alt": "foto 07"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-08.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-08.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-08.webp",
           "alt": "foto 08"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-09.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-09.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-09.webp",
           "alt": "foto 09"
         },
         {
           "src": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-10.jpg",
+          "thumb": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-10.thumb.webp",
+          "full": "assets/img/cursos/fundamentos-gestao-publica-2026-05-t1-m1/fotos/foto-10.webp",
           "alt": "foto 10"
         }
       ]
     }
   },
   "gestao-resultados-2026-05": {
-    "flyer": "assets/img/cursos/gestao-resultados-2026-05/flyer.jpg",
-    "flyerCarrossel": "assets/img/cursos/gestao-resultados-2026-05/carrossel.jpg"
+    "flyer": "assets/img/cursos/gestao-resultados-2026-05/flyer.webp",
+    "flyerCarrossel": "assets/img/cursos/gestao-resultados-2026-05/carrossel.webp"
   },
   "mapa-gerenciamento-risco-2026-05-t1": {
-    "flyer": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/flyer.jpg",
-    "flyerCarrossel": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/carrossel.jpg"
+    "flyer": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/flyer.webp",
+    "flyerCarrossel": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/carrossel.webp"
   },
   "mapa-gerenciamento-risco-2026-05-t2": {
-    "flyer": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t2/flyer.jpg",
-    "flyerCarrossel": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t2/carrossel.jpg"
+    "flyer": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t2/flyer.webp",
+    "flyerCarrossel": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t2/carrossel.webp"
   }
 }

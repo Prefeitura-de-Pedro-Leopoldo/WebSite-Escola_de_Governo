@@ -398,6 +398,45 @@
   gap: var(--space-6);
 }
 
+/* Botão "Ver mais notícias" — aparece abaixo do grid quando há cards ocultos. */
+.noticias-ver-mais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: fit-content;
+  margin: var(--space-8) auto 0;
+  padding: var(--space-3) var(--space-6);
+  background: transparent;
+  color: var(--brand-primary);
+  border: 1.5px solid var(--brand-primary);
+  border-radius: var(--radius-full, 999px);
+  font-weight: var(--fw-semibold, 600);
+  font-size: var(--fs-base);
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.noticias-ver-mais:hover {
+  background: var(--brand-primary);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-brand, 0 6px 18px rgba(48, 99, 173, 0.28));
+}
+
+.noticias-ver-mais:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.noticias-ver-mais:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 3px;
+}
+
 .noticia-card {
   display: flex;
   flex-direction: column;
