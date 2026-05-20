@@ -4,6 +4,15 @@ Todas as mudanças relevantes deste projeto são registradas aqui.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.6.1] - 2026-05-20
+
+### Corrigido
+
+- `.vercelignore` deixava de incluir `scripts/`, o que fazia o build na
+  Vercel quebrar com `Cannot find module 'scripts/gerar-galerias.mjs'`.
+  A pasta `scripts/` é necessária em tempo de build (não em runtime),
+  então foi removida do ignore. `admin/` e `docs/` continuam excluídos.
+
 ## [0.6.0] - 2026-05-20
 
 ### Adicionado

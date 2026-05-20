@@ -7,8 +7,8 @@ admin/
 # Documentação interna e propostas
 docs/
 
-# Scripts de build/manutenção (rodam só durante o build, não precisam no output)
-scripts/
+# OBS: scripts/ NÃO deve ser ignorado — o build (`npm run build`) executa
+# scripts/gerar-galerias.mjs antes do deploy. Sem ele o build quebra.
 
 # Configurações locais e de desenvolvimento
 .git/
