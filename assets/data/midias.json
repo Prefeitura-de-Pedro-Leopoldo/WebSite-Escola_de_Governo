@@ -567,7 +567,61 @@
   },
   "mapa-gerenciamento-risco-2026-05-t1": {
     "flyer": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/flyer.webp",
-    "flyerCarrossel": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/carrossel.webp"
+    "flyerCarrossel": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/carrossel.webp",
+    "galeria": {
+      "titulo": "Registros do evento",
+      "descricao": "Fotos da realização em 20 de maio de 2026.",
+      "fotos": [
+        {
+          "src": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-01.jpeg",
+          "thumb": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-01.thumb.webp",
+          "full": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-01.webp",
+          "alt": "foto 01"
+        },
+        {
+          "src": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-02.jpeg",
+          "thumb": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-02.thumb.webp",
+          "full": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-02.webp",
+          "alt": "foto 02"
+        },
+        {
+          "src": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-03.jpeg",
+          "thumb": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-03.thumb.webp",
+          "full": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-03.webp",
+          "alt": "foto 03"
+        },
+        {
+          "src": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-04.jpeg",
+          "thumb": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-04.thumb.webp",
+          "full": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-04.webp",
+          "alt": "foto 04"
+        },
+        {
+          "src": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-05.jpeg",
+          "thumb": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-05.thumb.webp",
+          "full": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-05.webp",
+          "alt": "foto 05"
+        },
+        {
+          "src": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-06.jpeg",
+          "thumb": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-06.thumb.webp",
+          "full": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-06.webp",
+          "alt": "foto 06"
+        },
+        {
+          "src": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-07.jpeg",
+          "thumb": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-07.thumb.webp",
+          "full": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-07.webp",
+          "alt": "foto 07"
+        },
+        {
+          "src": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-08.jpeg",
+          "thumb": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-08.thumb.webp",
+          "full": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t1/fotos/foto-08.webp",
+          "alt": "foto 08"
+        }
+      ]
+    }
   },
   "mapa-gerenciamento-risco-2026-05-t2": {
     "flyer": "assets/img/cursos/mapa-gerenciamento-risco-2026-05-t2/flyer.webp",
