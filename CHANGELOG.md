@@ -4,6 +4,16 @@ Todas as mudanças relevantes deste projeto são registradas aqui.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.6.2] - 2026-05-20
+
+### Corrigido
+
+- `noticias-feed.js` declarava `temDataDefinida` localmente e também a
+  importava de `curso-utils.js`, causando `SyntaxError: Identifier
+  'temDataDefinida' has already been declared`. Como cascata, o
+  `initEventosDestaque` quebrava ao tentar montar o Swiper. Removida
+  a declaração local — definição central fica em `curso-utils.js`.
+
 ## [0.6.1] - 2026-05-20
 
 ### Corrigido
