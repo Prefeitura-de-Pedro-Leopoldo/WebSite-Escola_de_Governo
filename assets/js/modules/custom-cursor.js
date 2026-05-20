@@ -18,7 +18,10 @@ const SELECTOR_CAP = [
 // Canudo de diploma — sobre o botão "Saiba mais".
 const SELECTOR_DIPLOMA = '.curso-card__btn--secondary'
 
-const SELECTOR = `${SELECTOR_CAP}, ${SELECTOR_DIPLOMA}`
+// Câmera fotográfica — sobre as fotos do mural de registros do evento.
+const SELECTOR_CAMERA = '.curso-detalhe__mural-item'
+
+const SELECTOR = `${SELECTOR_CAP}, ${SELECTOR_DIPLOMA}, ${SELECTOR_CAMERA}`
 
 const SVG_CAP = `
 <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -134,6 +137,89 @@ const SVG_DIPLOMA = `
 </svg>
 `.trim()
 
+const SVG_CAMERA = `
+<svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="cam-body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b6fb8"/>
+      <stop offset="55%" stop-color="#264e8c"/>
+      <stop offset="100%" stop-color="#142a4d"/>
+    </linearGradient>
+    <linearGradient id="cam-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4f87d9"/>
+      <stop offset="100%" stop-color="#2a4f87"/>
+    </linearGradient>
+    <radialGradient id="cam-lens" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#9bc3ff"/>
+      <stop offset="55%" stop-color="#3063ad"/>
+      <stop offset="100%" stop-color="#0e1f3d"/>
+    </radialGradient>
+    <radialGradient id="cam-iris" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sombra suave -->
+  <ellipse cx="14" cy="23" rx="8.5" ry="0.9" fill="rgba(11,17,32,0.22)"/>
+
+  <!-- Visor superior (pentaprisma) -->
+  <path d="M10.4 6.4 L17.6 6.4 L18.6 8.2 L9.4 8.2 Z"
+        fill="url(#cam-top)"
+        stroke="rgba(255,255,255,0.18)" stroke-width="0.35" stroke-linejoin="round"/>
+
+  <!-- Corpo da câmera -->
+  <rect x="3.8" y="8.2" width="20.4" height="13.2" rx="2.2"
+        fill="url(#cam-body)"
+        stroke="rgba(255,255,255,0.16)" stroke-width="0.4"/>
+
+  <!-- Faixa horizontal sutil -->
+  <rect x="3.8" y="11" width="20.4" height="0.6" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Visor / display lateral esquerdo -->
+  <rect x="5" y="9.2" width="3.4" height="1.4" rx="0.3"
+        fill="#0d1f3a" stroke="rgba(255,255,255,0.25)" stroke-width="0.25"/>
+
+  <!-- Botão disparador (top right) com brilho -->
+  <g class="custom-cursor__camera-shutter">
+    <rect x="20.4" y="6.6" width="2.4" height="1.8" rx="0.5"
+          fill="#cc3a3a" stroke="#7a1c1c" stroke-width="0.3"/>
+    <rect x="20.6" y="6.8" width="2" height="0.5" fill="rgba(255,255,255,0.4)"/>
+  </g>
+
+  <!-- Aro externo da lente -->
+  <circle cx="14" cy="15.2" r="5.4"
+          fill="#0a1830"
+          stroke="rgba(255,255,255,0.22)" stroke-width="0.45"/>
+  <circle cx="14" cy="15.2" r="4.7" fill="#142a4d"/>
+
+  <!-- Lente principal com gradiente radial -->
+  <circle cx="14" cy="15.2" r="3.8" fill="url(#cam-lens)"/>
+
+  <!-- Anel reflexivo na lente -->
+  <circle cx="14" cy="15.2" r="2.6"
+          fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.35"/>
+
+  <!-- Pupila escura interna -->
+  <circle cx="14" cy="15.2" r="1.5" fill="#061224"/>
+
+  <!-- Reflexo de luz na lente -->
+  <ellipse cx="12.7" cy="13.6" rx="1.2" ry="0.7"
+           fill="url(#cam-iris)"/>
+  <circle cx="15.4" cy="16.6" r="0.45" fill="rgba(255,255,255,0.55)"/>
+
+  <!-- LED de captura (verde) — pisca via animação -->
+  <circle class="custom-cursor__camera-led"
+          cx="6.6" cy="19.6" r="0.5" fill="#3ae07f"/>
+
+  <!-- Flash retangular (top left) -->
+  <rect x="4.6" y="6.6" width="3" height="1.4" rx="0.3"
+        fill="#f7f2c4" stroke="#b8a83a" stroke-width="0.25"/>
+  <rect x="4.8" y="6.8" width="2.6" height="0.4" fill="rgba(255,255,255,0.7)"/>
+</svg>
+`.trim()
+
 export function initCustomCursor() {
   if (!window.matchMedia || !window.matchMedia('(pointer: fine)').matches) return
 
@@ -145,6 +231,7 @@ export function initCustomCursor() {
     <span class="custom-cursor__inner">
       <span class="custom-cursor__icon custom-cursor__icon--cap">${SVG_CAP}</span>
       <span class="custom-cursor__icon custom-cursor__icon--diploma">${SVG_DIPLOMA}</span>
+      <span class="custom-cursor__icon custom-cursor__icon--camera">${SVG_CAMERA}</span>
     </span>
   `
   document.body.appendChild(cursor)
@@ -178,9 +265,12 @@ export function initCustomCursor() {
   }, { passive: true })
 
   const applyVariant = el => {
-    const diploma = !!el && !!el.closest(SELECTOR_DIPLOMA)
+    const camera = !!el && !!el.closest(SELECTOR_CAMERA)
+    const diploma = !camera && !!el && !!el.closest(SELECTOR_DIPLOMA)
+    const cap = !camera && !diploma
+    cursor.classList.toggle('camera', camera)
     cursor.classList.toggle('diploma', diploma)
-    cursor.classList.toggle('cap', !diploma)
+    cursor.classList.toggle('cap', cap)
   }
 
   document.addEventListener('mouseover', e => {

@@ -5,10 +5,9 @@
    ======================================== */
 
 import { openFormModal } from "./form-modal.js"
+import { getStatus, descreverLink, isLinkSympla } from "./curso-utils.js"
 
 const DATA_URL = new URL("../../data/cursos.json", import.meta.url)
-
-const FORM_BASE = "https://docs.google.com/forms/d/e/"
 
 function buildModalidadeTag(modalidade) {
   const isEad = modalidade === "ead"
@@ -19,8 +18,14 @@ function buildModalidadeTag(modalidade) {
 
 let formsDefault = {}
 
+const ROTULOS_STATUS = {
+  realizado: "Evento realizado",
+  convocacao: "Convocação",
+  "em-breve": "Inscrições liberadas em breve"
+}
+
 function buildFooter(curso) {
-  // Botão "Saiba mais" — disponível em qualquer estado quando o curso tem detalhe.
+  const status = getStatus(curso)
   const detalheBtn = curso.detalhe
     ? `
       <a class="curso-card__btn curso-card__btn--secondary" href="curso.html?id=${encodeURIComponent(curso.id)}">
@@ -29,58 +34,62 @@ function buildFooter(curso) {
     `
     : ""
 
-  if (curso.emBreve) {
+  // Status não-clicáveis (em-breve, convocação, realizado)
+  if (status !== "abertas") {
+    const label = curso.inscricaoLabel || ROTULOS_STATUS[status] || "Inscrições liberadas em breve"
     return `
       <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">
-        Inscrições liberadas em breve
+        ${escapeHtml(label)}
       </span>
-    `
-  }
-
-  if (curso.modalidade === "presencial") {
-    const customLabel = curso.inscricaoLabel
-    const url = curso.inscricaoUrl
-
-    // Sem URL: badge informativo nao-clicavel (ex: "Convocação", "Encerrado")
-    if (!url) {
-      const label = customLabel || "Inscrições liberadas em breve"
-      return `
-        <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">
-          ${escapeHtml(label)}
-        </span>
-        ${detalheBtn}
-      `
-    }
-
-    const label = customLabel || "Inscrever-se no Sympla"
-    return `
-      <a class="curso-card__btn curso-card__btn--primary" href="${url}" target="_blank" rel="noopener">
-        <i class="fas fa-ticket-alt"></i> ${escapeHtml(label)}
-      </a>
       ${detalheBtn}
     `
   }
 
-  if (curso.modalidade === "ead") {
-    const inscricaoFormId = curso.inscricaoFormId || formsDefault.inscricaoFormId || ""
-    const inscricaoSrc = inscricaoFormId ? FORM_BASE + inscricaoFormId + "/viewform?embedded=true" : ""
+  // Status "abertas" — descobre o tipo de link
+  const link = descreverLink(curso, formsDefault)
+  if (!link) {
+    return `
+      <span class="curso-card__cta curso-card__cta--soon" aria-disabled="true">Inscrições liberadas em breve</span>
+      ${detalheBtn}
+    `
+  }
+
+  // Forms → abre em modal embed
+  if (link.tipo === "forms") {
     const certUrl = curso.certificadoUrl || formsDefault.certificadoUrl || ""
     const acesso = curso.acessoCursoUrl || ""
+    const segundo = curso.modalidade === "ead" && certUrl
+      ? `<a class="curso-card__btn curso-card__btn--secondary" href="${certUrl}" target="_blank" rel="noopener"
+            title="Abre em nova aba - exige login Google para anexar o PDF">
+           <i class="fas fa-file-upload"></i> Entregar certificado
+         </a>`
+      : detalheBtn
     return `
       <button type="button" class="curso-card__btn curso-card__btn--primary"
-              data-form-open data-src="${inscricaoSrc}"
+              data-form-open data-src="${escapeHtml(link.href)}"
               data-title="Inscrição - ${escapeHtml(curso.titulo)}"
               data-acesso="${escapeHtml(acesso)}">
         <i class="fas fa-edit"></i> Inscrever-se
       </button>
-      <a class="curso-card__btn curso-card__btn--secondary"
-         href="${certUrl || "#"}" target="_blank" rel="noopener"
-         title="Abre em nova aba - exige login Google para anexar o PDF">
-        <i class="fas fa-file-upload"></i> Entregar certificado
-      </a>
+      ${segundo}
     `
   }
-  return ""
+
+  // Externo (Sympla, Enap, etc.)
+  const isSympla = isLinkSympla(link.href)
+  const label = curso.inscricaoLabel ||
+    (isSympla ? "Inscrever-se no Sympla" :
+     curso.modalidade === "ead" ? "Acessar curso" :
+     "Inscrever-se")
+  const icone = isSympla ? "fas fa-ticket-alt" :
+    curso.modalidade === "ead" ? "fas fa-external-link-alt" :
+    "fas fa-ticket-alt"
+  return `
+    <a class="curso-card__btn curso-card__btn--primary" href="${escapeHtml(link.href)}" target="_blank" rel="noopener">
+      <i class="${icone}"></i> ${escapeHtml(label)}
+    </a>
+    ${detalheBtn}
+  `
 }
 
 function buildCard(curso) {
@@ -141,8 +150,15 @@ function ordemCronologica(curso) {
   return mes * 100 + dia
 }
 
+function isMesPassadoOuAtual(curso) {
+  const mes = MES_ORDEM[(curso.mes || "").toLowerCase()]
+  if (!mes) return true // sem mês definido, mantém visível
+  const hoje = new Date()
+  return mes <= hoje.getMonth() + 1
+}
+
 function renderTrilha(trilha) {
-  const cursosVisiveis = trilha.cursos.filter(c => !c.ocultarNoEixo)
+  const cursosVisiveis = trilha.cursos.filter(c => !c.ocultarNoEixo && isMesPassadoOuAtual(c))
   const cursosOrdenados = [...cursosVisiveis].sort((a, b) => ordemCronologica(a) - ordemCronologica(b))
   const cardsHtml = cursosOrdenados.map(buildCard).join("")
   if (!trilha.nome) return cardsHtml
@@ -211,14 +227,14 @@ export async function initCursosRender() {
       return
     }
 
-    const allCursos = eixo.trilhas.flatMap(t => t.cursos).filter(c => !c.ocultarNoEixo)
+    const allCursos = eixo.trilhas.flatMap(t => t.cursos).filter(c => !c.ocultarNoEixo && isMesPassadoOuAtual(c))
     if (!allCursos.length) {
       container.innerHTML = buildEmptyState()
       return
     }
 
     container.innerHTML = eixo.trilhas
-      .filter(t => t.cursos.some(c => !c.ocultarNoEixo))
+      .filter(t => t.cursos.some(c => !c.ocultarNoEixo && isMesPassadoOuAtual(c)))
       .map(renderTrilha)
       .join("")
 

@@ -1,0 +1,12 @@
+{
+  "name": "website-escola-de-governo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/gerar-galerias.mjs",
+    "gerar:galerias": "node scripts/gerar-galerias.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -3,7 +3,10 @@
    Usa Swiper.js (effect: 'creative') via CDN global.
    ======================================== */
 
+import { getStatus, cursoDate } from "./curso-utils.js"
+
 const DATA_URL = new URL("../../data/cursos.json", import.meta.url)
+const MIDIAS_URL = new URL("../../data/midias.json", import.meta.url)
 
 function escapeHtml(str) {
   return String(str).replace(
@@ -12,46 +15,7 @@ function escapeHtml(str) {
   )
 }
 
-const MESES_NUM = {
-  janeiro: 0, fevereiro: 1, marco: 2, "março": 2, abril: 3, maio: 4, junho: 5,
-  julho: 6, agosto: 7, setembro: 8, outubro: 9, novembro: 10, dezembro: 11,
-}
-
-function cursoDate(curso) {
-  const d = curso.detalhe || {}
-  // dataExtenso: "23 de abril de 2026"
-  const ext = d.dataExtenso && d.dataExtenso.match(/^(\d{1,2})\s+de\s+([a-zçãéíóúâêô]+)\s+de\s+(\d{4})/i)
-  if (ext) {
-    const mes = MESES_NUM[ext[2].toLowerCase()]
-    if (mes != null) return new Date(Number(ext[3]), mes, Number(ext[1]))
-  }
-  // data: "07/05" + mes contém ano? não. Assumimos ano corrente do cronograma (2026).
-  if (curso.data) {
-    const m = curso.data.match(/^(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?/)
-    if (m) {
-      const ano = m[3] ? Number(m[3]) : 2026
-      return new Date(ano, Number(m[2]) - 1, Number(m[1]))
-    }
-  }
-  return null
-}
-
-function isPast(curso) {
-  const date = cursoDate(curso)
-  if (!date) return false
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
-  return date.getTime() < today.getTime()
-}
-
-function getStatus(curso) {
-  if (curso.inscricaoLabel && /encerrad|realizad/i.test(curso.inscricaoLabel)) return "realizado"
-  if (isPast(curso)) return "realizado"
-  if (curso.inscricaoLabel && /convoca/i.test(curso.inscricaoLabel)) return "convocacao"
-  if (curso.emBreve) return "em-breve"
-  if (curso.inscricaoUrl) return "abertas"
-  return null
-}
+// getStatus e cursoDate importados de ./curso-utils.js
 
 const STATUS_LABEL = {
   abertas: "Inscrições abertas",
@@ -280,6 +244,28 @@ export async function initEventosDestaque() {
     console.error("Falha ao carregar cursos.json em eventos-destaque", err)
     root.remove()
     return
+  }
+
+  // Mídias auto-detectadas (flyer.jpg / carrossel.jpg em assets/img/cursos/<id>/).
+  let midias = {}
+  try {
+    const res = await fetch(MIDIAS_URL)
+    if (res.ok) midias = await res.json()
+  } catch {
+    /* opcional */
+  }
+
+  // Injeta flyer/flyerCarrossel auto-detectados quando o curso não tem hardcoded.
+  for (const eixoKey of Object.keys(data.eixos || {})) {
+    for (const trilha of data.eixos[eixoKey].trilhas || []) {
+      for (const curso of trilha.cursos || []) {
+        const auto = midias[curso.id]
+        if (!auto) continue
+        const d = (curso.detalhe = curso.detalhe || {})
+        if (!d.flyer && auto.flyer) d.flyer = auto.flyer
+        if (!d.flyerCarrossel && auto.flyerCarrossel) d.flyerCarrossel = auto.flyerCarrossel
+      }
+    }
   }
 
   const eventos = collectEventos(data)
