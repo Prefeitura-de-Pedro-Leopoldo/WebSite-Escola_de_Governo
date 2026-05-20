@@ -4,6 +4,19 @@ Todas as mudanças relevantes deste projeto são registradas aqui.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/)
 e versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.7.3] - 2026-05-20
+
+### Corrigido
+
+- `curso-detalhe.js` (página `pages/curso.html`) ainda usava o campo
+  legado `inscricaoUrl`, que deixou de existir após a migração v0.6.0
+  para `inscricaoAberta` + `link`. Resultado: o botão "Inscrever-se no
+  Sympla" sumiu da página de "Saiba mais". Refatorado para usar
+  `getStatus` + `descreverLink` de `curso-utils.js` (mesmo padrão dos
+  cards do eixo) — suporta Sympla, Forms (modal) e Enap.
+- Página de detalhe agora também aciona o modal de Forms para EAD que
+  usa formulário Google.
+
 ## [0.7.2] - 2026-05-20
 
 ### Adicionado
